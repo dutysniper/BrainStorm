@@ -7,27 +7,32 @@
 
 import UIKit
 
-// hbjbvkjnl
+//@IBDesignable
 final class ViewController: UIViewController {
     
     private let shapesView = HumanView()
+
     
+    @IBOutlet var humanView: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        shapesView.backgroundColor = .clear
+        humanView.backgroundColor = .clear
+        
         shapesView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(shapesView)
+        humanView.addSubview(shapesView)
         
        // shapesView.animateCircle()
         
         NSLayoutConstraint.activate([
-            shapesView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            shapesView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            shapesView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            shapesView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -350),
+            shapesView.topAnchor.constraint(equalTo: humanView.topAnchor),
+            shapesView.leadingAnchor.constraint(equalTo: humanView.leadingAnchor),
+            shapesView.trailingAnchor.constraint(equalTo: humanView.trailingAnchor),
+            shapesView.bottomAnchor.constraint(equalTo: humanView.bottomAnchor),
         ])
     }
 }

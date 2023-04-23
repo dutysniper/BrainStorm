@@ -7,18 +7,19 @@
 
 import UIKit
 
+@IBDesignable
 final class HumanView: UIView {
     
     private let headLayer = CAShapeLayer()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .systemGray6
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        backgroundColor = .clear
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func draw(_ rect: CGRect) {
         let height = frame.height
@@ -41,9 +42,9 @@ final class HumanView: UIView {
             controlPoint2: CGPoint(x: center.x * 0.78, y: center.y * 0.06)
         )
         
-        UIColor.black.setStroke()
+        UIColor.white.setStroke()
         
-        headPath.lineWidth = 4.0
+        headPath.lineWidth = 2.0
         headPath.stroke()
         
         headLayer.fillColor = .none

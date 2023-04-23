@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CD35BB329F5B47F001456F3 /* HumanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD35BB229F5B47F001456F3 /* HumanView.swift */; };
 		9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131601E29F5B28D006CECD7 /* AppDelegate.swift */; };
 		9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131602029F5B28D006CECD7 /* SceneDelegate.swift */; };
 		9131602329F5B28D006CECD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131602229F5B28D006CECD7 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CD35BB229F5B47F001456F3 /* HumanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanView.swift; sourceTree = "<group>"; };
 		9131601B29F5B28D006CECD7 /* Hangman Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9131601E29F5B28D006CECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9131602029F5B28D006CECD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				9131603229F5B38F006CECD7 /* App */,
 				9131603329F5B3AB006CECD7 /* ViewControllers */,
 				9131603429F5B3B6006CECD7 /* Storyboards */,
+				9131602C29F5B28E006CECD7 /* Info.plist */,
 				9131603529F5B3BF006CECD7 /* Resources */,
 			);
 			path = "Hangman Classic";
@@ -69,7 +72,6 @@
 			children = (
 				9131602029F5B28D006CECD7 /* SceneDelegate.swift */,
 				9131601E29F5B28D006CECD7 /* AppDelegate.swift */,
-				9131602C29F5B28E006CECD7 /* Info.plist */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9131602229F5B28D006CECD7 /* ViewController.swift */,
+				4CD35BB229F5B47F001456F3 /* HumanView.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				9131602329F5B28D006CECD7 /* ViewController.swift in Sources */,
 				9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */,
+				4CD35BB329F5B47F001456F3 /* HumanView.swift in Sources */,
 				9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
+				INFOPLIST_FILE = "Hangman Classic/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -354,7 +358,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
+				INFOPLIST_FILE = "Hangman Classic/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

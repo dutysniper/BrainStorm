@@ -7,6 +7,7 @@
 
 import UIKit
 
+// hbjbvkjnl
 final class ViewController: UIViewController {
     
     private let shapesView = HumanView()

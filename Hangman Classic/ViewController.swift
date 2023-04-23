@@ -27,7 +27,7 @@ final class ViewController: UIViewController {
             shapesView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             shapesView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             shapesView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            shapesView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150),
+            shapesView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -350),
         ])
     }
 }

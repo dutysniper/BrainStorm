@@ -58,10 +58,10 @@
 		9131601D29F5B28D006CECD7 /* Hangman Classic */ = {
 			isa = PBXGroup;
 			children = (
+				9131602C29F5B28E006CECD7 /* Info.plist */,
 				9131603229F5B38F006CECD7 /* App */,
 				9131603329F5B3AB006CECD7 /* ViewControllers */,
 				9131603429F5B3B6006CECD7 /* Storyboards */,
-				9131602C29F5B28E006CECD7 /* Info.plist */,
 				9131603529F5B3BF006CECD7 /* Resources */,
 			);
 			path = "Hangman Classic";
@@ -323,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hangman Classic/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
@@ -356,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hangman Classic/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";

@@ -56,15 +56,47 @@
 		9131601D29F5B28D006CECD7 /* Hangman Classic */ = {
 			isa = PBXGroup;
 			children = (
-				9131601E29F5B28D006CECD7 /* AppDelegate.swift */,
-				9131602029F5B28D006CECD7 /* SceneDelegate.swift */,
-				9131602229F5B28D006CECD7 /* ViewController.swift */,
-				9131602429F5B28D006CECD7 /* Main.storyboard */,
-				9131602729F5B28E006CECD7 /* Assets.xcassets */,
-				9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */,
-				9131602C29F5B28E006CECD7 /* Info.plist */,
+				9131603229F5B38F006CECD7 /* App */,
+				9131603329F5B3AB006CECD7 /* ViewControllers */,
+				9131603429F5B3B6006CECD7 /* Storyboards */,
+				9131603529F5B3BF006CECD7 /* Resources */,
 			);
 			path = "Hangman Classic";
+			sourceTree = "<group>";
+		};
+		9131603229F5B38F006CECD7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9131602029F5B28D006CECD7 /* SceneDelegate.swift */,
+				9131601E29F5B28D006CECD7 /* AppDelegate.swift */,
+				9131602C29F5B28E006CECD7 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		9131603329F5B3AB006CECD7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9131602229F5B28D006CECD7 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9131603429F5B3B6006CECD7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9131602429F5B28D006CECD7 /* Main.storyboard */,
+				9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9131603529F5B3BF006CECD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9131602729F5B28E006CECD7 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +321,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/Info.plist";
+				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +336,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.Hangman-Classic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +354,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/Info.plist";
+				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +369,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.Hangman-Classic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

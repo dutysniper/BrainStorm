@@ -7,21 +7,20 @@
 
 import UIKit
 
-
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    private let shapesView = HumanView()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let shapesView = ShapesView()
-        shapesView.contentScaleFactor = .infinity
         
         shapesView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(shapesView)
         
        // shapesView.animateCircle()
-        shapesView.animateRectangle()
         
         NSLayoutConstraint.activate([
             shapesView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),

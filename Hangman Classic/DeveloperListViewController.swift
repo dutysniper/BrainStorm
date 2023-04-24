@@ -53,8 +53,11 @@ final class DeveloperListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let gitHub = developers[indexPath.section].person[indexPath.row].gitHubLink
-        guard let url = URL(string: gitHub) else { return }
-        UIApplication.shared.open(url)
+        let person = developers[indexPath.section].person[indexPath.row]
+        guard let url = URL(string: person.gitHubLink) else { return }
+        
+        showAlert(title: "Перейти в GitHub?", message: person.gitHubLink) {
+            UIApplication.shared.open(url)
+        }
     }
 }

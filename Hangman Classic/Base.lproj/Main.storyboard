@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,7 +34,10 @@
                             <constraint firstItem="ceJ-li-VWV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5nC-jU-caz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Game" id="nJZ-ek-NZs"/>
+                    <tabBarItem key="tabBarItem" title="" id="nJZ-ek-NZs">
+                        <imageReference key="image" image="gamecontroller" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="gamecontroller.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Title" id="kHN-gS-VO5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -516,11 +520,11 @@
             </objects>
             <point key="canvasLocation" x="801" y="-265"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Vg9-Kc-qLu">
             <objects>
                 <navigationController id="dyt-2y-yjr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="w5h-vV-cCD"/>
+                    <tabBarItem key="tabBarItem" title="" id="w5h-vV-cCD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Fal-eb-eBE">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -543,21 +547,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="developer" textLabel="i8H-gk-n7S" detailTextLabel="oBq-qC-47D" style="IBUITableViewCellStyleSubtitle" id="O9Q-F5-8Jv">
-                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="430" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9Q-F5-8Jv" id="m1w-dt-SC9">
-                                    <rect key="frame" x="0.0" y="0.0" width="399.66666666666669" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="399.66666666666669" height="55.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i8H-gk-n7S">
-                                            <rect key="frame" x="20.000000000000004" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                            <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="NickName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oBq-qC-47D">
-                                            <rect key="frame" x="20" y="25.333333333333332" width="58" height="14.333333333333334"/>
+                                            <rect key="frame" x="20" y="31.333333333333332" width="58" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <color key="textColor" red="0.16123939282966382" green="0.16123939282966382" blue="0.16123939282966382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -572,7 +576,10 @@
                             <outlet property="delegate" destination="F56-YO-0a3" id="qQu-2U-1Yk"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Developers" id="LX9-kP-o5P"/>
+                    <tabBarItem key="tabBarItem" title="" id="LX9-kP-o5P">
+                        <imageReference key="image" image="person.2" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="person.2.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Разработчики" id="cFO-7U-rbs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3a-2v-aBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -587,7 +594,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T14-Po-ZVU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="54s-d7-nD8"/>
@@ -600,6 +607,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamecontroller" catalog="system" width="128" height="79"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="person.2" catalog="system" width="128" height="82"/>
+        <image name="person.2.fill" catalog="system" width="128" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

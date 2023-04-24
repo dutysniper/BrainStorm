@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CD35BB329F5B47F001456F3 /* HumanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD35BB229F5B47F001456F3 /* HumanView.swift */; };
+		4CDEB71F29F70D2B0021932A /* DeveloperListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */; };
+		4CDEB72129F70ED50021932A /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEB72029F70ED50021932A /* Developer.swift */; };
 		9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131601E29F5B28D006CECD7 /* AppDelegate.swift */; };
 		9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131602029F5B28D006CECD7 /* SceneDelegate.swift */; };
 		9131602329F5B28D006CECD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131602229F5B28D006CECD7 /* ViewController.swift */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4CD35BB229F5B47F001456F3 /* HumanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanView.swift; sourceTree = "<group>"; };
+		4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListViewController.swift; sourceTree = "<group>"; };
+		4CDEB72029F70ED50021932A /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		9131601B29F5B28D006CECD7 /* Hangman Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9131601E29F5B28D006CECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9131602029F5B28D006CECD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				9131603329F5B3AB006CECD7 /* ViewControllers */,
 				9131603429F5B3B6006CECD7 /* Storyboards */,
 				9131603529F5B3BF006CECD7 /* Resources */,
+				4CDEB72029F70ED50021932A /* Developer.swift */,
 			);
 			path = "Hangman Classic";
 			sourceTree = "<group>";
@@ -80,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				9131602229F5B28D006CECD7 /* ViewController.swift */,
-				4CD35BB229F5B47F001456F3 /* HumanView.swift */,
+				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -174,9 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9131602329F5B28D006CECD7 /* ViewController.swift in Sources */,
+				4CDEB72129F70ED50021932A /* Developer.swift in Sources */,
 				9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */,
-				4CD35BB329F5B47F001456F3 /* HumanView.swift in Sources */,
 				9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */,
+				4CDEB71F29F70D2B0021932A /* DeveloperListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

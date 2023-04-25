@@ -5,9 +5,9 @@
 //  Created by Константин Натаров on 24.04.2023.
 //
 
-final class DataStore {
+final class HangmanDataStore {
     
-    static let shared = DataStore()
+    static let shared = HangmanDataStore()
     
     let easyWords = [
         "автомобиль",

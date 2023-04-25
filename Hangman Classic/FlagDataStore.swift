@@ -8,159 +8,259 @@
 class FlagDataStore {
     
     let flagsAndCourties = [
-        "Арабские Эмираты": "UAE",
+        // MARK: - АЗИЯ
         "Афганистан": "Afghanistan",
-        "ALL": "Albania",
-        "AMD": "Armenia",
-        "ANG": "Curacao",
-        "AOA": "Angola",
-        "ARS": "Argentina",
-        "AUD": "Australia",
-        "AWG": "Aruba",
-        "AZN": "Azerbaijan",
-        "BAM": "Bosnia & Herzegovina",
-        "BBD": "Barbados",
-        "BDT": "Bangladesh",
-        "BGN": "Bulgaria",
-        "BHD": "Bahrain",
-        "BIF": "Burundi",
-        "BMD": "Bermuda",
-        "BND": "Brunei",
-        "BOB": "Bolivia",
-        "BRL": "Brazil",
-        "BSD": "Bahamas",
-        "BTN": "Bhutan",
-        "BWP": "Botswana",
-        "BZD": "Belize",
-        "CAD": "Canada",
-        "CDF": "Congo",
-        "CHF": "Switzerland",
-        "CNY": "China",
-        "COP": "Colombia",
-        "CRC": "Costa Rica",
-        "CVE": "Cabo Verde Escudo",
-        "CZK": "Czech Republic",
-        "DJF": "Djibouti",
-        "DKK": "Denmark",
-        "DOP": "Dominican Republic",
-        "DZD": "Algeria",
-        "EGP": "Egypt",
-        "ERN": "Eritrea",
-        "ETB": "Ethiopia",
-        "EUR": "European Union",
-        "FJD": "Fiji",
-        "FKP": "Falkland Islands",
-        "GBP": "United Kingdom",
-        "GEL": "Georgia",
-        "GGP": "Guernsey",
-        "GHS": "Ghana",
-        "GIP": "Gibraltar",
-        "GMD": "Gambia",
-        "GNF": "Guinea",
-        "GTQ": "Guatemala",
-        "GYD": "Guyana",
-        "HNL": "Honduras",
-        "HRK": "Croatia",
-        "HTG": "Haiti",
-        "HUF": "Hungary",
-        "IDR": "Indonesia",
-        "ILS": "Israel",
-        "IMP": "Isle of Man",
-        "INR": "India",
-        "IQD": "Iraq",
-        "IRR": "Iran",
-        //"ISK": "Iceland", // НЕТ ФОТО
-        "JEP": "Jersey",
-        "JMD": "Jamaica",
-        "JOD": "Jordan",
-        "JPY": "Japan",
-        "KES": "Kenya",
-        "KGS": "Kyrgyzstan",
-        "KHR": "Cambodia",
-        "KMF": "Comoros",
-        "KPW": "Korea (North)",
-        "KRW": "Korea (South)",
-        "KWD": "Kuwait",
-        "KYD": "Cayman Islands",
-        "KZT": "Kazakhstan",
-        "LAK": "Laos",
-        "LBP": "Lebanon",
-        "LKR": "Sri Lanka",
-        "LRD": "Liberia",
-        "LSL": "Lesotho",
-        "LTL": "Lithuania",
-        "LVL": "Latvia",
-        "LYD": "Libya",
-        "MAD": "Morocco",
-        "MDL": "Moldova",
-        "MGA": "Madagascar",
-        "MKD": "Macedonia",
-        "MMK": "Myanmar (Burma)",
-        "MNT": "Mongolia",
-        "MOP": "Macau",
-        "MUR": "Mauritius",
-        "MVR": "Maldives",
-        "MWK": "Malawi",
-        "MXN": "Mexico",
-        "MYR": "Malaysia",
-        "MZN": "Mozambique",
-        "NAD": "Namibia",
-        "NGN": "Nigeria",
-        "NIO": "Nicaragua",
-        "NOK": "Norway",
-        "NPR": "Nepal",
-        "NZD": "New Zealand",
-        "OMR": "Oman",
-        "PAB": "Panama",
-        "PEN": "Peru",
-        "PGK": "Papua New Guinea",
-        "PHP": "Philippines",
-        "PKR": "Pakistan",
-        "PLN": "Poland",
-        "PYG": "Paraguay",
-        "QAR": "Qatar",
-        "RON": "Romania",
-        "RSD": "Serbia",
-        "RUB": "Russia",
-        "RWF": "Rwanda",
-        "SAR": "Saudi Arabia",
-        "SBD": "Solomon Islands",
-        "SCR": "Seychelles",
-        "SDG": "Sudan",
-        "SEK": "Sweden",
-        "SGD": "Singapore",
-        "SHP": "Saint Helena",
-        "SLL": "Sierra Leone",
-        "SOS": "Somalia",
-        "SRD": "Suriname",
-        "SVC": "El Salvador",
-        "SYP": "Syria",
-        "SZL": "Eswatini",
-        "THB": "Thailand",
-        "TJS": "Tajikistan",
-        "TMT": "Turkmenistan",
-        "TND": "Tunisia",
-        "TOP": "Tonga",
-        "TRY": "Turkey",
-        "TTD": "Trinidad & Tobago",
-        "TWD": "Taiwan",
-        "TZS": "Tanzania",
-        "UAH": "Ukraine",
-        "UGX": "Uganda",
-        "USD": "United States",
-        "UYU": "Uruguay",
-        "UZS": "Uzbekistan",
-        "VEF": "Venezuela",
-        "VND": "Vietnam",
-        "VUV": "Vanuatu",
-        "WST": "Samoa",
-        "XCD": "Caribbean Netherlands",
-        "YER": "Yemen",
-        "ZAR": "South Africa",
-        "ZMK": "Zambia",
-        "CUC": "Cuba",
-        "CLP": "Chile",
-        "BYN": "Belarus",
-        "MRO": "Mauritania"
+        "Бангладеш": "Bangladesh",
+        "Бруней": "Brunei",
+        "Бутан": "Bhutan",
+        "Восточный Тимор": "Timor-Leste", //------------------
+        "Вьетнам": "Vietnam",
+        "Индия": "India",
+        "Индонезия": "Indonesia",
+        "Казахстан": "Kazakhstan",
+        "Камбоджа": "Cambodia",
+        "Киргизия": "Kyrgyzstan",
+        "Китай": "China",
+        "Лаос": "Laos",
+        "Макао": "Macau",
+        "Малайзия": "Malaysia",
+        "Мальдивы": "Maldives",
+        "Монголия": "Mongolia",
+        "Мьянма": "Myanmar (Burma)",
+        "Непал": "Nepal",
+        "Пакистан": "Pakistan",
+        "Папуа - Новая Гвинея": "Papua New Guinea",
+        "Россия": "Russia",
+        "Северная Корея": "Korea (North)",
+        "Сингапур": "Singapore",
+        "Таджикистан": "Tajikistan",
+        "Тайланд": "Thailand",
+        "Тайвань": "Taiwan",
+        "Туркменистан": "Turkmenistan",
+        "Узбекистан": "Uzbekistan",
+        "Филиппины": "Philippines",
+        "Шри-Ланка": "Sri Lanka",
+        "Южная Корея": "Korea (South)",
+        "Япония": "Japan",
+        
+        // MARK: - АФРИКА
+        "Алжир": "Algeria",
+        "Ангола": "Angola",
+        "Бенин": "Benin",     //------------------
+        "Ботсвана": "Botswana",
+        "Буркина-Фасо": "Burkina Faso",   //------------------
+        "Бурунди": "Burundi",
+        "Габон": "Gabon",   //------------------
+        "Гамбия": "Gambia",
+        "Гана": "Ghana",
+        "Гвинея": "Guinea",
+        "Гвинея-Бисау": "Guine-Bissau",   //------------------
+        "Дем. Респ. Конго": "Dem. Rep. Congo",
+        "Джибути": "Djibouti",
+        "Египет": "Egypt",
+        "Эсватини": "Eswatini",
+        "Замбия": "Zambia",
+        "Западная Сахара": "West Sahara",   //------------------
+        "Зимбабве": "Zimbabwe",   //------------------
+        "Кабо-Верде": "Cabo Verde Escudo",
+        "Камерун": "Cameroon",   //------------------
+        "Кения": "Kenya",
+        "Коморы": "Comoros",
+        "Кот-д'Ивуар": "Ivory Coast",   //------------------
+        "Лесото": "Lesotho",
+        "Либерия": "Liberia",
+        "Ливия": "Libya",
+        "Маврикий": "Mauritius",
+        "Мавритания": "Mauritania",
+        "Мадагаскар": "Madagascar",
+        "Майотта": "Mayotte",   //------------------
+        "Малави": "Malawi",
+        "Мали": "Mali",   //------------------
+        "Марокко": "Morocco",
+        "Мозамбик": "Mozambique",
+        "Намибия": "Namibia",
+        "Нигер": "Niger",   //------------------
+        "Нигерия": "Nigeria",
+        "Тристан-да-Кунья": "Tristan da Cunha",   //------------------
+        "Респ. Конго": "Rep. Congo",   //------------------
+        "Реюньон": "Reunion",   //------------------
+        "Руанда": "Rwanda",
+        "Сан-Томе и Принсипи": "Sao Tome and Principe",   //------------------
+        "Свазиленд": "Swaziland",   //------------------
+        "Сейшельские Острова": "Seychelles",
+        "Сенегал": "Senegal",   //------------------
+        "Сомали": "Somalia",
+        "Судан": "Sudan",
+        "Сьерра-Леоне": "Sierra Leone",
+        "Танзания": "Tanzania",
+        "Того": "Togo",   //------------------
+        "Тунис": "Tunisia",
+        "Уганда": "Uganda",
+        "ЦАР": "CAR",   //------------------
+        "Чад": "Chad",   //------------------
+        "Экваториальная Гвинея": "Equatorial Guinea",   //------------------
+        "Эритрея": "Eritrea",
+        "Эфиопия": "Ethiopia",
+        "ЮАР": "South Africa",
+        "Южный Судан": "South Sudan",   //------------------
+        
+        // MARK: - БЛИЖНИЙ ВОСТОК
+        "Азербайджан": "Azerbaijan",
+        "Армения": "Armenia",
+        "Бахрейн": "Bahrain",
+        "Грузия": "Georgia",
+        "Израиль": "Israel",
+        "Иордания": "Jordan",
+        "Ирак": "Iraq",
+        "Иран": "Iran",
+        "Йемен": "Yemen",
+        "Катар": "Qatar",
+        "Кувейт": "Kuwait",
+        "Ливан": "Lebanon",
+        "Арабские Эмираты": "UAE",
+        "Оман": "Oman",
+        "Саудовская Аравия": "Saudi Arabia",
+        "Сирия": "Syria",
+        "Турция": "Turkey",
+        
+        // MARK: - ЕВРОПА
+        "Евросоюз": "European Union",
+        "Австрия": "",   //------------------
+        "Албания": "Albania",
+        "Андорра": "",   //------------------
+        "Беларусь": "Belarus",
+        "Бельгия": "",   //------------------
+        "Болгария": "Bulgaria",
+        "Босния и Герцеговина": "Bosnia & Herzegovina",
+        "Ватикан": "",   //------------------
+        "Великобритания": "United Kingdom",
+        "Венгрия": "Hungary",
+        "Германия": "",   //------------------
+        "Гибралтар": "Gibraltar",
+        "Греция": "",   //------------------
+        "Дания": "Denmark",
+        "Ирландия": "", //------------------
+        "Исландия": "Iceland", //------------------
+        "Испания": "Spain", //------------------
+        "Италия": "Italy", //------------------
+        "Кипр": "", //------------------
+        "Косово": "", //------------------
+        "Латвия": "Latvia",
+        "Литва": "Lithuania",
+        "Лихтенштейн": "", //------------------
+        "Люксембург": "", //------------------
+        "Македония": "Macedonia",
+        "Мальта": "", //------------------
+        "Молдова": "Moldova",
+        "Монако": "", //------------------
+        "Нидерланды": "", //------------------
+        "Норвегия": "Norway",
+        "Остров Мэн": "Isle of Man",
+        "Польша": "Poland",
+        "Португалия": "", //------------------
+        "Румыния": "Romania",
+        "Сан-Марино": "", //------------------
+        "Сербия": "Serbia",
+        "Словакия": "", //------------------
+        "Словения": "", //------------------
+        "Украина": "Ukraine",
+        "Фарерские Острова": "", //------------------
+        "Финляндия": "", //------------------
+        "Франция": "", //------------------
+        "Хорватия": "Croatia",
+        "Черногория": "", //------------------
+        "Чехия": "Czech Republic",
+        "Швейцария": "Switzerland",
+        "Швеция": "Sweden",
+        "Эстония": "",
+        "Гернси": "Guernsey",
+        
+        // MARK: - КАРИБСКИЙ БАССЕЙН
+        "Ангилья": "", //------------------
+        "Антигуа и Барбуда": "", //------------------
+        "Аруба": "Aruba",
+        "Багамские Острова": "Bahamas",
+        "Барбадос": "Barbados",
+        "Британские Виргинские Острова": "", //------------------
+        "Виргинские Острова": "", //------------------
+        "Гаити": "Haiti",
+        "Гваделупа": "", //------------------
+        "Гренада": "", //------------------
+        "Доминика": "", //------------------
+        "Доминиканская Республика": "Dominican Republic",
+        "Каймановы Острова": "Cayman Islands",
+        "Куба": "Cuba",
+        "Кюрасао": "Curacao",
+        "Мартиника": "", //------------------
+        "Монтсератт": "", //------------------
+        "Пуэрто-Рико": "", //------------------
+        "Сент-Винсент": "", //------------------
+        "Сент-Китс и Невис": "", //------------------
+        "Сент-Люсия": "", //------------------
+        "Синт-Мартен": "", //------------------
+        "Теркс и Кайкос": "", //------------------
+        "Тринидад и Тобаго": "Trinidad & Tobago",
+        "Ямайка": "Jamaica",
+        
+        // MARK: - ОКЕАНИЯ
+        "Австралия": "Australia",
+        "Американское Самоа": "", //------------------
+        "Вануату": "Vanuatu",
+        "Гуам": "", //------------------
+        "Кирибати": "", //------------------
+        "Кокосовые Острова": "", //------------------
+        "Маршалловы Острова": "", //------------------
+        "Микронезия": "", //------------------
+        "Науру": "", //------------------
+        "Ниуэ": "", //------------------
+        "Новая Зеландия": "New Zealand",
+        "Новая Каледония": "", //------------------
+        "Остров Норфолк": "", //------------------
+        "Остров Рождества": "", //------------------
+        "Острова Ашмор и Картье": "", //------------------
+        "Острова Кука": "", //------------------
+        "Остров Питкэрн": "", //------------------
+        
+        "Палау": "", //------------------
+        "Самоа": "Samoa",
+        "Северные Марианские острова": "", //------------------
+        "Токелау": "", //------------------
+        "Тонга": "Tonga",
+        "Тувалу": "", //------------------
+        "Уоллис и Футуна": "", //------------------
+        "Фиджи": "Fiji",
+        "Французская Полинезия": "", //------------------
+        "Соломоновы Острова": "Solomon Islands",
+        
+        // MARK: - СЕВЕРНАЯ АМЕРИКА
+        "Бермудские Острова": "Bermuda",
+        "Гренландия": "", //------------------
+        "Канада": "Canada",
+        "Мексика": "Mexico",
+        "США": "United States",
+        
+        // MARK: - ЦЕНТРАЛЬНАЯ АМЕРИКА
+        "Белиз": "Belize",
+        "Гватемала": "Guatemala",
+        "Гондурас": "Honduras",
+        "Коста-Рика": "Costa Rica",
+        "Никарагуа": "Nicaragua",
+        "Панама": "Panama",
+        "Эль-Сальвадор": "El Salvador",
+        
+        // MARK: - ЮЖНАЯ АМЕРИКА
+        "Аргентина": "Argentina",
+        "Боливия": "Bolivia",
+        "Бразилия": "Brazil",
+        "Венесуэла": "Venezuela",
+        "Гайана": "Guyana",
+        "Колумбия": "Colombia",
+        "Парагвай": "Paraguay",
+        "Перу": "Peru",
+        "Суринам": "Suriname",
+        "Уругвай": "Uruguay",
+        "Фолклендские Острова": "Falkland Islands",
+        "Французская Гвиана": "", //------------------
+        "Чили": "Chile",
     ]
 }

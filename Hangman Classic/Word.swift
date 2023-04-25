@@ -11,18 +11,23 @@ struct Word {
     var word: String
     var difficulty: Difficulty
     
-    enum Difficulty: String, CaseIterable {
-        case easy
-        case medium
-        case hard
-        case impossible
-    }
     
     init(word: String, difficulty: Difficulty) {
         self.word = word
         self.difficulty = difficulty
     }
     
+    
+}
+
+enum Difficulty: String, CaseIterable {
+    case easy
+    case medium
+    case hard
+    case impossible
+}
+
+extension Word {
     static func randomWord(ofDifficulty difficulty: Difficulty) -> Word? {
         let wordArray: [String]
         

@@ -6,6 +6,9 @@
 //
 
 final class DataStore {
+    
+    static let shared = DataStore()
+    
     let easyWords = [
         "автомобиль",
         "банан",
@@ -336,5 +339,6 @@ final class DataStore {
         "Тропосфера",
         "Эквайринг"
     ]
-        
+    
+    private init() {}
 }

@@ -27,25 +27,25 @@ enum Difficulty: String, CaseIterable {
     case impossible
 }
 
-extension Word {
-    static func randomWord(ofDifficulty difficulty: Difficulty) -> Word? {
-        let wordArray: [String]
+//extension Word {
+//    static func randomWord(ofDifficulty difficulty: Difficulty) -> Word? {
+//        let wordArray: [String]
+//
+//        switch difficulty {
+//        case .easy:
+//            wordArray = dataStore.easyWords
+//        case .medium:
+//            wordArray = dataStore.mediumWords
+//        case .hard:
+//            wordArray = dataStore.hardWords
+//        case .impossible:
+//            wordArray = dataStore.impossibleWords
+//        }
         
-        switch difficulty {
-        case .easy:
-            wordArray = dataStore.easyWords
-        case .medium:
-            wordArray = dataStore.mediumWords
-        case .hard:
-            wordArray = dataStore.hardWords
-        case .impossible:
-            wordArray = dataStore.impossibleWords
-        }
+//        guard let randomWord = wordArray.randomElement() else {
+//            return nil
+//        }
         
-        guard let randomWord = wordArray.randomElement() else {
-            return nil
-        }
-        
-        return Word(word: randomWord, difficulty: difficulty)
-    }
-}
+//        return Word(word: randomWord, difficulty: difficulty)
+//    }
+//}

@@ -11,8 +11,6 @@ final class ViewController: UIViewController {
     
     @IBOutlet private var keyBoardButtons: [UIButton]!
     
-    
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
-        
     }
 }

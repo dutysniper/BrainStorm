@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C100FA029F74379001D3662 /* Ext + Alert.swift */; };
+		4CB012EF29F76E4E005508CC /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB012EE29F76E4E005508CC /* FlagViewController.swift */; };
+		4CB012F129F77B72005508CC /* FlagDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB012F029F77B72005508CC /* FlagDataStore.swift */; };
 		4CDEB71F29F70D2B0021932A /* DeveloperListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */; };
 		4CDEB72129F70ED50021932A /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEB72029F70ED50021932A /* Developer.swift */; };
 		9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131601E29F5B28D006CECD7 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		4C100FA029F74379001D3662 /* Ext + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Alert.swift"; sourceTree = "<group>"; };
+		4CB012EE29F76E4E005508CC /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
+		4CB012F029F77B72005508CC /* FlagDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDataStore.swift; sourceTree = "<group>"; };
 		4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperListViewController.swift; sourceTree = "<group>"; };
 		4CDEB72029F70ED50021932A /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		9131601B29F5B28D006CECD7 /* Hangman Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,7 @@
 			children = (
 				9131602229F5B28D006CECD7 /* ViewController.swift */,
 				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
+				4CB012EE29F76E4E005508CC /* FlagViewController.swift */,
 				4C100FA229F74473001D3662 /* Extensions */,
 			);
 			name = ViewControllers;
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9131603A29F70BCC006CECD7 /* DataStore.swift */,
+				4CB012F029F77B72005508CC /* FlagDataStore.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				4CDEB72129F70ED50021932A /* Developer.swift in Sources */,
 				4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */,
 				9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */,
+				4CB012EF29F76E4E005508CC /* FlagViewController.swift in Sources */,
+				4CB012F129F77B72005508CC /* FlagDataStore.swift in Sources */,
 				9131603829F70B4E006CECD7 /* Word.swift in Sources */,
 				9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */,
 				4CDEB71F29F70D2B0021932A /* DeveloperListViewController.swift in Sources */,

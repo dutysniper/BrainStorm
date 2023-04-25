@@ -5,7 +5,10 @@
 //  Created by Константин Натаров on 24.04.2023.
 //
 
-final class DataStore {
+final class HangmanDataStore {
+    
+    static let shared = HangmanDataStore()
+    
     let easyWords = [
         "автомобиль",
         "банан",
@@ -333,7 +336,9 @@ final class DataStore {
         "Штангенциркуль",
         "Чересполосица",
         "Постфактум",
-        "Тропосфера"
+        "Тропосфера",
+        "Эквайринг"
     ]
-        
+    
+    private init() {}
 }

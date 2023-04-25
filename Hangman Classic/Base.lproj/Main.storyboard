@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MathGame-->
+        <scene sceneID="xBE-uR-whp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MathGame" storyboardName="MathGame" referencedIdentifier="MathGame" id="hnq-G2-Eiz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dl7-CV-3TM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="-766"/>
+        </scene>
         <!--Flag View Controller-->
         <scene sceneID="hK7-jS-cG9">
             <objects>
@@ -236,6 +244,15 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Флаги"/>
                                 <connections>
                                     <segue destination="y6q-kp-Aj7" kind="presentation" modalPresentationStyle="fullScreen" id="bo2-zo-Uhe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-J4-CEe">
+                                <rect key="frame" x="184" y="535" width="63" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Math"/>
+                                <connections>
+                                    <segue destination="hnq-G2-Eiz" kind="presentation" modalPresentationStyle="fullScreen" id="MOa-ci-0Aw"/>
                                 </connections>
                             </button>
                         </subviews>

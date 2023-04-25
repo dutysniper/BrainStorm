@@ -64,46 +64,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8ZW-mk-iIC">
-                                <rect key="frame" x="20" y="565.66666666666663" width="390" height="266.66666666666663"/>
+                                <rect key="frame" x="20" y="707.33333333333337" width="390" height="123.33333333333337"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-ZJ-Hnu">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="123.33333333333333"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clN-tg-CUm">
-                                                <rect key="frame" x="0.0" y="0.0" width="185" height="123.33333333333333"/>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="efefe">
-                                                    <backgroundConfiguration key="background" cornerRadius="12" strokeWidth="2" strokeOutset="4">
-                                                        <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="y6q-kp-Aj7" eventType="touchUpInside" id="OvS-K9-VMl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo0-gV-DiD">
-                                                <rect key="frame" x="205" y="0.0" width="185" height="123.33333333333333"/>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="ef">
-                                                    <backgroundConfiguration key="background" cornerRadius="12" strokeWidth="2" strokeOutset="4">
-                                                        <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="y6q-kp-Aj7" eventType="touchUpInside" id="EQ2-Uu-eym"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="clN-tg-CUm" firstAttribute="width" secondItem="clN-tg-CUm" secondAttribute="height" multiplier="3:2" id="mzO-PN-cY5"/>
-                                        </constraints>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PNE-Al-chz">
-                                        <rect key="frame" x="0.0" y="143.33333333333337" width="390" height="123.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="123.33333333333333"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e4-vg-Ie2">
                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="123.33333333333333"/>
@@ -121,6 +85,9 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-Be-on1">
                                                 <rect key="frame" x="205" y="0.0" width="185" height="123.33333333333333"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Jcq-Be-on1" secondAttribute="height" multiplier="3:2" id="THJ-Oc-02S"/>
+                                                </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ef">
@@ -150,7 +117,7 @@
                             <constraint firstItem="dwl-44-QEQ" firstAttribute="trailing" secondItem="VCZ-ff-znS" secondAttribute="trailing" constant="20" id="3s7-Va-5Re"/>
                             <constraint firstAttribute="bottom" secondItem="Rrb-PV-XW1" secondAttribute="bottom" id="C18-Ip-DMw"/>
                             <constraint firstItem="Bo6-AK-euv" firstAttribute="centerY" secondItem="JbT-LR-KOH" secondAttribute="centerY" multiplier="0.4" id="DzN-4z-6jz"/>
-                            <constraint firstItem="8ZW-mk-iIC" firstAttribute="centerY" secondItem="JbT-LR-KOH" secondAttribute="centerY" multiplier="1.5" id="Q2e-OW-Pa3"/>
+                            <constraint firstItem="8ZW-mk-iIC" firstAttribute="centerY" secondItem="JbT-LR-KOH" secondAttribute="centerY" multiplier="1.65" id="Q2e-OW-Pa3"/>
                             <constraint firstItem="dwl-44-QEQ" firstAttribute="trailing" secondItem="HP5-6Z-fXe" secondAttribute="trailing" constant="20" id="XRV-z6-8LA"/>
                             <constraint firstItem="Rrb-PV-XW1" firstAttribute="leading" secondItem="JbT-LR-KOH" secondAttribute="leading" id="YpL-Fg-dBp"/>
                             <constraint firstItem="8ZW-mk-iIC" firstAttribute="leading" secondItem="dwl-44-QEQ" secondAttribute="leading" constant="20" id="fVF-vU-49J"/>
@@ -170,8 +137,6 @@
                         <outlet property="countLabel" destination="HP5-6Z-fXe" id="A32-61-vuR"/>
                         <outletCollection property="buttons" destination="Jcq-Be-on1" collectionClass="NSMutableArray" id="mb6-a4-nHg"/>
                         <outletCollection property="buttons" destination="8e4-vg-Ie2" collectionClass="NSMutableArray" id="9iB-Hr-1Pg"/>
-                        <outletCollection property="buttons" destination="clN-tg-CUm" collectionClass="NSMutableArray" id="9Ah-ez-ODd"/>
-                        <outletCollection property="buttons" destination="Mo0-gV-DiD" collectionClass="NSMutableArray" id="L3W-RE-F7J"/>
                         <outletCollection property="liveImages" destination="RoC-P5-vvu" collectionClass="NSMutableArray" id="D0Q-hA-XHC"/>
                         <outletCollection property="liveImages" destination="9kK-HQ-B7s" collectionClass="NSMutableArray" id="gnf-ig-P7S"/>
                         <outletCollection property="liveImages" destination="Hr8-Go-8R6" collectionClass="NSMutableArray" id="e7d-oX-8kU"/>

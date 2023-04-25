@@ -49,7 +49,7 @@ final class FlagViewController: UIViewController {
         countLabel.text = "\(count)"
 
         buttons.forEach { button in
-            let randomElement = flags.values.randomElement()!
+            let randomElement = flags.values.randomElement()!.lowercased()
             
             button.configuration?.background.image = UIImage(named: randomElement)
             
@@ -61,7 +61,7 @@ final class FlagViewController: UIViewController {
         currentButton = buttons.randomElement()!
         
         currentButton.configuration?.background.image = UIImage(
-            named: flags[counrtyLabel.text!]!
+            named: flags[counrtyLabel.text!]!.lowercased()
         )
         currentButton.setTitle(flags[counrtyLabel.text!]!, for: .normal)
         

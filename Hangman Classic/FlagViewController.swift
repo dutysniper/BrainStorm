@@ -9,7 +9,7 @@ import UIKit
 
 final class FlagViewController: UIViewController {
     
-    let flags = FlagDataStore().flagsAndCourties
+    let flags = FlagDataStore.shared
     
     var count = 0
     var currentButton = UIButton()
@@ -31,7 +31,8 @@ final class FlagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView.progress = progress
-        refreshTask()
+//        refreshTask()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -57,32 +58,30 @@ final class FlagViewController: UIViewController {
             progress = 0
             progressView.setProgress(progress, animated: true)
         }
-        refreshTask()
+//        refreshTask()
     }
     
     
-    private func refreshTask() {
-        countLabel.text = "\(count)"
-
-        buttons.forEach { button in
-            let randomElement = flags.values.randomElement()!.lowercased()
-            
-            button.configuration?.background.image = UIImage(named: randomElement)
-            
-            button.setTitle(randomElement, for: .normal)
-        }
-        
-        counrtyLabel.text = flags.keys.randomElement()
-            
-        currentButton = buttons.randomElement()!
-        
-        currentButton.configuration?.background.image = UIImage(
-            named: flags[counrtyLabel.text!]!.lowercased()
-        )
-        currentButton.setTitle(flags[counrtyLabel.text!]!, for: .normal)
-        
-
-        
-       
-    }
+//    private func refreshTask() {
+//        countLabel.text = "\(count)"
+//
+//        buttons.forEach { button in
+//            let randomElement = flags.values.randomElement()!.lowercased()
+//
+//            button.configuration?.background.image = UIImage(named: randomElement)
+//
+//            button.setTitle(randomElement, for: .normal)
+//        }
+//
+//        counrtyLabel.text = flags.keys.randomElement()
+//
+//        currentButton = buttons.randomElement()!
+//
+//        currentButton.configuration?.background.image = UIImage(
+//            named: flags[counrtyLabel.text!]!.lowercased()
+//        )
+//        currentButton.setTitle(flags[counrtyLabel.text!]!, for: .normal)
+//
+//    }
+    
 }

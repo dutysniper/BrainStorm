@@ -4,86 +4,75 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Math View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="MathGame" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MathGame" id="Y6W-OH-hqX" customClass="MathViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-jW-tjP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-jW-tjP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-4y-nJj">
-                                <rect key="frame" x="85" y="68" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="0.30111079800000001" green="0.1184388915" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </progressView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="3tm-3t-mZp">
-                                <rect key="frame" x="16" y="436" width="288" height="112"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-TW-5uh">
+                                <rect key="frame" x="16" y="44" width="288" height="54"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="rZ7-sP-ptx">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-4y-nJj">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="4"/>
+                                        <color key="progressTintColor" red="0.30111079800000001" green="0.1184388915" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </progressView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-lB-zIP">
+                                        <rect key="frame" x="0.0" y="25" width="288" height="29"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-xz-Iv7">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="2">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-K5-uje">
-                                                <rect key="frame" x="160" y="0.0" width="128" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="2">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="v2f-0q-Qb6">
-                                        <rect key="frame" x="0.0" y="72" width="288" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vN-nJ-C7J">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="2">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlE-vF-ix8">
-                                                <rect key="frame" x="160" y="0.0" width="128" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="2">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eC1-Sc-nYg">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="29"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FxV-iJ-SFt">
+                                                        <rect key="frame" x="0.0" y="-3" width="26" height="35"/>
+                                                        <imageReference key="image" image="timer" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                            <hierarchicalColors>
+                                                                <color systemColor="labelColor"/>
+                                                                <color systemColor="labelColor"/>
+                                                                <color systemColor="tertiaryLabelColor"/>
+                                                            </hierarchicalColors>
+                                                        </imageReference>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOx-qF-m5O">
+                                                        <rect key="frame" x="34" y="0.0" width="26" height="29"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-c2-G6M">
+                                                <rect key="frame" x="240" y="0.0" width="48" height="29"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJH-jF-szb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="29"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U8L-Og-dTW">
+                                                        <rect key="frame" x="23" y="-4" width="25" height="37"/>
+                                                        <imageReference key="image" image="medal" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                            <hierarchicalColors>
+                                                                <color systemColor="labelColor"/>
+                                                                <color systemColor="labelColor"/>
+                                                                <color systemColor="tertiaryLabelColor"/>
+                                                            </hierarchicalColors>
+                                                        </imageReference>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -95,27 +84,124 @@
                                 <state key="normal" title="Старт">
                                     <color key="titleColor" red="0.30111079800000001" green="0.1184388915" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="startPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eZC-Tp-BJa"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3tm-3t-mZp">
+                                <rect key="frame" x="16" y="420.5" width="288" height="96"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rZ7-sP-ptx">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-xz-Iv7">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="2">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="auD-xA-eQT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-K5-uje">
+                                                <rect key="frame" x="152" y="0.0" width="136" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="2">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xdU-TK-4h1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v2f-0q-Qb6">
+                                        <rect key="frame" x="0.0" y="56" width="288" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vN-nJ-C7J">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="2">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lyv-8w-LhI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlE-vF-ix8">
+                                                <rect key="frame" x="152" y="0.0" width="136" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="2">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UnM-G2-L2k"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 12 = ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhj-To-pFA">
+                                <rect key="frame" x="94.5" y="265" width="131.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3tm-3t-mZp" secondAttribute="trailing" constant="16" id="5UJ-aN-paC"/>
                             <constraint firstAttribute="bottom" secondItem="zMq-jW-tjP" secondAttribute="bottom" id="6WZ-9z-Jaj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eUY-TW-5uh" secondAttribute="trailing" constant="16" id="8DH-P4-GvJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PAI-82-3or" secondAttribute="bottom" constant="164" id="AO7-gr-Nxe"/>
+                            <constraint firstItem="bhj-To-pFA" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="BG7-bo-hzB"/>
                             <constraint firstItem="PAI-82-3or" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Eh3-X8-E5N"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3tm-3t-mZp" secondAttribute="bottom" constant="20" id="EpY-VL-ET2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3tm-3t-mZp" secondAttribute="bottom" multiplier="1.1" id="EpY-VL-ET2"/>
+                            <constraint firstItem="eUY-TW-5uh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="N9f-uS-ZBk"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NyI-2F-fPR"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="TRX-VU-Dn6"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Umz-hf-XQC"/>
+                            <constraint firstItem="eUY-TW-5uh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="kjf-Mw-saQ"/>
+                            <constraint firstItem="bhj-To-pFA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ovL-k5-ARo"/>
                             <constraint firstItem="3tm-3t-mZp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uUg-d6-WrO"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="PAI-82-3or"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="expressionLabel" destination="bhj-To-pFA" id="b7U-dO-2Yd"/>
+                        <outlet property="progressView" destination="lXk-4y-nJj" id="zt5-CE-d77"/>
+                        <outlet property="scoreLabel" destination="EJH-jF-szb" id="ayf-M0-DBu"/>
+                        <outlet property="startButton" destination="PAI-82-3or" id="J4U-sK-T7V"/>
+                        <outlet property="timerLabel" destination="vOx-qF-m5O" id="LtP-co-iD7"/>
+                        <outletCollection property="stackViews" destination="eUY-TW-5uh" collectionClass="NSMutableArray" id="l59-Un-LVs"/>
+                        <outletCollection property="stackViews" destination="3tm-3t-mZp" collectionClass="NSMutableArray" id="OPb-Et-JzN"/>
+                        <outletCollection property="answerButtons" destination="5Wu-xz-Iv7" collectionClass="NSMutableArray" id="wPm-ro-u4q"/>
+                        <outletCollection property="answerButtons" destination="Qmt-K5-uje" collectionClass="NSMutableArray" id="1LY-UO-aft"/>
+                        <outletCollection property="answerButtons" destination="4vN-nJ-C7J" collectionClass="NSMutableArray" id="Vcl-Ao-2Wy"/>
+                        <outletCollection property="answerButtons" destination="PlE-vF-ix8" collectionClass="NSMutableArray" id="Eyj-PB-r1e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,8 +210,16 @@
     </scenes>
     <resources>
         <image name="mathBackground" width="2000" height="1333"/>
+        <image name="medal" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

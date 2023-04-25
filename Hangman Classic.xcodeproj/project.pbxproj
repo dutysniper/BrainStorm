@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07FC0C9729F83B3300251DFB /* MathGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FC0C9629F83B3300251DFB /* MathGame.storyboard */; };
-		07FE5A4F29F869F100FE9A46 /* MathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE5A4E29F869F100FE9A46 /* MathViewController.swift */; };
-		07FE5A5129F869FB00FE9A46 /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE5A5029F869FB00FE9A46 /* MathExpression.swift */; };
 		4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C100FA029F74379001D3662 /* Ext + Alert.swift */; };
 		4CB012EF29F76E4E005508CC /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB012EE29F76E4E005508CC /* FlagViewController.swift */; };
 		4CB012F129F77B72005508CC /* FlagDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB012F029F77B72005508CC /* FlagDataStore.swift */; };
@@ -26,8 +24,6 @@
 
 /* Begin PBXFileReference section */
 		07FC0C9629F83B3300251DFB /* MathGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MathGame.storyboard; sourceTree = "<group>"; };
-		07FE5A4E29F869F100FE9A46 /* MathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathViewController.swift; path = ../../../../Desktop/MathViewController.swift; sourceTree = "<group>"; };
-		07FE5A5029F869FB00FE9A46 /* MathExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathExpression.swift; path = ../../../../Desktop/MathExpression.swift; sourceTree = "<group>"; };
 		4C100FA029F74379001D3662 /* Ext + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Alert.swift"; sourceTree = "<group>"; };
 		4CB012EE29F76E4E005508CC /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
 		4CB012F029F77B72005508CC /* FlagDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDataStore.swift; sourceTree = "<group>"; };
@@ -109,7 +105,6 @@
 				9131602229F5B28D006CECD7 /* ViewController.swift */,
 				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
 				4CB012EE29F76E4E005508CC /* FlagViewController.swift */,
-				07FE5A4E29F869F100FE9A46 /* MathViewController.swift */,
 				4C100FA229F74473001D3662 /* Extensions */,
 			);
 			name = ViewControllers;
@@ -138,7 +133,6 @@
 			children = (
 				4CDEB72029F70ED50021932A /* Developer.swift */,
 				9131603729F70B4E006CECD7 /* Word.swift */,
-				07FE5A5029F869FB00FE9A46 /* MathExpression.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -224,14 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07FE5A5129F869FB00FE9A46 /* MathExpression.swift in Sources */,
 				9131602329F5B28D006CECD7 /* ViewController.swift in Sources */,
 				4CDEB72129F70ED50021932A /* Developer.swift in Sources */,
 				4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */,
 				9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */,
 				4CB012EF29F76E4E005508CC /* FlagViewController.swift in Sources */,
 				4CB012F129F77B72005508CC /* FlagDataStore.swift in Sources */,
-				07FE5A4F29F869F100FE9A46 /* MathViewController.swift in Sources */,
 				9131603829F70B4E006CECD7 /* Word.swift in Sources */,
 				9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */,
 				4CDEB71F29F70D2B0021932A /* DeveloperListViewController.swift in Sources */,

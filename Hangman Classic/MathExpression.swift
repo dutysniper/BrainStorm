@@ -23,7 +23,7 @@ struct Expression {
         "\(firstNumber) \(operationType.rawValue) \(secondNumber) = ?"
     }
     
-    static func getRandomExpression() -> Expression {
+    static func getRandomExpression(withDifficulty difficulty: Int) -> Expression {
         var firstNumber = 0
         var secondNumber = 0
         let operationTypes: [OperationType] = [
@@ -36,20 +36,33 @@ struct Expression {
         
         switch operationType {
         case .addition:
-            firstNumber = Int.random(in: 0...20)
-            secondNumber = Int.random(in: 0...20)
+            firstNumber = Int.random(in: 1 * difficulty...40 * difficulty)
+            secondNumber = Int.random(in: 1 * difficulty...40 * difficulty)
         case .subtraction:
-            firstNumber = Int.random(in: 0...20)
-            secondNumber = Int.random(in: 0...20)
+            firstNumber = Int.random(in: 1 * difficulty...40 * difficulty)
+            secondNumber = Int.random(in: 1 * difficulty...40 * difficulty)
         case .multiplication:
-            firstNumber = Int.random(in: 0...20)
-            secondNumber = Int.random(in: 0...10)
+            firstNumber = Int.random(in: 1 * difficulty...5 * difficulty)
+            secondNumber = Int.random(in: 1 * difficulty...5 * difficulty)
         case .division:
-            firstNumber = Int.random(in: 1...100)
-            secondNumber = Int.random(in: 1...100)
-            while firstNumber % secondNumber != 0 {
-                secondNumber = Int.random(in: 1...100)
+            firstNumber = Int.random(in: 1 * difficulty...50 * difficulty)
+            secondNumber = Int.random(in: 1 * difficulty...10 * difficulty)
+            while isPrimeNumber(number: firstNumber) || firstNumber < 8 {
+                firstNumber = Int.random(in: 1 * difficulty...50 * difficulty)
+                print("1while")
+                print(firstNumber)
             }
+            while firstNumber % secondNumber != 0 || secondNumber == 1 || firstNumber == secondNumber {
+                secondNumber = Int.random(in: 1...firstNumber)
+                print("2while")
+                print(firstNumber)
+                print(secondNumber)
+            }
+            print("DIVISION \(firstNumber) \(secondNumber)")
+        }
+        
+        func isPrimeNumber(number: Int) -> Bool {
+            number % 2 == 0 || number % 3 == 0 || number % 5 == 0 || number % 7 == 0 ? false : true
         }
         
         return Expression(

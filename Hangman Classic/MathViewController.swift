@@ -14,9 +14,10 @@ class MathViewController: UIViewController {
     @IBOutlet var answerButtons: [UIButton]!
     @IBOutlet var stackViews: [UIStackView]!
     
-    @IBOutlet var progressView: UIProgressView!
-    @IBOutlet var expressionLabel: UILabel!
     @IBOutlet var startButton: UIButton!
+    @IBOutlet var gameNameLabel: UILabel!
+    @IBOutlet var expressionLabel: UILabel!
+    @IBOutlet var progressView: UIProgressView!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
     
@@ -53,10 +54,6 @@ class MathViewController: UIViewController {
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        print("Difficulty \(expressionDifficulty)")
-        print("Score \(score)")
-        print(timerLabel.text ?? "")
-        print(expression.expression)
         if sender.tag == correctButton {
             setExpression()
             progress = 1000
@@ -75,6 +72,7 @@ class MathViewController: UIViewController {
         }
         expressionLabel.isHidden = boolean
         startButton.isHidden = !boolean
+        gameNameLabel.isHidden = !boolean
         progress = 1000
         score = 0
         expressionDifficulty = 1

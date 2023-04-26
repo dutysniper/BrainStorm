@@ -78,8 +78,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-82-3or">
-                                <rect key="frame" x="126" y="359" width="68" height="45"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <rect key="frame" x="124" y="364" width="72" height="40"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Старт">
                                     <color key="titleColor" red="0.30111079800000001" green="0.1184388915" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -169,6 +169,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Math" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzl-oH-VPT">
+                                <rect key="frame" x="89.5" y="154.5" width="141.5" height="35"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
+                                <color key="textColor" red="0.30111079800000001" green="0.1184388915" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -182,15 +188,18 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3tm-3t-mZp" secondAttribute="bottom" multiplier="1.1" id="EpY-VL-ET2"/>
                             <constraint firstItem="eUY-TW-5uh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="N9f-uS-ZBk"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NyI-2F-fPR"/>
+                            <constraint firstItem="pzl-oH-VPT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PiM-y9-knS"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="TRX-VU-Dn6"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Umz-hf-XQC"/>
                             <constraint firstItem="eUY-TW-5uh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="kjf-Mw-saQ"/>
                             <constraint firstItem="bhj-To-pFA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ovL-k5-ARo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pzl-oH-VPT" secondAttribute="bottom" multiplier="3" id="sO5-Gt-Baf"/>
                             <constraint firstItem="3tm-3t-mZp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uUg-d6-WrO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="expressionLabel" destination="bhj-To-pFA" id="b7U-dO-2Yd"/>
+                        <outlet property="gameNameLabel" destination="pzl-oH-VPT" id="iV2-eK-7BL"/>
                         <outlet property="progressView" destination="lXk-4y-nJj" id="zt5-CE-d77"/>
                         <outlet property="scoreLabel" destination="EJH-jF-szb" id="ayf-M0-DBu"/>
                         <outlet property="startButton" destination="PAI-82-3or" id="J4U-sK-T7V"/>

@@ -17,7 +17,7 @@ final class DeveloperListViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = view.frame.height / 10
     }
-
+    
     // MARK: - Table View Data Source
     override func numberOfSections(in tableView: UITableView) -> Int {
         developers.count

@@ -17,31 +17,56 @@ final class HangmanViewController: UIViewController {
     var word: Word!
     var numberOfErrors = 0
     var correctLetters = [String]()
+    var secretWord = "" {
+        didSet {
+            secretWordLabel.text = secretWord.map { String($0) }.joined(separator: " ")
+        }
+    }
+    var isWordComplete: Bool {
+        !secretWord.contains("_")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(word.word)
-        secretWordLabel.text = word.word
+        secretWord = word.word.map { _ in "_" }.joined()
+//        secretWordLabel.text = word.word.map { _ in "_" }.joined()
         difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
         startGame()
     }
     
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
-        let letter = sender.titleLabel?.text ?? " "
+        let letter = sender.titleLabel?.text?.lowercased() ?? " "
         print(letter)
-        if word.word.contains(letter.lowercased()) {
-            correctLetters.append(letter)
-            manageCorrectGuess()
-        } else {
-            manageIncorrectGuess()
+        if word.word.contains(letter) {
+            setCorrectLetter(letter: letter)
         }
+//        if word.word.contains(letter.lowercased()) {
+//            correctLetters.append(letter)
+//            manageCorrectGuess()
+//        } else {
+//            manageIncorrectGuess()
+//        }
     }
 }
 extension HangmanViewController {
     private func startGame() {
-        secretWordLabel.text = String(repeating: "_ ", count: word.word.count).trimmingCharacters(in: .whitespaces)
+//        secretWordLabel.text = String(repeating: "_ ", count: word.word.count).trimmingCharacters(in: .whitespaces)
         numberOfErrors = 0
         correctLetters = [String]()
+    }
+    
+    private func setCorrectLetter(letter: String) {
+        var _word = ""
+        for i in zip(word.word, secretWord) {
+            if String(i.0) == letter && String(i.1) == "_" {
+                _word += letter
+            } else {
+                _word += String(i.1)
+            }
+        }
+        secretWord = _word
+        
     }
     
     private func manageCorrectGuess() {

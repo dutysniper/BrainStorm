@@ -55,7 +55,7 @@ class MathViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         print("Difficulty \(expressionDifficulty)")
         print("Score \(score)")
-        print("\(timerLabel.text)")
+        print(\(timerLabel.text))
         print(expression.expression)
         if sender.tag == correctButton {
             setExpression()

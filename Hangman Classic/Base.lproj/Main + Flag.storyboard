@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zci-eK-BA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="-400"/>
+            <point key="canvasLocation" x="1508" y="-352"/>
         </scene>
         <!--Hangman-->
         <scene sceneID="Sgl-Hp-OgS">
@@ -253,7 +253,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Флаги"/>
                                 <connections>
-                                    <segue destination="y6q-kp-Aj7" kind="presentation" modalPresentationStyle="fullScreen" id="bo2-zo-Uhe"/>
+                                    <segue destination="y6q-kp-Aj7" kind="presentation" modalPresentationStyle="fullScreen" id="6B0-dr-KR2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-J4-CEe">

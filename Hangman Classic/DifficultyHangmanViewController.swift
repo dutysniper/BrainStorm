@@ -9,9 +9,10 @@ import UIKit
 
 final class DifficultyHangmanViewController: UIViewController {
     
+    var gameDescription: GameDescription!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

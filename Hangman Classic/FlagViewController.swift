@@ -9,7 +9,7 @@ import UIKit
 
 final class FlagViewController: UIViewController {
     
-    let flags = FlagModel.getCountires()
+    let flags = CountryFlag.getCountires()
     
     var count = 0
     var currentButton = UIButton()

@@ -5,7 +5,7 @@
 //  Created by M I C H A E L on 26.04.2023.
 //
 
-enum Continent: String {
+enum Place: String {
     case asia = "Азия"
     case africa = "Африка"
     case nearEast = "Ближний Восток"
@@ -18,32 +18,26 @@ enum Continent: String {
 }
 
 struct FlagModel {
-    let continent: Continent
-    let countries: [String: String]
-
-//    let caribbeanCounties: [String: String]
-//    let oceaniaCounties: [String: String]
-//    let northAmericaCounties: [String: String]
-//    let centralAmericaCounties: [String: String]
-//    let southAmericaCountires: [String: String]
-//
-    //    var allCountries: [String: String]
-    
-}
-
-struct Countries {
+    let place: Place
     let countries: [String: String]
 }
 
 extension FlagModel {
-    static func getFlagsAndCountires() -> [FlagModel] {
+    static func getCountires() -> [FlagModel] {
         let data = FlagDataStore.shared
         
         return [
-            FlagModel(continent: .asia, countries: data.asia),
-            FlagModel(continent: .africa, countries: data.africa),
-            FlagModel(continent: .nearEast, countries: data.nearEast),
-            FlagModel(continent: .europe, countries: data.europe)
+            FlagModel(place: .asia, countries: data.asia),
+            FlagModel(place: .africa, countries: data.africa),
+            FlagModel(place: .nearEast, countries: data.nearEast),
+            FlagModel(place: .europe, countries: data.europe),
+            FlagModel(place: .caribbean, countries: data.caribbean),
+            FlagModel(place: .oceania, countries: data.oceania),
+            FlagModel(place: .northAmerica, countries: data.northAmerica),
+            FlagModel(place: .centralAmerica, countries: data.centralAmerica),
+            FlagModel(place: .southAmerica, countries: data.southAmerica)
         ]
     }
 }
+
+//allCountries.merge(countries.countries, uniquingKeysWith: { $1 })

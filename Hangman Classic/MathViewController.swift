@@ -113,7 +113,7 @@ class MathViewController: UIViewController {
     
     private func stopTheGame(withMessage title: String) {
         timer.invalidate()
-        let ac = UIAlertController(title: title, message: "Ваш результат: \(score)", preferredStyle: .alert)
+        let ac = UIAlertController(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.setupGameScreen(withStartButton: true)
         }

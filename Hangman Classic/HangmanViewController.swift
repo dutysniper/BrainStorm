@@ -3,7 +3,7 @@
 //  Hangman Classic
 //
 //  Created by Константин Натаров on 23.04.2023.
-//
+//start create suicide logic
 
 import UIKit
 

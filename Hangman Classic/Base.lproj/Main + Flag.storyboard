@@ -256,9 +256,8 @@
                                     <segue destination="y6q-kp-Aj7" kind="presentation" modalPresentationStyle="fullScreen" id="bo2-zo-Uhe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-J4-CEe">
-                                <rect key="frame" x="184" y="535" width="63" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-J4-CEe">
+                                <rect key="frame" x="183.66666666666666" y="535" width="63" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Math"/>
                                 <connections>
@@ -272,6 +271,8 @@
                             <constraint firstItem="ceJ-li-VWV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1LH-Ue-KKj"/>
                             <constraint firstItem="ceJ-li-VWV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5nC-jU-caz"/>
                             <constraint firstItem="ceJ-li-VWV" firstAttribute="top" secondItem="fYD-aP-brc" secondAttribute="bottom" constant="50" id="IFQ-EY-ucg"/>
+                            <constraint firstItem="l6t-J4-CEe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z04-Iu-7fG"/>
+                            <constraint firstItem="l6t-J4-CEe" firstAttribute="top" secondItem="ceJ-li-VWV" secondAttribute="bottom" constant="52" id="lTn-mw-m5O"/>
                             <constraint firstItem="ceJ-li-VWV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qES-hm-HbC"/>
                             <constraint firstItem="fYD-aP-brc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPE-sf-LjC"/>
                         </constraints>

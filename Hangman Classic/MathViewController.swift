@@ -59,7 +59,6 @@ class MathViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         if sender.tag == correctButton {
             setExpression()
-//            progressView.setProgress(1, animated: true)
             progress = 1000
             score += 1
             sender.tintColor = .green

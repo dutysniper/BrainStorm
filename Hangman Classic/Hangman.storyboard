@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Difficulty Hangman View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Hangman" id="Y6W-OH-hqX" customClass="DifficultyHangmanViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-rh-e0g">
+                                <rect key="frame" x="143.66666666666666" y="308" width="106" height="236.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjx-eq-hFo">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Easy" cornerStyle="large">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.23333750810000001" green="0.25941097200000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="difficultyButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8hx-7H-h41"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktV-YB-dyr">
+                                        <rect key="frame" x="0.0" y="67.333333333333314" width="106" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Medium" cornerStyle="large">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.23333750810000001" green="0.25941097200000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="difficultyButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WTb-aN-6lV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymy-c3-9Lw">
+                                        <rect key="frame" x="0.0" y="134.66666666666669" width="106" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Hard" cornerStyle="large">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.23333750810000001" green="0.25941097200000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="difficultyButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gYU-am-Mzn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVF-if-YQK">
+                                        <rect key="frame" x="0.0" y="202" width="106" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Impossible" cornerStyle="large">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.23333750810000001" green="0.25941097200000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="difficultyButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ij1-0K-wAc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cww-6h-owv">
+                                <rect key="frame" x="110" y="230.66666666666666" width="173" height="31.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdA-nL-mZB">
+                                <rect key="frame" x="44" y="79" width="305.33333333333331" height="50.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cww-6h-owv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1kA-Ic-TGz"/>
+                            <constraint firstItem="3VH-rh-e0g" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="2yj-vZ-LRM"/>
+                            <constraint firstItem="zdA-nL-mZB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4cd-Gn-Vcz"/>
+                            <constraint firstItem="zdA-nL-mZB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="6Da-c6-X38"/>
+                            <constraint firstItem="3VH-rh-e0g" firstAttribute="top" secondItem="cww-6h-owv" secondAttribute="bottom" constant="46" id="JNy-zd-0aY"/>
+                            <constraint firstItem="3VH-rh-e0g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ybW-UH-Sk0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ATJ-FO-Sqw" kind="presentation" identifier="showHangmanVC" modalPresentationStyle="fullScreen" id="dSY-IH-Bw6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53" y="4"/>
+        </scene>
+        <!--Hangman View Controller-->
+        <scene sceneID="Ces-Ou-lnK">
+            <objects>
+                <viewController storyboardIdentifier="HangmanViewController" id="ATJ-FO-Sqw" customClass="HangmanViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fEY-uU-3Xg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ik7-CR-FDx">
+                                <rect key="frame" x="16" y="632" width="361" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-f9-o5a">
+                                        <rect key="frame" x="38.666666666666657" y="0.0" width="284" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWb-Cg-Ro1">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aWb-Cg-Ro1" secondAttribute="height" multiplier="1:1" id="GCz-av-PZ1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="А">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="6Jb-3d-1tH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPb-TF-Ndc">
+                                                <rect key="frame" x="42.000000000000007" y="0.0" width="31.999999999999993" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Б">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="Pqj-TK-ZoY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BO-Vl-asY">
+                                                <rect key="frame" x="84" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="В">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="jhS-63-HGb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWW-nP-dg7">
+                                                <rect key="frame" x="126" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Г">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="t5x-wZ-T5f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neu-Qi-Ibb">
+                                                <rect key="frame" x="168" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Д">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="o7E-f6-jD2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-LV-txR">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Е">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="TsZ-is-b7N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFf-y6-cfD">
+                                                <rect key="frame" x="252" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ё">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="3OA-UL-Wkf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kuv-qs-iQl">
+                                        <rect key="frame" x="38.666666666666657" y="42" width="284" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKz-hr-4XI">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DKz-hr-4XI" secondAttribute="height" multiplier="1:1" id="RAq-9X-EvY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ж">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="CRe-bT-ONR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58e-LA-8c9">
+                                                <rect key="frame" x="42.000000000000007" y="0.0" width="31.999999999999993" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="З">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="VC9-my-SVF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX5-Uz-nSf">
+                                                <rect key="frame" x="84" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="И">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="I9W-eg-jdB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXg-b8-rva">
+                                                <rect key="frame" x="126" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Й">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="plT-n9-S51"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-jx-5L8">
+                                                <rect key="frame" x="168" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="К">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="oI8-eS-VYD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-PM-Ky5">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Л">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="L26-dg-ZTt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD2-9A-Hig">
+                                                <rect key="frame" x="252" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="М">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="aSr-b4-WsI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MuW-45-KIj">
+                                        <rect key="frame" x="38.666666666666657" y="84" width="284" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-gd-WBd">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="o3G-gd-WBd" secondAttribute="height" multiplier="1:1" id="LoH-wp-mRq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Н">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="aAm-FG-je3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D90-dj-NDH">
+                                                <rect key="frame" x="42.000000000000007" y="0.0" width="31.999999999999993" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="О">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="Hh4-kI-mXs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKb-T7-xpH">
+                                                <rect key="frame" x="84" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="П">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="Qxt-fl-kt2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-Kc-psV">
+                                                <rect key="frame" x="126" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Р">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="lMQ-nN-54b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4s-q6-guo">
+                                                <rect key="frame" x="168" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="С">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="T4y-jQ-dFW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8t-9w-x0t">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Т">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="bDV-JZ-aed"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1he-J8-sbk">
+                                                <rect key="frame" x="252" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="У">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="yh1-Fk-KrA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G67-Mw-L1f">
+                                        <rect key="frame" x="38.666666666666657" y="126" width="284" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGq-WU-ih8">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZGq-WU-ih8" secondAttribute="height" multiplier="1:1" id="8f2-4I-yQx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ф">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="1p6-HJ-DLB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-qY-pXU">
+                                                <rect key="frame" x="42.000000000000007" y="0.0" width="31.999999999999993" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Х">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="gJS-5f-baK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-n7-NIR">
+                                                <rect key="frame" x="84" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ц">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="6NH-DE-4hH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4M-3q-lx2">
+                                                <rect key="frame" x="126" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ч">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="fPm-4z-Vqy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-uL-upC">
+                                                <rect key="frame" x="168" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ш">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="AvB-Uv-b6N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrp-NO-r74">
+                                                <rect key="frame" x="210.00000000000003" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Щ">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="F15-Zp-gpN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-ej-cie">
+                                                <rect key="frame" x="252" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ъ">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="KNc-Fa-cho"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-0s-Ubh">
+                                        <rect key="frame" x="80.666666666666686" y="168" width="200" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-Ek-X7c">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XfY-Ek-X7c" secondAttribute="height" multiplier="1:1" id="1Qu-Im-EyJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ы">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="7P3-82-2Tu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXX-LC-3oz">
+                                                <rect key="frame" x="41.999999999999986" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ь">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="hDa-R1-Hd1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1K5-pm-a3y">
+                                                <rect key="frame" x="83.999999999999986" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Э">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="PTE-9d-8to"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-Bb-tV0">
+                                                <rect key="frame" x="126" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ю">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="XGO-og-KSM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqR-ae-7t5">
+                                                <rect key="frame" x="168" y="0.0" width="32" height="32"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Я">
+                                                    <color key="titleColor" red="0.24314179080000001" green="0.24314179080000001" blue="0.24314179080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyBoardButtonPressed:" destination="ATJ-FO-Sqw" eventType="touchUpInside" id="lQf-TL-G3C"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTR-uH-8Zc">
+                                <rect key="frame" x="20" y="621" width="353" height="1"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="rEh-xV-O14"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7kq-it-A0a">
+                                <rect key="frame" x="158.66666666666666" y="441.33333333333331" width="75.666666666666657" height="39.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сложность:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc2-WV-Z87">
+                                <rect key="frame" x="20.000000000000007" y="592.33333333333337" width="122.66666666666669" height="27.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aEY-ZB-4r6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nTR-uH-8Zc" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="20" id="4Su-MW-Xhe"/>
+                            <constraint firstItem="Kc2-WV-Z87" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="20" id="703-Bc-Q1v"/>
+                            <constraint firstItem="ik7-CR-FDx" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="16" id="RDM-xk-8WF"/>
+                            <constraint firstItem="aEY-ZB-4r6" firstAttribute="trailing" secondItem="ik7-CR-FDx" secondAttribute="trailing" constant="16" id="Tk6-U3-edq"/>
+                            <constraint firstItem="aEY-ZB-4r6" firstAttribute="bottom" secondItem="ik7-CR-FDx" secondAttribute="bottom" constant="20" id="aWn-RK-Jyc"/>
+                            <constraint firstItem="7kq-it-A0a" firstAttribute="centerX" secondItem="fEY-uU-3Xg" secondAttribute="centerX" id="aoA-XC-3Ed"/>
+                            <constraint firstItem="ik7-CR-FDx" firstAttribute="top" secondItem="nTR-uH-8Zc" secondAttribute="bottom" constant="10" id="dFQ-fc-TQ6"/>
+                            <constraint firstItem="aEY-ZB-4r6" firstAttribute="trailing" secondItem="nTR-uH-8Zc" secondAttribute="trailing" constant="20" id="pLp-oU-oEU"/>
+                            <constraint firstItem="nTR-uH-8Zc" firstAttribute="top" secondItem="7kq-it-A0a" secondAttribute="bottom" constant="140" id="ybK-qH-k75"/>
+                            <constraint firstItem="nTR-uH-8Zc" firstAttribute="top" secondItem="Kc2-WV-Z87" secondAttribute="bottom" constant="1" id="yge-Nf-lWw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ee1-KQ-4MZ"/>
+                    <connections>
+                        <outlet property="difficultyLabel" destination="Kc2-WV-Z87" id="Inc-TU-X80"/>
+                        <outlet property="secretWordLabel" destination="7kq-it-A0a" id="L0q-Fb-JdT"/>
+                        <outletCollection property="keyBoardButtons" destination="aWb-Cg-Ro1" collectionClass="NSMutableArray" id="52d-bd-bm8"/>
+                        <outletCollection property="keyBoardButtons" destination="IPb-TF-Ndc" collectionClass="NSMutableArray" id="dyM-z8-K6Z"/>
+                        <outletCollection property="keyBoardButtons" destination="4BO-Vl-asY" collectionClass="NSMutableArray" id="t7F-CR-kT3"/>
+                        <outletCollection property="keyBoardButtons" destination="uWW-nP-dg7" collectionClass="NSMutableArray" id="kmf-T8-T9s"/>
+                        <outletCollection property="keyBoardButtons" destination="Neu-Qi-Ibb" collectionClass="NSMutableArray" id="gox-2Y-awm"/>
+                        <outletCollection property="keyBoardButtons" destination="l6f-LV-txR" collectionClass="NSMutableArray" id="FZ5-yy-Qqx"/>
+                        <outletCollection property="keyBoardButtons" destination="cFf-y6-cfD" collectionClass="NSMutableArray" id="mrb-rw-H4t"/>
+                        <outletCollection property="keyBoardButtons" destination="DKz-hr-4XI" collectionClass="NSMutableArray" id="LrR-YC-FBh"/>
+                        <outletCollection property="keyBoardButtons" destination="58e-LA-8c9" collectionClass="NSMutableArray" id="OIZ-Ak-EaG"/>
+                        <outletCollection property="keyBoardButtons" destination="zX5-Uz-nSf" collectionClass="NSMutableArray" id="gCL-BR-NOj"/>
+                        <outletCollection property="keyBoardButtons" destination="EXg-b8-rva" collectionClass="NSMutableArray" id="O1Y-5k-7AA"/>
+                        <outletCollection property="keyBoardButtons" destination="yjf-jx-5L8" collectionClass="NSMutableArray" id="rUr-0C-tXB"/>
+                        <outletCollection property="keyBoardButtons" destination="pmD-PM-Ky5" collectionClass="NSMutableArray" id="3wq-jG-Zwc"/>
+                        <outletCollection property="keyBoardButtons" destination="uD2-9A-Hig" collectionClass="NSMutableArray" id="XWR-ng-mWB"/>
+                        <outletCollection property="keyBoardButtons" destination="o3G-gd-WBd" collectionClass="NSMutableArray" id="6Vt-JZ-NNo"/>
+                        <outletCollection property="keyBoardButtons" destination="D90-dj-NDH" collectionClass="NSMutableArray" id="KZc-sZ-Yxl"/>
+                        <outletCollection property="keyBoardButtons" destination="MKb-T7-xpH" collectionClass="NSMutableArray" id="bhZ-CP-3nr"/>
+                        <outletCollection property="keyBoardButtons" destination="0F9-Kc-psV" collectionClass="NSMutableArray" id="yDE-P0-F5C"/>
+                        <outletCollection property="keyBoardButtons" destination="l4s-q6-guo" collectionClass="NSMutableArray" id="6Km-xC-rld"/>
+                        <outletCollection property="keyBoardButtons" destination="W8t-9w-x0t" collectionClass="NSMutableArray" id="6Ue-GT-cJO"/>
+                        <outletCollection property="keyBoardButtons" destination="1he-J8-sbk" collectionClass="NSMutableArray" id="D09-Nj-jFX"/>
+                        <outletCollection property="keyBoardButtons" destination="ZGq-WU-ih8" collectionClass="NSMutableArray" id="SDa-Cq-lGs"/>
+                        <outletCollection property="keyBoardButtons" destination="IiQ-qY-pXU" collectionClass="NSMutableArray" id="L6r-WT-LrK"/>
+                        <outletCollection property="keyBoardButtons" destination="bFJ-n7-NIR" collectionClass="NSMutableArray" id="XUG-Ey-ddM"/>
+                        <outletCollection property="keyBoardButtons" destination="S4M-3q-lx2" collectionClass="NSMutableArray" id="hVZ-4E-ecm"/>
+                        <outletCollection property="keyBoardButtons" destination="vgm-uL-upC" collectionClass="NSMutableArray" id="UPP-R6-w8N"/>
+                        <outletCollection property="keyBoardButtons" destination="rrp-NO-r74" collectionClass="NSMutableArray" id="NZP-GS-kbP"/>
+                        <outletCollection property="keyBoardButtons" destination="WOh-ej-cie" collectionClass="NSMutableArray" id="XiK-DB-gqc"/>
+                        <outletCollection property="keyBoardButtons" destination="XfY-Ek-X7c" collectionClass="NSMutableArray" id="cQo-cE-oMW"/>
+                        <outletCollection property="keyBoardButtons" destination="HXX-LC-3oz" collectionClass="NSMutableArray" id="9UZ-dQ-aLf"/>
+                        <outletCollection property="keyBoardButtons" destination="1K5-pm-a3y" collectionClass="NSMutableArray" id="l3T-xB-LmI"/>
+                        <outletCollection property="keyBoardButtons" destination="baJ-Bb-tV0" collectionClass="NSMutableArray" id="Xqx-ZX-rB6"/>
+                        <outletCollection property="keyBoardButtons" destination="TqR-ae-7t5" collectionClass="NSMutableArray" id="zuq-YN-mTF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RvK-rY-OJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

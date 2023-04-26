@@ -21,6 +21,7 @@ class MathViewController: UIViewController {
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
     
+    // MARK: - Private Properties
     private var expression = Expression.getRandomExpression(withDifficulty: 1)
     private var expressionDifficulty = 1
     private var timer = Timer()
@@ -40,6 +41,7 @@ class MathViewController: UIViewController {
         }
     }
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGameScreen(withStartButton: true)
@@ -47,6 +49,7 @@ class MathViewController: UIViewController {
         
     }
     
+    // MARK: - IBActions
     @IBAction func startPressed() {
         setupGameScreen(withStartButton: false)
         setExpression()
@@ -56,8 +59,8 @@ class MathViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         if sender.tag == correctButton {
             setExpression()
+//            progressView.setProgress(1, animated: true)
             progress = 1000
-            progressView.setProgress(1, animated: true)
             score += 1
             sender.tintColor = .green
         } else {
@@ -65,7 +68,7 @@ class MathViewController: UIViewController {
         }
     }
     
-    
+    // MARK: - Private Methods
     private func setupGameScreen(withStartButton boolean: Bool) {
         stackViews.forEach {
             $0.isHidden = boolean

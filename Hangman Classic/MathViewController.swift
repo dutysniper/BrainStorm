@@ -9,17 +9,19 @@ import UIKit
 
 final class MathViewController: UIViewController {
     
+    // MARK: - Public Properties
+    var gameDescription: GameDescription!
     
     // MARK: - IBOutlets
-    @IBOutlet var answerButtons: [UIButton]!
-    @IBOutlet var stackViews: [UIStackView]!
+    @IBOutlet private var answerButtons: [UIButton]!
+    @IBOutlet private var stackViews: [UIStackView]!
     
-    @IBOutlet var startButton: UIButton!
-    @IBOutlet var gameNameLabel: UILabel!
-    @IBOutlet var expressionLabel: UILabel!
-    @IBOutlet var progressView: UIProgressView!
-    @IBOutlet var timerLabel: UILabel!
-    @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet private var startButton: UIButton!
+    @IBOutlet private var gameNameLabel: UILabel!
+    @IBOutlet private var expressionLabel: UILabel!
+    @IBOutlet private var progressView: UIProgressView!
+    @IBOutlet private var timerLabel: UILabel!
+    @IBOutlet private var scoreLabel: UILabel!
     
     // MARK: - Private Properties
     private var expression = Expression.getRandomExpression(withDifficulty: 1)
@@ -46,17 +48,16 @@ final class MathViewController: UIViewController {
         super.viewDidLoad()
         setupGameScreen(withStartButton: true)
         progressView.progress = Float(progress) / 1000
-        
     }
     
     // MARK: - IBActions
-    @IBAction func startPressed() {
+    @IBAction private func startPressed() {
         setupGameScreen(withStartButton: false)
         setExpression()
         createTimer()
     }
     
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
+    @IBAction private func answerButtonPressed(_ sender: UIButton) {
         if sender.tag == correctButton {
             setExpression()
             progress = 1000

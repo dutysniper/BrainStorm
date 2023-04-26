@@ -61,6 +61,8 @@ final class GameListViewController: UITableViewController {
         let flagSettingsVC = segue.destination as? FlagSettingsViewController
         flagSettingsVC?.gameDescription = gameDescriptions[indexPath.row]
         
+        let mathVC = segue.destination as? MathViewController
+        mathVC?.gameDescription = gameDescriptions[indexPath.row]
         
     }
   

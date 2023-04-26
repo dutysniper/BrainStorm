@@ -49,16 +49,10 @@ struct Expression {
             secondNumber = Int.random(in: 1 * difficulty...10 * difficulty)
             while isPrimeNumber(number: firstNumber) || firstNumber < 8 {
                 firstNumber = Int.random(in: 1 * difficulty...50 * difficulty)
-                print("1while")
-                print(firstNumber)
             }
             while firstNumber % secondNumber != 0 || secondNumber == 1 || firstNumber == secondNumber {
                 secondNumber = Int.random(in: 1...firstNumber)
-                print("2while")
-                print(firstNumber)
-                print(secondNumber)
             }
-            print("DIVISION \(firstNumber) \(secondNumber)")
         }
         
         func isPrimeNumber(number: Int) -> Bool {

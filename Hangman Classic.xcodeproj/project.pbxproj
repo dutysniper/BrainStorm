@@ -20,7 +20,7 @@
 		9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131601E29F5B28D006CECD7 /* AppDelegate.swift */; };
 		9131602129F5B28D006CECD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131602029F5B28D006CECD7 /* SceneDelegate.swift */; };
 		9131602329F5B28D006CECD7 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131602229F5B28D006CECD7 /* HangmanViewController.swift */; };
-		9131602629F5B28D006CECD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131602429F5B28D006CECD7 /* Main.storyboard */; };
+		9131602629F5B28D006CECD7 /* Main + Flag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131602429F5B28D006CECD7 /* Main + Flag.storyboard */; };
 		9131602829F5B28E006CECD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9131602729F5B28E006CECD7 /* Assets.xcassets */; };
 		9131602B29F5B28E006CECD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */; };
 		9131603829F70B4E006CECD7 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131603729F70B4E006CECD7 /* Word.swift */; };
@@ -42,7 +42,7 @@
 		9131601E29F5B28D006CECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9131602029F5B28D006CECD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9131602229F5B28D006CECD7 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
-		9131602529F5B28D006CECD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9131602529F5B28D006CECD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main + Flag.storyboard"; sourceTree = "<group>"; };
 		9131602729F5B28E006CECD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9131602A29F5B28E006CECD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9131602C29F5B28E006CECD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 		9131603429F5B3B6006CECD7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				9131602429F5B28D006CECD7 /* Main.storyboard */,
 				9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */,
+				9131602429F5B28D006CECD7 /* Main + Flag.storyboard */,
 				07FC0C9629F83B3300251DFB /* MathGame.storyboard */,
 				91D1482E29F926C20084E763 /* Hangman.storyboard */,
 			);
@@ -224,7 +224,7 @@
 				9131602829F5B28E006CECD7 /* Assets.xcassets in Resources */,
 				91D1482F29F926C20084E763 /* Hangman.storyboard in Resources */,
 				07FC0C9729F83B3300251DFB /* MathGame.storyboard in Resources */,
-				9131602629F5B28D006CECD7 /* Main.storyboard in Resources */,
+				9131602629F5B28D006CECD7 /* Main + Flag.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,12 +255,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9131602429F5B28D006CECD7 /* Main.storyboard */ = {
+		9131602429F5B28D006CECD7 /* Main + Flag.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9131602529F5B28D006CECD7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Main + Flag.storyboard";
 			sourceTree = "<group>";
 		};
 		9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */ = {
@@ -395,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hangman Classic/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
@@ -428,7 +428,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
+				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hangman Classic/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";

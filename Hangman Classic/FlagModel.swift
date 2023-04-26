@@ -5,6 +5,18 @@
 //  Created by M I C H A E L on 26.04.2023.
 //
 
+enum Continent: String {
+    case asia
+    case africa
+    case nearEast
+    case europe
+    case caribbean
+    case oceania
+    case northAmerica
+    case centralAmerica
+    case southAmerica
+}
+
 struct FlagModel {
     let asiaCounties: [String: String]
     let africaCounties: [String: String]

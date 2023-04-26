@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="MathGame" storyboardName="MathGame" referencedIdentifier="MathGame" id="hnq-G2-Eiz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dl7-CV-3TM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="-766"/>
+            <point key="canvasLocation" x="1305" y="136"/>
         </scene>
         <!--Flag View Controller-->
         <scene sceneID="hK7-jS-cG9">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zci-eK-BA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962.79069767441854" y="-216.95278969957084"/>
+            <point key="canvasLocation" x="971" y="-400"/>
         </scene>
         <!--Hangman-->
         <scene sceneID="Sgl-Hp-OgS">
@@ -230,7 +230,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HS-Br-349" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="152"/>
+            <point key="canvasLocation" x="1299" y="530"/>
         </scene>
         <!--Title-->
         <scene sceneID="tne-QT-ifu">

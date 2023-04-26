@@ -44,6 +44,6 @@ extension Word {
             return nil
         }
         
-        return Word(word: randomWord, difficulty: difficulty)
+        return Word(word: randomWord.lowercased(), difficulty: difficulty)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MathViewController: UIViewController {
+final class MathViewController: UIViewController {
     
     
     // MARK: - IBOutlets
@@ -121,6 +121,7 @@ class MathViewController: UIViewController {
         present(ac, animated: true)
     }
     
+    // MARK: - Objective-C Methods
     @objc
     private func setProgressView() {
         progress -= 1

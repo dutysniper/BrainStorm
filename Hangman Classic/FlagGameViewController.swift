@@ -11,6 +11,7 @@ final class FlagGameViewController: UIViewController {
      
     var countryFlag: CountryFlag!
     
+    
     var count = 0
     var currentButton = UIButton()
     var mistakesCount = 0

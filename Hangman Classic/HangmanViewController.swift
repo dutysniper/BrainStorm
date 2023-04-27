@@ -30,7 +30,7 @@ final class HangmanViewController: UIViewController {
         super.viewDidLoad()
         print(word.word)
         secretWord = word.word.map { _ in "_" }.joined()
-//        secretWordLabel.text = word.word.map { _ in "_" }.joined()
+        //        secretWordLabel.text = word.word.map { _ in "_" }.joined()
         difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
         startGame()
     }
@@ -38,20 +38,18 @@ final class HangmanViewController: UIViewController {
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
         let letter = sender.titleLabel?.text?.lowercased() ?? " "
         print(letter)
+        print("secretWord: \(secretWord)")
         if word.word.contains(letter) {
             setCorrectLetter(letter: letter)
+        } else {
+            
         }
-//        if word.word.contains(letter.lowercased()) {
-//            correctLetters.append(letter)
-//            manageCorrectGuess()
-//        } else {
-//            manageIncorrectGuess()
-//        }
+        setView(view: sender, hidden: true)
     }
 }
 extension HangmanViewController {
     private func startGame() {
-//        secretWordLabel.text = String(repeating: "_ ", count: word.word.count).trimmingCharacters(in: .whitespaces)
+        //        secretWordLabel.text = String(repeating: "_ ", count: word.word.count).trimmingCharacters(in: .whitespaces)
         numberOfErrors = 0
         correctLetters = [String]()
     }
@@ -66,41 +64,12 @@ extension HangmanViewController {
             }
         }
         secretWord = _word
-        
     }
-    
-    private func manageCorrectGuess() {
-        var wordText = ""
-        var wordComplete = true
-        
-        for l in word.word {
-            let strLetter = String(l)
-            
-            if correctLetters.contains(strLetter) {
-                wordText += "\(strLetter) "
-            } else {
-                wordText += "_ "
-                wordComplete = false
-            }
-        }
-        
-        secretWordLabel.text = wordText.trimmingCharacters(in: .whitespaces)
-        
-        if wordComplete {
-            for button in keyBoardButtons {
-                button.isUserInteractionEnabled = false
-            }
-   // setup Winning
-        }
-    }
-    private func manageIncorrectGuess() {
-        numberOfErrors += 1
-        
-        if numberOfErrors == 7 {
-            for button in keyBoardButtons {
-                button.isUserInteractionEnabled = false
-            }
-            // setup GameOver
-        }
+    func setView(view: UIView, hidden: Bool) {
+        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            view.isHidden = hidden
+        })
     }
 }
+
+

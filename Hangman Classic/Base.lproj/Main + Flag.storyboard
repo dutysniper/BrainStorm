@@ -695,7 +695,7 @@
         <scene sceneID="qir-U0-3M3">
             <objects>
                 <navigationController id="XUF-ga-9UT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Настройки" id="D9T-Lp-YcJ"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="D9T-Lp-YcJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lix-8J-OYX">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -774,6 +774,8 @@
         <image name="flagBackground" width="1080" height="1920"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="person.2" catalog="system" width="128" height="82"/>

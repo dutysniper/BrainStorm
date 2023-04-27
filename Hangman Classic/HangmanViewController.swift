@@ -11,7 +11,9 @@ final class HangmanViewController: UIViewController {
     
     @IBOutlet weak var secretWordLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var hangmanImage: UIImageView!
     
+    @IBOutlet var livesImages: [UIImageView]!
     @IBOutlet private var keyBoardButtons: [UIButton]!
     
     var word: Word!
@@ -32,7 +34,6 @@ final class HangmanViewController: UIViewController {
         secretWord = word.word.map { _ in "_" }.joined()
         //        secretWordLabel.text = word.word.map { _ in "_" }.joined()
         difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
-        startGame()
     }
     
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
@@ -42,17 +43,13 @@ final class HangmanViewController: UIViewController {
         if word.word.contains(letter) {
             setCorrectLetter(letter: letter)
         } else {
-            
+            numberOfErrors += 1
+            hangmanImage.image = UIImage(named: word.gameProgress[numberOfErrors].rawValue)
         }
         setView(view: sender, hidden: true)
     }
 }
 extension HangmanViewController {
-    private func startGame() {
-        //        secretWordLabel.text = String(repeating: "_ ", count: word.word.count).trimmingCharacters(in: .whitespaces)
-        numberOfErrors = 0
-        correctLetters = [String]()
-    }
     
     private func setCorrectLetter(letter: String) {
         var _word = ""

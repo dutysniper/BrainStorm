@@ -23,14 +23,14 @@ final class FlagSettingsViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        countryPicker.delegate = self
+        countryPicker.dataSource = self
+        
         NameLabel.text = gameDescription.game.rawValue
         
         let index = countryPicker.selectedRow(inComponent: .zero)
         let countCountries = countries[index].countries.count
         countriesQuantity.text = "Количество стран: \(countCountries)"
-        
-        countryPicker.delegate = self
-        countryPicker.dataSource = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,7 +46,6 @@ final class FlagSettingsViewController: UIViewController {
         } else if let rulesVC = path as? FlagRulesViewController {
             rulesVC.gameDescription = gameDescription
         }
-        
     }
 }
 

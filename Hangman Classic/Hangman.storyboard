@@ -648,15 +648,81 @@
                         <outletCollection property="livesImages" destination="qGq-ZC-aIl" collectionClass="NSMutableArray" id="r0o-ed-iRf"/>
                         <outletCollection property="livesImages" destination="HV3-Vf-1px" collectionClass="NSMutableArray" id="6td-9p-7SR"/>
                         <outletCollection property="livesImages" destination="cvg-ac-tbe" collectionClass="NSMutableArray" id="lab-eU-8zg"/>
+                        <segue destination="opk-t9-m93" kind="presentation" identifier="showGameOver" modalPresentationStyle="fullScreen" id="aP4-tF-IVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RvK-rY-OJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="787.5" y="3.1690140845070425"/>
         </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="BIg-dl-fno">
+            <objects>
+                <viewController id="opk-t9-m93" customClass="GameOverViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y90-aa-br3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tn-dW-MKO">
+                                <rect key="frame" x="103.5" y="30" width="113" height="48"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6r-L7-Bnj">
+                                <rect key="frame" x="135" y="108" width="50" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-W2-C33">
+                                <rect key="frame" x="98" y="267" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Продолжить">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.077177525890000001" green="0.12927237829999999" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddV-Pw-V1N">
+                                <rect key="frame" x="92" y="325" width="137" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Главное меню">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.077177525890000001" green="0.12927237829999999" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Qi-pj-itt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Tn-dW-MKO" firstAttribute="centerX" secondItem="Y90-aa-br3" secondAttribute="centerX" id="6S6-OU-iH1"/>
+                            <constraint firstItem="C6r-L7-Bnj" firstAttribute="top" secondItem="8Tn-dW-MKO" secondAttribute="bottom" constant="30" id="I1f-sl-4kV"/>
+                            <constraint firstItem="8Tn-dW-MKO" firstAttribute="top" secondItem="2Qi-pj-itt" secondAttribute="top" constant="30" id="QcK-AO-Lei"/>
+                            <constraint firstItem="C6r-L7-Bnj" firstAttribute="centerX" secondItem="Y90-aa-br3" secondAttribute="centerX" id="Y4x-gm-h59"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BLv-Ru-5rE"/>
+                    <connections>
+                        <outlet property="detailsResultLabel" destination="C6r-L7-Bnj" id="XdB-Ra-VmK"/>
+                        <outlet property="gameResultLabel" destination="8Tn-dW-MKO" id="oER-bc-4JL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-Sd-C6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="3"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

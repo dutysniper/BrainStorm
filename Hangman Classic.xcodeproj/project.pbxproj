@@ -32,6 +32,7 @@
 		9131603829F70B4E006CECD7 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131603729F70B4E006CECD7 /* Word.swift */; };
 		91D1482F29F926C20084E763 /* Hangman.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D1482E29F926C20084E763 /* Hangman.storyboard */; };
 		91D1483129F92A6A0084E763 /* DifficultyHangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */; };
+		91D1483329FB06210084E763 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1483229FB06210084E763 /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		9131603A29F70BCC006CECD7 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		91D1482E29F926C20084E763 /* Hangman.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hangman.storyboard; sourceTree = "<group>"; };
 		91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyHangmanViewController.swift; sourceTree = "<group>"; };
+		91D1483229FB06210084E763 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */,
 				9131602229F5B28D006CECD7 /* HangmanViewController.swift */,
+				91D1483229FB06210084E763 /* GameOverViewController.swift */,
 			);
 			name = HangmanViewControllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				4C944E1529F940B500E12081 /* CountryFlag.swift in Sources */,
 				9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */,
 				4CB012EF29F76E4E005508CC /* FlagGameViewController.swift in Sources */,
+				91D1483329FB06210084E763 /* GameOverViewController.swift in Sources */,
 				4CB012F129F77B72005508CC /* FlagDataStore.swift in Sources */,
 				9131603829F70B4E006CECD7 /* Word.swift in Sources */,
 				4C41E5C329FA9213007C2E90 /* FlagRulesViewController.swift in Sources */,

@@ -9,11 +9,18 @@ struct Word {
     let word: String
     let difficulty: Difficulty
     var gameProgress: [GameProgress]
+    var gameResult: [GameResult]
     
-    init(word: String, difficulty: Difficulty, gameProgress: [GameProgress]) {
+    init(
+        word: String,
+        difficulty: Difficulty,
+        gameProgress: [GameProgress],
+        gameResult: [GameResult]
+    ) {
         self.word = word
         self.difficulty = difficulty
         self.gameProgress = gameProgress
+        self.gameResult = gameResult
     }
 }
 
@@ -32,6 +39,11 @@ enum GameProgress: String, CaseIterable {
     case five = "hangman5"
     case six = "hangman6"
     case seven = "hangman7"
+}
+
+enum GameResult: String, CaseIterable {
+    case win = "Вас не остановить! Вы успешно угадали слово и остановили палача"
+    case defeat = "На этот раз удача отвернулась от вас. Понизим сложность?"
 }
 
 extension Word {
@@ -53,6 +65,6 @@ extension Word {
             return nil
         }
         
-        return Word(word: randomWord.lowercased(), difficulty: difficulty, gameProgress: GameProgress.allCases)
+        return Word(word: randomWord.lowercased(), difficulty: difficulty, gameProgress: GameProgress.allCases, gameResult: GameResult.allCases)
     }
 }

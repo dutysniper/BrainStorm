@@ -450,6 +450,7 @@
 				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hangman Classic/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -483,6 +484,7 @@
 				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hangman Classic/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

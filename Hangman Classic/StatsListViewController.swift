@@ -35,23 +35,3 @@ final class StatsListViewController: UITableViewController {
         return cell
     }
 }
-
-
-
-
-
-
-
-
-
-// Код тут сохранил для себя
-
-//let appVersion = Bundle.main.object(
-//forInfoDictionaryKey: "CFBundleShortVersionString"
-//)
-//
-//if let version = appVersion as? String {
-//content.text = "Текущая версия приложения: \(version)"
-//} else {
-//content.text = "Не удалось получить версию приложения"
-//}

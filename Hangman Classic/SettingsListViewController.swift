@@ -5,6 +5,34 @@
 //  Created by M I C H A E L on 27.04.2023.
 //
 
+
+struct SettingsButtonTitle {
+    let header: String
+    let title: String
+    
+//    static func getSettingsButtonTitles() -> [SettingsButtonTitle] {
+//        
+//        let appVersion = Bundle.main.object(
+//        forInfoDictionaryKey: "CFBundleShortVersionString"
+//        )
+//
+//        if let version = appVersion as? String {
+//        content.text = "Текущая версия приложения: \(version)"
+//        } else {
+//        content.text = "Не удалось получить версию приложения"
+//        }
+//
+//        [
+//            SettingsButtonTitle(header: <#T##String#>, title: <#T##String#>)
+//        ]
+//    }
+//}
+
+// Код тут сохранил для себя
+
+
+
+
 import UIKit
 
 class SettingsListViewController: UITableViewController {
@@ -18,7 +46,7 @@ class SettingsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.rowHeight = view.frame.height / 17
     }
 
     // MARK: - Table view data source
@@ -59,6 +87,9 @@ class SettingsListViewController: UITableViewController {
         settings[section].first?.key
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        view.frame.height / 20
+    }
     
     
 

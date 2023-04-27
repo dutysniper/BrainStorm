@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
         <!--Math View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="MathGame" id="Y6W-OH-hqX" customClass="MathViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MathGame" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="MathViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-TW-5uh">
-                                <rect key="frame" x="16" y="44" width="288" height="54"/>
+                                <rect key="frame" x="16" y="10" width="288" height="54"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-4y-nJj">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="4"/>
@@ -186,7 +186,7 @@
                             <constraint firstItem="bhj-To-pFA" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="BG7-bo-hzB"/>
                             <constraint firstItem="PAI-82-3or" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Eh3-X8-E5N"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3tm-3t-mZp" secondAttribute="bottom" multiplier="1.1" id="EpY-VL-ET2"/>
-                            <constraint firstItem="eUY-TW-5uh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="N9f-uS-ZBk"/>
+                            <constraint firstItem="eUY-TW-5uh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-10" id="N9f-uS-ZBk"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NyI-2F-fPR"/>
                             <constraint firstItem="pzl-oH-VPT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PiM-y9-knS"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="TRX-VU-Dn6"/>
@@ -197,6 +197,15 @@
                             <constraint firstItem="3tm-3t-mZp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uUg-d6-WrO"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sMx-Na-y0V">
+                        <barButtonItem key="rightBarButtonItem" image="questionmark.circle" catalog="system" id="xFu-st-gIc">
+                            <connections>
+                                <action selector="rulesPressed:" destination="Y6W-OH-hqX" id="6wa-Pg-pwN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="expressionLabel" destination="bhj-To-pFA" id="b7U-dO-2Yd"/>
                         <outlet property="gameNameLabel" destination="pzl-oH-VPT" id="iV2-eK-7BL"/>
@@ -220,6 +229,7 @@
     <resources>
         <image name="mathBackground" width="2000" height="1333"/>
         <image name="medal" catalog="system" width="121" height="128"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

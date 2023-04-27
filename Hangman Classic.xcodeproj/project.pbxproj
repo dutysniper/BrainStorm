@@ -12,7 +12,8 @@
 		07FC0C9729F83B3300251DFB /* MathGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FC0C9629F83B3300251DFB /* MathGame.storyboard */; };
 		4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C100FA029F74379001D3662 /* Ext + Alert.swift */; };
 		4C41E5C329FA9213007C2E90 /* FlagRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E5C229FA9213007C2E90 /* FlagRulesViewController.swift */; };
-		4C41E5C529FACEF1007C2E90 /* RatingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E5C429FACEF1007C2E90 /* RatingListViewController.swift */; };
+		4C41E5C529FACEF1007C2E90 /* StatsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E5C429FACEF1007C2E90 /* StatsListViewController.swift */; };
+		4C41E5C929FADF4D007C2E90 /* SettingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */; };
 		4C944E1529F940B500E12081 /* CountryFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C944E1429F940B400E12081 /* CountryFlag.swift */; };
 		4C944E1929F956BF00E12081 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C944E1829F956BF00E12081 /* CountriesListViewController.swift */; };
 		4C9D524229F8716F00603710 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131603A29F70BCC006CECD7 /* DataStore.swift */; };
@@ -41,7 +42,8 @@
 		07FC0C9629F83B3300251DFB /* MathGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MathGame.storyboard; sourceTree = "<group>"; };
 		4C100FA029F74379001D3662 /* Ext + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + Alert.swift"; sourceTree = "<group>"; };
 		4C41E5C229FA9213007C2E90 /* FlagRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagRulesViewController.swift; sourceTree = "<group>"; };
-		4C41E5C429FACEF1007C2E90 /* RatingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListViewController.swift; sourceTree = "<group>"; };
+		4C41E5C429FACEF1007C2E90 /* StatsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsListViewController.swift; sourceTree = "<group>"; };
+		4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewController.swift; sourceTree = "<group>"; };
 		4C944E1429F940B400E12081 /* CountryFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlag.swift; sourceTree = "<group>"; };
 		4C944E1829F956BF00E12081 /* CountriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewController.swift; sourceTree = "<group>"; };
 		4CB012EE29F76E4E005508CC /* FlagGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagGameViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +103,8 @@
 			children = (
 				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
 				4CF7AC3329F9B16600C25C0A /* GameListViewController.swift */,
-				4C41E5C429FACEF1007C2E90 /* RatingListViewController.swift */,
+				4C41E5C429FACEF1007C2E90 /* StatsListViewController.swift */,
+				4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */,
 			);
 			name = MainViewControllers;
 			sourceTree = "<group>";
@@ -289,12 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF7AC3429F9B16600C25C0A /* GameListViewController.swift in Sources */,
-				4C41E5C529FACEF1007C2E90 /* RatingListViewController.swift in Sources */,
+				4C41E5C529FACEF1007C2E90 /* StatsListViewController.swift in Sources */,
 				9131602329F5B28D006CECD7 /* HangmanViewController.swift in Sources */,
 				4C9D524229F8716F00603710 /* DataStore.swift in Sources */,
 				4CDEB72129F70ED50021932A /* Developer.swift in Sources */,
 				4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */,
 				4C944E1929F956BF00E12081 /* CountriesListViewController.swift in Sources */,
+				4C41E5C929FADF4D007C2E90 /* SettingsListViewController.swift in Sources */,
 				07F5ADA229F870E6008ED0F3 /* MathExpression.swift in Sources */,
 				4C944E1529F940B500E12081 /* CountryFlag.swift in Sources */,
 				9131601F29F5B28D006CECD7 /* AppDelegate.swift in Sources */,

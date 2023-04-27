@@ -34,12 +34,17 @@ final class FlagSettingsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let flagGameVC = segue.destination as? FlagGameViewController else { return }
+        let path = segue.destination
         
-        let index = countryPicker.selectedRow(inComponent: .zero)
-        flagGameVC.countryFlag = countries[index]
+        if let flagGameVC = path as? FlagGameViewController {
+            let index = countryPicker.selectedRow(inComponent: .zero)
+            flagGameVC.countryFlag = countries[index]
+            
+        } else if let countriesVC = path as? CountriesListViewController {
+            countriesVC.countries = countries
+        }
+        
     }
-    
 }
 
 // MARK: - UIPickerViewDelegate

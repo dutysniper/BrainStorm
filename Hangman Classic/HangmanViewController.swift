@@ -42,41 +42,38 @@ final class HangmanViewController: UIViewController {
     }
     
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
-        let letter = sender.titleLabel?.text?.lowercased() ?? " "
-        
-        if isWordComplete {
-            performSegue(withIdentifier: "showGameOver", sender: nil)
-        }
-        
-        if word.word.contains(letter) {
-            setCorrectLetter(letter: letter)
-            
-        } else if numberOfErrors <= word.gameProgress.count {
-                setIncorrectLetter()
-        } else if numberOfErrors == word.gameProgress.count {
-            performSegue(withIdentifier: "showGameOver", sender: nil)
-        }
-        
-        sender.isEnabled = false
-                 sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
-                 sender.layer.borderWidth = 3
-                 sender.layer.borderColor = [UIColor.red.cgColor, UIColor.green.cgColor].randomElement()
+           let letter = sender.titleLabel?.text?.lowercased() ?? " "
+           
+           if isWordComplete {
+               performSegue(withIdentifier: "showGameOver", sender: nil)
+           } else if word.word.contains(letter) {
+               setCorrectLetter(letter: letter)
+           } else if numberOfErrors < livesImages.count {
+               setIncorrectLetter()
+           } else {
+               performSegue(withIdentifier: "showGameOver", sender: nil)
+           }
+           
+           sender.isEnabled = false
+           sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
+           sender.layer.borderWidth = 3
+           sender.layer.borderColor = [UIColor.red.cgColor, UIColor.green.cgColor].randomElement()
 
-                 UIView.animate(withDuration: 0.3, animations: {
-                         sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-                     }) { _ in
-                         UIView.animate(withDuration: 0.5) {
-                             sender.transform = CGAffineTransform.identity
-                         }
-                     }
+           UIView.animate(withDuration: 0.3, animations: {
+               sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+           }) { _ in
+               UIView.animate(withDuration: 0.5) {
+                   sender.transform = CGAffineTransform.identity
+               }
+           }
 
-                 DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                     UIButton.animate(withDuration: 0.5, animations: {
-                         sender.alpha = 0.0
-                     })
-                 }
-    }
-}
+           DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+               UIButton.animate(withDuration: 0.5, animations: {
+                   sender.alpha = 0.0
+               })
+           }
+       }
+   }
 extension HangmanViewController {
     
     private func setCorrectLetter(letter: String) {

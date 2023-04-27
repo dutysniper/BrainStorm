@@ -1,0 +1,30 @@
+//
+//  RatingListViewController.swift
+//  Hangman Classic
+//
+//  Created by M I C H A E L on 27.04.2023.
+//
+
+import UIKit
+
+final class RatingListViewController: UITableViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        3
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        4
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ratingCell", for: indexPath)
+
+        return cell
+    }
+}

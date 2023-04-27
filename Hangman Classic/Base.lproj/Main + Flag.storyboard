@@ -72,7 +72,53 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dl7-CV-3TM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1493" y="138"/>
+            <point key="canvasLocation" x="-996" y="138"/>
+        </scene>
+        <!--Рейтинг-->
+        <scene sceneID="hj4-Zz-fFx">
+            <objects>
+                <tableViewController id="0kL-fv-NJj" customClass="RatingListViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cUn-wE-07L">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ratingCell" id="6GQ-H6-b9x">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6GQ-H6-b9x" id="NyI-q7-ETh">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0kL-fv-NJj" id="rUA-FK-Iq3"/>
+                            <outlet property="delegate" destination="0kL-fv-NJj" id="Roa-Td-J50"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Рейтинг" id="ZHE-f3-fbe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDB-7Y-BYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2263" y="-534"/>
+        </scene>
+        <!--Рейтинг-->
+        <scene sceneID="gQv-mH-r9H">
+            <objects>
+                <navigationController id="F8a-lC-ci4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Рейтинг" image="chart.bar" catalog="system" selectedImage="chart.bar.fill" id="CC2-fy-Zzt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fdX-Kn-1Yc">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0kL-fv-NJj" kind="relationship" relationship="rootViewController" id="mOo-Ap-7OW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFZ-tF-RcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3031" y="-534"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="v8c-5J-mxs">
@@ -236,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUU-yg-ibd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1488.75" y="-460.56338028169017"/>
+            <point key="canvasLocation" x="-996" y="-534"/>
         </scene>
         <!--Правила-->
         <scene sceneID="Y0m-WB-nPc">
@@ -277,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ex0-UN-WIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-1430"/>
+            <point key="canvasLocation" x="-201" y="-1503"/>
         </scene>
         <!--Список стран-->
         <scene sceneID="XfI-43-b3D">
@@ -322,7 +368,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02u-u8-BdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-774"/>
+            <point key="canvasLocation" x="-201" y="-847"/>
         </scene>
         <!--Flag Game View Controller-->
         <scene sceneID="hK7-jS-cG9">
@@ -527,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zci-eK-BA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-117"/>
+            <point key="canvasLocation" x="-201" y="-190"/>
         </scene>
         <!--Hangman-->
         <scene sceneID="Sgl-Hp-OgS">
@@ -537,7 +583,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HS-Br-349" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1487" y="292"/>
+            <point key="canvasLocation" x="-1002" y="429"/>
         </scene>
         <!--Разработчики-->
         <scene sceneID="NCt-zj-mRG">
@@ -595,8 +641,9 @@
                         <color key="selectedImageTintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FjO-yw-QMC" kind="relationship" relationship="viewControllers" id="Wma-os-8ow"/>
-                        <segue destination="Ycf-vV-9Nj" kind="relationship" relationship="viewControllers" id="DuE-NO-9an"/>
+                        <segue destination="F8a-lC-ci4" kind="relationship" relationship="viewControllers" id="92F-Jr-KvN"/>
+                        <segue destination="FjO-yw-QMC" kind="relationship" relationship="viewControllers" id="1Nz-5D-3Lp"/>
+                        <segue destination="Ycf-vV-9Nj" kind="relationship" relationship="viewControllers" id="kmb-1x-nDV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfc-Ag-iNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -643,6 +690,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="chart.bar.fill" catalog="system" width="128" height="90"/>
         <image name="flagBackground" width="1080" height="1920"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>

@@ -603,11 +603,11 @@
             </objects>
             <point key="canvasLocation" x="-3800" y="138"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Разработчики-->
         <scene sceneID="z5X-69-PQY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ycf-vV-9Nj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.2" catalog="system" selectedImage="person.2.fill" id="Adb-8d-0yj"/>
+                    <tabBarItem key="tabBarItem" title="Разработчики" image="person.2" catalog="system" selectedImage="person.2.fill" id="Adb-8d-0yj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="asn-Th-sdk">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
@@ -622,11 +622,11 @@
             </objects>
             <point key="canvasLocation" x="-3032" y="862"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Игры-->
         <scene sceneID="ZaI-bd-rCz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FjO-yw-QMC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="gamecontroller" catalog="system" selectedImage="gamecontroller.fill" id="A6b-pi-CzF"/>
+                    <tabBarItem key="tabBarItem" title="Игры" image="gamecontroller" catalog="system" selectedImage="gamecontroller.fill" id="A6b-pi-CzF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ecO-gY-TTL">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>

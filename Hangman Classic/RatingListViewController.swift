@@ -11,6 +11,7 @@ final class RatingListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = view.frame.height / 12
     }
 
     // MARK: - Table view data source

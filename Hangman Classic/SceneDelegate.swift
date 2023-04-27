@@ -15,8 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        // Это задает светлую тему на все приложение
+        // Задаем светлую тему для всего приложения
         window?.overrideUserInterfaceStyle = .light
         
+        // Задаем основной таб для таббара
+        if let tabBarController = window?.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 1
+        }
     }
 }

@@ -74,21 +74,37 @@
             </objects>
             <point key="canvasLocation" x="-996" y="138"/>
         </scene>
-        <!--Рейтинг-->
+        <!--Статистика-->
         <scene sceneID="hj4-Zz-fFx">
             <objects>
-                <tableViewController id="0kL-fv-NJj" customClass="RatingListViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0kL-fv-NJj" customClass="StatsListViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cUn-wE-07L">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ratingCell" id="6GQ-H6-b9x">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statsCell" textLabel="gjQ-PN-aaC" detailTextLabel="HuA-sJ-ZXU" style="IBUITableViewCellStyleSubtitle" id="6GQ-H6-b9x">
                                 <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6GQ-H6-b9x" id="NyI-q7-ETh">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjQ-PN-aaC">
+                                            <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HuA-sJ-ZXU">
+                                            <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -97,17 +113,17 @@
                             <outlet property="delegate" destination="0kL-fv-NJj" id="Roa-Td-J50"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Рейтинг" id="ZHE-f3-fbe"/>
+                    <navigationItem key="navigationItem" title="Статистика" id="ZHE-f3-fbe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDB-7Y-BYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2263" y="-534"/>
         </scene>
-        <!--Рейтинг-->
+        <!--Статистика-->
         <scene sceneID="gQv-mH-r9H">
             <objects>
                 <navigationController id="F8a-lC-ci4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Рейтинг" image="chart.bar" catalog="system" selectedImage="chart.bar.fill" id="CC2-fy-Zzt"/>
+                    <tabBarItem key="tabBarItem" title="Статистика" image="chart.bar" catalog="system" selectedImage="chart.bar.fill" id="CC2-fy-Zzt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fdX-Kn-1Yc">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -630,6 +646,68 @@
             </objects>
             <point key="canvasLocation" x="-2262" y="862"/>
         </scene>
+        <!--Настройки-->
+        <scene sceneID="zyO-z0-Ttp">
+            <objects>
+                <tableViewController id="vxV-QS-Uz5" customClass="SettingsListViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jE2-16-VYw">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" textLabel="0yf-Tc-l5H" detailTextLabel="bDX-by-k7l" style="IBUITableViewCellStyleSubtitle" id="6zj-dh-zoJ">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6zj-dh-zoJ" id="UmF-sf-i45">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0yf-Tc-l5H">
+                                            <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bDX-by-k7l">
+                                            <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vxV-QS-Uz5" id="5SD-PD-7yY"/>
+                            <outlet property="delegate" destination="vxV-QS-Uz5" id="KcJ-cC-0S6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Настройки" id="yw1-DC-G6i"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lO3-RX-xag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2263" y="1560"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="qir-U0-3M3">
+            <objects>
+                <navigationController id="XUF-ga-9UT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="D9T-Lp-YcJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lix-8J-OYX">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vxV-QS-Uz5" kind="relationship" relationship="rootViewController" id="QcG-PN-h1k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ncg-GB-xVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3032" y="1560"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B1y-Ei-OTY">
             <objects>
@@ -644,6 +722,7 @@
                         <segue destination="F8a-lC-ci4" kind="relationship" relationship="viewControllers" id="92F-Jr-KvN"/>
                         <segue destination="FjO-yw-QMC" kind="relationship" relationship="viewControllers" id="1Nz-5D-3Lp"/>
                         <segue destination="Ycf-vV-9Nj" kind="relationship" relationship="viewControllers" id="kmb-1x-nDV"/>
+                        <segue destination="XUF-ga-9UT" kind="relationship" relationship="viewControllers" id="ZgW-vH-37g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfc-Ag-iNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -695,6 +774,8 @@
         <image name="flagBackground" width="1080" height="1920"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="person.2" catalog="system" width="128" height="82"/>

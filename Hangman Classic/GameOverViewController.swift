@@ -8,16 +8,15 @@
 import UIKit
 
 final class GameOverViewController: UIViewController {
+    @IBOutlet var gameResultLabel: UILabel!
+    @IBOutlet var detailsResultLabel: UILabel!
     
-    var result: String! // <--------------------- ТУТ
-    var detail: String! // <--------------------- ТУТ
-    
-    @IBOutlet var gameResultLabel: UILabel! // <- НЕ ТУТ
-    @IBOutlet var detailsResultLabel: UILabel! // <- НЕ ТУТ
+    var result: String!
+    var detail: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameResultLabel.text = result // <--------------------- ТУТ
-        detailsResultLabel.text = detail // <--------------------- ТУТ
+        gameResultLabel.text = result
+        detailsResultLabel.text = detail 
     }
 }

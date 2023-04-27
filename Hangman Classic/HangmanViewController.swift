@@ -37,47 +37,47 @@ final class HangmanViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
 
-        gameOverVC.result = isWordComplete // <--------------------- ТУТ
+        gameOverVC.result = isWordComplete 
         ? "Успех!"
         : "Поражение!"
 
-        gameOverVC.detail = isWordComplete // <--------------------- ТУТ
+        gameOverVC.detail = isWordComplete
         ? word.gameResult.first?.rawValue
         : word.gameResult.last?.rawValue
     }
     
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
-           let letter = sender.titleLabel?.text?.lowercased() ?? " "
-           
-           if isWordComplete {
-               performSegue(withIdentifier: "showGameOver", sender: sender)
-           } else if word.word.contains(letter) {
-               setCorrectLetter(letter: letter)
-           } else if numberOfErrors < livesImages.count {
-               setIncorrectLetter()
-           } else {
-               performSegue(withIdentifier: "showGameOver", sender: sender)
-           }
-           print("После нажатия \(isWordComplete)")
-           sender.isEnabled = false
-           sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
-           sender.layer.borderWidth = 3
-           sender.layer.borderColor = [UIColor.red.cgColor, UIColor.green.cgColor].randomElement()
+        let letter = sender.titleLabel?.text?.lowercased() ?? " "
 
-           UIView.animate(withDuration: 0.3, animations: {
-               sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-           }) { _ in
-               UIView.animate(withDuration: 0.5) {
-                   sender.transform = CGAffineTransform.identity
-               }
-           }
+        if word.word.contains(letter) {
+            setCorrectLetter(letter: letter)
+        } else {
+            setIncorrectLetter()
+        }
 
-           DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-               UIButton.animate(withDuration: 0.5, animations: {
-                   sender.alpha = 0.0
-               })
-           }
-       }
+        sender.isEnabled = false
+        sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
+        sender.layer.borderWidth = 3
+        sender.layer.borderColor = [UIColor.red.cgColor, UIColor.green.cgColor].randomElement()
+
+        UIView.animate(withDuration: 0.2, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }) { _ in
+            UIView.animate(withDuration: 0.3) {
+                sender.transform = CGAffineTransform.identity
+            }
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            UIButton.animate(withDuration: 0.3, animations: {
+                sender.alpha = 0.0
+            }) { _ in
+                if self.isWordComplete || self.numberOfErrors == self.livesImages.count {
+                    self.performSegue(withIdentifier: "showGameOver", sender: sender)
+                }
+            }
+        }
+    }
    }
 extension HangmanViewController {
     

@@ -17,14 +17,13 @@ final class HangmanViewController: UIViewController {
     @IBOutlet private var keyBoardButtons: [UIButton]!
     
     var word: Word!
-    var numberOfErrors = 0
-    var correctLetters = [String]()
-    var secretWord = "" {
+    var numberOfErrors = 0 // счетчик ошибок
+    var secretWord = "" { // загаданное слово
         didSet {
             secretWordLabel.text = secretWord.map { String($0) }.joined(separator: " ")
         }
     }
-    var isWordComplete: Bool {
+    var isWordComplete: Bool { // триггер Победы: если в загаданном слове нет _, принимает тру
         !secretWord.contains("_")
     }
     
@@ -37,23 +36,28 @@ final class HangmanViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
-        gameOverVC.gameResultLabel.text = isWordComplete ? "Успех!" : "Поражение!"
-        gameOverVC.detailsResultLabel.text = isWordComplete ? word.gameResult.first?.rawValue : word.gameResult.last?.rawValue
+        gameOverVC.gameResultLabel.text = isWordComplete
+        ? "Успех!"
+        : "Поражение!"
+        
+        gameOverVC.detailsResultLabel.text = isWordComplete
+        ? word.gameResult.first?.rawValue
+        : word.gameResult.last?.rawValue
     }
     
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
            let letter = sender.titleLabel?.text?.lowercased() ?? " "
            
-           if isWordComplete {
-               performSegue(withIdentifier: "showGameOver", sender: nil)
-           } else if word.word.contains(letter) {
+           if isWordComplete { // если тру, пытаемся сделать переход
+               performSegue(withIdentifier: "showGameOver", sender: sender)
+           } else if word.word.contains(letter) { // если в слове есть нажатая буква, выполняем функцию по открытию буквы
                setCorrectLetter(letter: letter)
-           } else if numberOfErrors < livesImages.count {
-               setIncorrectLetter()
-           } else {
-               performSegue(withIdentifier: "showGameOver", sender: nil)
+           } else if numberOfErrors < livesImages.count { // пока число ошибок меньше числа жизней
+               setIncorrectLetter() // выполняем ф-ию для отрисовки виселицы
+           } else { // пытаемся сделать переход
+               performSegue(withIdentifier: "showGameOver", sender: sender)
            }
-           
+           print(isWordComplete)
            sender.isEnabled = false
            sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
            sender.layer.borderWidth = 3
@@ -88,12 +92,6 @@ extension HangmanViewController {
         numberOfErrors += 1
         hangmanImage.image = UIImage(named: word.gameProgress[numberOfErrors - 1].rawValue)
         livesImages[numberOfErrors - 1].alpha = 0.2
-    }
-    
-    func setView(view: UIView, hidden: Bool) {
-        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            view.isHidden = hidden
-        })
     }
 }
 

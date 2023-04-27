@@ -222,7 +222,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="Pqf-HN-5eW">
-                        <barButtonItem key="rightBarButtonItem" title="Правила" id="Nin-oB-tpY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Правила" id="Nin-oB-tpY">
+                            <connections>
+                                <segue destination="t9M-uD-7f6" kind="show" id="2Lx-VF-rFD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="NameLabel" destination="MAg-eb-DGu" id="H3e-us-epV"/>
@@ -233,6 +237,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUU-yg-ibd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1488.75" y="-460.56338028169017"/>
+        </scene>
+        <!--Правила-->
+        <scene sceneID="Y0m-WB-nPc">
+            <objects>
+                <viewController modalTransitionStyle="partialCurl" hidesBottomBarWhenPushed="YES" id="t9M-uD-7f6" customClass="FlagRulesViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fv2-jq-Ibx">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagBackground" translatesAutoresizingMaskIntoConstraints="NO" id="J3w-RE-elG">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw4-ZW-FLe">
+                                <rect key="frame" x="20" y="123" width="390" height="755"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GdA-pl-qIX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J3w-RE-elG" firstAttribute="leading" secondItem="GdA-pl-qIX" secondAttribute="leading" id="5EJ-lw-8eO"/>
+                            <constraint firstItem="Gw4-ZW-FLe" firstAttribute="top" secondItem="GdA-pl-qIX" secondAttribute="top" constant="20" id="6lW-Yy-QZY"/>
+                            <constraint firstItem="GdA-pl-qIX" firstAttribute="trailing" secondItem="Gw4-ZW-FLe" secondAttribute="trailing" constant="20" id="PDk-gC-e5C"/>
+                            <constraint firstAttribute="bottom" secondItem="J3w-RE-elG" secondAttribute="bottom" id="V0L-A0-85y"/>
+                            <constraint firstItem="GdA-pl-qIX" firstAttribute="trailing" secondItem="J3w-RE-elG" secondAttribute="trailing" id="ceA-hH-imJ"/>
+                            <constraint firstItem="J3w-RE-elG" firstAttribute="top" secondItem="Fv2-jq-Ibx" secondAttribute="top" id="qQ7-5i-sEG"/>
+                            <constraint firstItem="GdA-pl-qIX" firstAttribute="bottom" secondItem="Gw4-ZW-FLe" secondAttribute="bottom" constant="20" id="rBT-sQ-A4a"/>
+                            <constraint firstItem="Gw4-ZW-FLe" firstAttribute="leading" secondItem="GdA-pl-qIX" secondAttribute="leading" constant="20" id="tgH-ko-09O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Правила" largeTitleDisplayMode="never" id="yLs-WV-pxV"/>
+                    <connections>
+                        <outlet property="rulesTextView" destination="Gw4-ZW-FLe" id="75I-zl-08Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ex0-UN-WIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693" y="-1430"/>
         </scene>
         <!--Список стран-->
         <scene sceneID="XfI-43-b3D">
@@ -277,7 +322,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02u-u8-BdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-1122"/>
+            <point key="canvasLocation" x="-693" y="-774"/>
         </scene>
         <!--Flag Game View Controller-->
         <scene sceneID="hK7-jS-cG9">
@@ -482,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zci-eK-BA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-460"/>
+            <point key="canvasLocation" x="-693" y="-113"/>
         </scene>
         <!--Hangman-->
         <scene sceneID="Sgl-Hp-OgS">

@@ -9,10 +9,16 @@ import UIKit
 
 final class CountriesListViewController: UITableViewController {
     
+    // MARK: - Public Properties
     var countries: [CountryFlag]!
     
     // MARK: - Private Properties
-    private let developers = Developer.getDevInfo()
+    private var separatedCountries: [CountryFlag] {
+        var countries = countries
+        countries?.removeFirst()
+        
+        return countries ?? []
+    }
 
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -22,22 +28,23 @@ final class CountriesListViewController: UITableViewController {
     
     // MARK: - Table View Data Source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        getSortedCountries().count
+        separatedCountries.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        getSortedCountries()[section].countries.count
+        separatedCountries[section].countries.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        getSortedCountries()[section].place.rawValue
+        separatedCountries[section].place.rawValue
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath)
-        let continensAndFlags = getSortedCountries()[indexPath.section].countries
         
+        let continensAndFlags = separatedCountries[indexPath.section].countries
         let country = Array(continensAndFlags.keys).sorted()[indexPath.row]
+        let flagImageName = continensAndFlags[country]?.lowercased() ?? ""
         
         var content = cell.defaultContentConfiguration()
 
@@ -47,17 +54,10 @@ final class CountriesListViewController: UITableViewController {
         content.imageToTextPadding = 20
 
         content.text = country
-        content.image = UIImage(named: continensAndFlags[country]?.lowercased() ?? "")
+        content.image = UIImage(named: flagImageName)
         
         cell.contentConfiguration = content
         
         return cell
-    }
-    
-    private func getSortedCountries() -> [CountryFlag] {
-        var countries = countries
-        countries?.removeLast()
-        
-        return countries ?? []
     }
 }

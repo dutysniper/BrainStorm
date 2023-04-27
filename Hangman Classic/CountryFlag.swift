@@ -44,12 +44,11 @@ extension CountryFlag {
             allCountries.merge(countryFlag.countries, uniquingKeysWith: { $1 })
         }
         
-        coutryFlags.append(
-            CountryFlag(place: .allCountries, countries: allCountries)
+        coutryFlags.insert(
+            CountryFlag(place: .allCountries, countries: allCountries),
+            at: 0
         )
         
         return coutryFlags
     }
 }
-
-//allCountries.merge(countries.countries, uniquingKeysWith: { $1 })

@@ -42,6 +42,9 @@ final class FlagSettingsViewController: UIViewController {
             
         } else if let countriesVC = path as? CountriesListViewController {
             countriesVC.countries = countries
+            
+        } else if let rulesVC = path as? FlagRulesViewController {
+            rulesVC.gameDescription = gameDescription
         }
         
     }

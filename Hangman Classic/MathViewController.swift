@@ -68,6 +68,22 @@ final class MathViewController: UIViewController {
         }
     }
     
+    @IBAction func rulesPressed(_ sender: UIBarButtonItem) {
+        let text = """
+            В данной игре вы испытаете свои математические способности.
+            
+            У Вас будет 10 секунд, чтобы нажать на правильный ответ. Также если вы выберите неправильный ответ, игра остановится.
+            
+            Через определенное количество(секретная информация) набранных очков уровень сложности будет повышаться!
+            
+            Успехов!
+            """
+        let ac = UIAlertController(title: "Правила", message: text, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Понял", style: .default)
+        ac.addAction(okAction)
+        present(ac, animated: true)
+    }
+    
     // MARK: - Private Methods
     private func setupGameScreen(withStartButton boolean: Bool) {
         stackViews.forEach {

@@ -15,6 +15,7 @@ enum Place: String {
     case northAmerica = "Северная Америка"
     case centralAmerica = "Центральная Америка"
     case southAmerica = "Южная Америка"
+    case allCountries = "Весь мир"
 }
 
 struct CountryFlag {
@@ -25,8 +26,9 @@ struct CountryFlag {
 extension CountryFlag {
     static func getCountires() -> [CountryFlag] {
         let data = FlagDataStore.shared
+        var allCountries = ["": ""]
         
-        return [
+        var coutryFlags = [
             CountryFlag(place: .asia, countries: data.asia),
             CountryFlag(place: .africa, countries: data.africa),
             CountryFlag(place: .nearEast, countries: data.nearEast),
@@ -37,6 +39,16 @@ extension CountryFlag {
             CountryFlag(place: .centralAmerica, countries: data.centralAmerica),
             CountryFlag(place: .southAmerica, countries: data.southAmerica)
         ]
+        
+        for countryFlag in coutryFlags {
+            allCountries.merge(countryFlag.countries, uniquingKeysWith: { $1 })
+        }
+        
+        coutryFlags.append(
+            CountryFlag(place: .allCountries, countries: allCountries)
+        )
+        
+        return coutryFlags
     }
 }
 

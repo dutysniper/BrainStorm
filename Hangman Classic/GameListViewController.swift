@@ -9,14 +9,31 @@ import UIKit
 
 final class GameListViewController: UITableViewController {
     
+    // MARK: - Private Properties
     private let gameDescriptions = GameDescription.getInfo()
-
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = view.frame.height / 8
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        let hangmanVC = segue.destination as? DifficultyHangmanViewController
+        hangmanVC?.gameDescription = gameDescriptions[indexPath.row]
+        
+        let flagSettingsVC = segue.destination as? FlagSettingsViewController
+        flagSettingsVC?.gameDescription = gameDescriptions[indexPath.row]
+        
+        let mathVC = segue.destination as? MathViewController
+        mathVC?.gameDescription = gameDescriptions[indexPath.row]
+    }
+}
 
-    // MARK: - Table view data source
+// MARK: - Extension Table View Data Source
+extension GameListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         gameDescriptions.count
     }
@@ -44,28 +61,8 @@ final class GameListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
         let segueID = gameDescriptions[indexPath.row].segueID
         
         performSegue(withIdentifier: segueID, sender: nil)
     }
-    
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        
-        let hangmanVC = segue.destination as? DifficultyHangmanViewController
-        hangmanVC?.gameDescription = gameDescriptions[indexPath.row]
-                
-        let flagSettingsVC = segue.destination as? FlagSettingsViewController
-        flagSettingsVC?.gameDescription = gameDescriptions[indexPath.row]
-        
-        let mathVC = segue.destination as? MathViewController
-        mathVC?.gameDescription = gameDescriptions[indexPath.row]
-        
-    }
-  
-  
- 
 }

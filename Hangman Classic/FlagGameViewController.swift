@@ -1,5 +1,5 @@
 //
-//  FlagViewController.swift
+//  FlagGameViewController.swift
 //  Hangman Classic
 //
 //  Created by M I C H A E L on 25.04.2023.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class FlagViewController: UIViewController {
-    
-    let flags = CountryFlag.getCountires()
+final class FlagGameViewController: UIViewController {
+     
+    var countryFlag: CountryFlag!
     
     var count = 0
     var currentButton = UIButton()
@@ -24,15 +24,18 @@ final class FlagViewController: UIViewController {
     
     @IBOutlet var liveImages: [UIImageView]!
     
-    @IBOutlet var continentLabel: UILabel!
+    @IBOutlet private var continentLabel: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        continentLabel.text = countryFlag.place.rawValue
+        
+        
+        
         progressView.progress = progress
         refreshTask()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -66,21 +69,21 @@ final class FlagViewController: UIViewController {
         countLabel.text = "\(count)"
 
         buttons.forEach { button in
-            let randomElement = flags.first?.countries.values.randomElement()!.lowercased()
+            let randomElement = countryFlag.countries.values.randomElement()!.lowercased()
 
-            button.configuration?.background.image = UIImage(named: randomElement!)
+            button.configuration?.background.image = UIImage(named: randomElement)
 
             button.setTitle(randomElement, for: .normal)
         }
 
-        counrtyLabel.text = flags.first?.countries.keys.randomElement()
+        counrtyLabel.text = countryFlag.countries.keys.randomElement()
 
         currentButton = buttons.randomElement()!
 
         currentButton.configuration?.background.image = UIImage(
-            named: (flags.first?.countries[counrtyLabel.text!]!.lowercased())!
+            named: (countryFlag.countries[counrtyLabel.text!]!.lowercased())
         )
-        currentButton.setTitle(flags.first?.countries[counrtyLabel.text!]!, for: .normal)
+        currentButton.setTitle(countryFlag.countries[counrtyLabel.text!]!, for: .normal)
 
     }
     

@@ -4,8 +4,6 @@
 //
 //  Created by Степан Фоминцев on 25.04.2023.
 //
-//test
-
 
 struct Expression {
     let firstNumber: Int

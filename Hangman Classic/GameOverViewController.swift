@@ -8,8 +8,9 @@
 import UIKit
 
 final class GameOverViewController: UIViewController {
-    @IBOutlet weak var gameResultLabel: UILabel!
-    @IBOutlet weak var detailsResultLabel: UILabel!
+    
+    @IBOutlet var gameResultLabel: UILabel!
+    @IBOutlet var detailsResultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

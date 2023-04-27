@@ -17,13 +17,13 @@ final class HangmanViewController: UIViewController {
     @IBOutlet private var keyBoardButtons: [UIButton]!
     
     var word: Word!
-    var numberOfErrors = 0 // счетчик ошибок
-    var secretWord = "" { // загаданное слово
+    var numberOfErrors = 0
+    var secretWord = "" {
         didSet {
             secretWordLabel.text = secretWord.map { String($0) }.joined(separator: " ")
         }
     }
-    var isWordComplete: Bool { // триггер Победы: если в загаданном слове нет _, принимает тру
+    var isWordComplete: Bool {
         !secretWord.contains("_")
     }
     
@@ -36,11 +36,12 @@ final class HangmanViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
-        gameOverVC.gameResultLabel.text = isWordComplete
+
+        gameOverVC.result = isWordComplete // <--------------------- ТУТ
         ? "Успех!"
         : "Поражение!"
-        
-        gameOverVC.detailsResultLabel.text = isWordComplete
+
+        gameOverVC.detail = isWordComplete // <--------------------- ТУТ
         ? word.gameResult.first?.rawValue
         : word.gameResult.last?.rawValue
     }
@@ -48,16 +49,16 @@ final class HangmanViewController: UIViewController {
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
            let letter = sender.titleLabel?.text?.lowercased() ?? " "
            
-           if isWordComplete { // если тру, пытаемся сделать переход
+           if isWordComplete {
                performSegue(withIdentifier: "showGameOver", sender: sender)
-           } else if word.word.contains(letter) { // если в слове есть нажатая буква, выполняем функцию по открытию буквы
+           } else if word.word.contains(letter) {
                setCorrectLetter(letter: letter)
-           } else if numberOfErrors < livesImages.count { // пока число ошибок меньше числа жизней
-               setIncorrectLetter() // выполняем ф-ию для отрисовки виселицы
-           } else { // пытаемся сделать переход
+           } else if numberOfErrors < livesImages.count {
+               setIncorrectLetter()
+           } else {
                performSegue(withIdentifier: "showGameOver", sender: sender)
            }
-           print(isWordComplete)
+           print("После нажатия \(isWordComplete)")
            sender.isEnabled = false
            sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
            sender.layer.borderWidth = 3

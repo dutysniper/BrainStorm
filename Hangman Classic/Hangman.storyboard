@@ -710,7 +710,7 @@
                     <navigationItem key="navigationItem" id="BLv-Ru-5rE"/>
                     <connections>
                         <outlet property="detailsResultLabel" destination="C6r-L7-Bnj" id="XdB-Ra-VmK"/>
-                        <outlet property="gameResultLabel" destination="8Tn-dW-MKO" id="oER-bc-4JL"/>
+                        <outlet property="gameResultLabel" destination="8Tn-dW-MKO" id="6mh-ch-Mhk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-Sd-C6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

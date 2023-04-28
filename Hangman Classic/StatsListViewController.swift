@@ -25,13 +25,11 @@ final class StatsListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath)
-
         var content = cell.defaultContentConfiguration()
         
-        content.text = "srg"
+        content.text = " "
         
         cell.contentConfiguration = content
-        
         return cell
     }
 }

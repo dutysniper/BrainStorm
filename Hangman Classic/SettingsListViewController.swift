@@ -5,93 +5,51 @@
 //  Created by M I C H A E L on 27.04.2023.
 //
 
-
-struct SettingsButtonTitle {
-    let header: String
-    let title: [String]
-    
-    static func getSettingsButtonTitles() -> [SettingsButtonTitle] {
-        
-        var version = "Не удалось получить версию приложения"
-        
-        let appVersion = Bundle.main.object(
-            forInfoDictionaryKey: "CFBundleShortVersionString"
-        )
-        
-        if let appVersion = appVersion as? String {
-            version = "Version: \(appVersion)"
-        }
-        
-        return [
-            SettingsButtonTitle(
-                header: "",
-                title: [version]
-            ),
-            SettingsButtonTitle(
-                header: "Покупки",
-                title: ["Оформить подписку", "Восстановить покупки"]
-            ),
-            SettingsButtonTitle(
-                header: "Обратная связь",
-                title: ["Оставить отзыв в AppStore", "Написать на почту"]
-            ),
-            SettingsButtonTitle(
-                header: " ",
-                title: ["Разработчики"]
-            )
-        ]
-    }
-}
-
 import UIKit
 
-class SettingsListViewController: UITableViewController {
+final class SettingsListViewController: UITableViewController {
     
-//    private let settings = [
-//        ["": ["Текущая версия: 1.0"]],
-//        ["Покупки": ["Оформить подписку", "Восстановить покупки"]],
-//        ["Обратная связь": ["Оставить отзыв в AppStore", "Написать на почту"]],
-//        [" ": ["Разработчики"]]
-//    ]
-    
+    // MARK: - Private Properties
     private let headersAndTitles = SettingsButtonTitle.getSettingsButtonTitles()
-
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = view.frame.height / 17
     }
+}
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
+extension SettingsListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         headersAndTitles.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         headersAndTitles[section].title.count
-       
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         content.text = headersAndTitles[indexPath.section].title[indexPath.row]
-       
-        
-        
+        content.image = UIImage(
+            systemName: headersAndTitles[indexPath.section].image[indexPath.row]
+        )
+        content.imageProperties.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
+      
         switch indexPath.section {
-        case 0:
-            break
+        case 0 where indexPath.row == 0, 2:
+            cell.accessoryType = .disclosureIndicator
+        case 3:
+            content.textProperties.color = .opaqueSeparator
+            cell.selectionStyle = .none
+            content.textProperties.alignment = .center
         default:
-            content.textProperties.font = .boldSystemFont(ofSize: 16)
-            content.textProperties.color = .darkGray
+            break
         }
-        
-        
+    
         cell.contentConfiguration = content
         return cell
     }
@@ -102,5 +60,13 @@ class SettingsListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         view.frame.height / 20
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            performSegue(withIdentifier: "showDevelopers", sender: nil)
+        } else {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }

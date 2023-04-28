@@ -33,10 +33,10 @@ final class DeveloperListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "developer", for: indexPath)
+        var content = cell.defaultContentConfiguration()
         
         let developer = developers[indexPath.section].person[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         content.textProperties.font = .systemFont(ofSize: 17, weight: .semibold)
         content.secondaryTextProperties.color = .darkGray
@@ -46,7 +46,6 @@ final class DeveloperListViewController: UITableViewController {
         content.image = UIImage(named: developer.photo)
         
         cell.contentConfiguration = content
-        
         return cell
     }
     

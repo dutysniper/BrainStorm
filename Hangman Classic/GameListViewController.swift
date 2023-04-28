@@ -40,10 +40,10 @@ extension GameListViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
         
         let gameInfo = gameDescriptions[indexPath.row]
 
-        var content = cell.defaultContentConfiguration()
         content.imageProperties.maximumSize.height = tableView.rowHeight * 0.8
         content.imageProperties.cornerRadius = tableView.rowHeight / 10
         
@@ -56,7 +56,6 @@ extension GameListViewController {
         content.image = UIImage(named: gameInfo.gamePhoto)
         
         cell.contentConfiguration = content
-        
         return cell
     }
     

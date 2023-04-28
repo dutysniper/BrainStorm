@@ -644,7 +644,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3a-2v-aBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2262" y="862"/>
+            <point key="canvasLocation" x="-1525" y="839"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="zyO-z0-Ttp">
@@ -655,7 +655,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" textLabel="0yf-Tc-l5H" detailTextLabel="bDX-by-k7l" style="IBUITableViewCellStyleSubtitle" id="6zj-dh-zoJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" textLabel="0yf-Tc-l5H" detailTextLabel="bDX-by-k7l" style="IBUITableViewCellStyleSubtitle" id="6zj-dh-zoJ">
                                 <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6zj-dh-zoJ" id="UmF-sf-i45">
@@ -663,14 +663,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0yf-Tc-l5H">
-                                            <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="6" width="34.666666666666664" height="19.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bDX-by-k7l">
-                                            <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -686,18 +686,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Настройки" id="yw1-DC-G6i"/>
+                    <connections>
+                        <segue destination="F56-YO-0a3" kind="show" identifier="showDevelopers" id="fht-cv-YM3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lO3-RX-xag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263" y="1560"/>
+            <point key="canvasLocation" x="-2263" y="839"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="qir-U0-3M3">
             <objects>
                 <navigationController id="XUF-ga-9UT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Настройки" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="D9T-Lp-YcJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lix-8J-OYX">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lix-8J-OYX">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -706,7 +709,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncg-GB-xVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3032" y="1560"/>
+            <point key="canvasLocation" x="-3032" y="839"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B1y-Ei-OTY">
@@ -721,32 +724,12 @@
                     <connections>
                         <segue destination="F8a-lC-ci4" kind="relationship" relationship="viewControllers" id="92F-Jr-KvN"/>
                         <segue destination="FjO-yw-QMC" kind="relationship" relationship="viewControllers" id="1Nz-5D-3Lp"/>
-                        <segue destination="Ycf-vV-9Nj" kind="relationship" relationship="viewControllers" id="kmb-1x-nDV"/>
                         <segue destination="XUF-ga-9UT" kind="relationship" relationship="viewControllers" id="ZgW-vH-37g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfc-Ag-iNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3800" y="138"/>
-        </scene>
-        <!--Разработчики-->
-        <scene sceneID="z5X-69-PQY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ycf-vV-9Nj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Разработчики" image="person.2" catalog="system" selectedImage="person.2.fill" id="Adb-8d-0yj"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="asn-Th-sdk">
-                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="F56-YO-0a3" kind="relationship" relationship="rootViewController" id="aT8-ym-aqL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4i2-Ok-g2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3032" y="862"/>
         </scene>
         <!--Игры-->
         <scene sceneID="ZaI-bd-rCz">
@@ -778,8 +761,6 @@
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="person.2" catalog="system" width="128" height="82"/>
-        <image name="person.2.fill" catalog="system" width="128" height="81"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -34,14 +34,14 @@ extension SettingsButtonTitle {
                 image: ["cart.badge.plus.fill", "arrow.counterclockwise.icloud.fill" ]
             ),
             SettingsButtonTitle(
+                header: "Настройки",
+                title: ["Темная тема"],
+                image: ["iphone"]
+            ),
+            SettingsButtonTitle(
                 header: "Обратная связь",
                 title: ["Оценить в AppStore", "Написать на почту"],
                 image: ["star.fill", "envelope.open.fill"]
-            ),
-            SettingsButtonTitle(
-                header: "Тема",
-                title: ["Тема"],
-                image: ["envelope.open.fill"]
             ),
             SettingsButtonTitle(
                 header: "Команда",

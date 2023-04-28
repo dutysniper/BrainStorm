@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         // Задаем светлую тему для всего приложения
-        window?.overrideUserInterfaceStyle = .light
+//        window?.overrideUserInterfaceStyle = .light
         
         // Задаем основной таб для таббара
         if let tabBarController = window?.rootViewController as? UITabBarController {

@@ -683,7 +683,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="115.5" height="45.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Учить страны"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Понизить сложность" imagePadding="3" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="filled" title="label" imagePadding="3" cornerStyle="capsule">
                                             <imageReference key="image" image="arrow.down" catalog="system" symbolScale="medium"/>
                                             <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="4">
                                                 <color key="strokeColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -697,7 +697,7 @@
                                         <rect key="frame" x="172.5" y="0.0" width="115.5" height="45.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Играть"/>
-                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="Начать сначала" imagePadding="3" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="label" imagePadding="3" cornerStyle="capsule">
                                             <imageReference key="image" image="repeat" catalog="system" symbolScale="medium"/>
                                             <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="4">
                                                 <color key="strokeColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

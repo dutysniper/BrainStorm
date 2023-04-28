@@ -20,7 +20,12 @@ final class GameOverViewController: UIViewController {
         super.viewDidLoad()
        setupUI(with: result)
     }
-    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if isBeingDismissed || isMovingFromParent {
+            print("GameOverViewController is dismissing")
+        }
+    }
 }
 extension GameOverViewController {
     private func setupUI(with result: GameResult) {
@@ -29,31 +34,36 @@ extension GameOverViewController {
             gameResultLabel.text = win.name
             detailsResultLabel.text = win.details
             resultImage.image = UIImage(named: win.winImage)
-            firstButton.setTitle("Main menu", for: .normal)
-                            secondButton.setTitle("Play again", for: .normal)
+            firstButton.setTitle("Выход", for: .normal)
+                            secondButton.setTitle("Новое слово", for: .normal)
                             firstButton.addTarget(self, action: #selector(backToMainMenu), for: .touchUpInside)
                             secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
         case .defeat(let defeat):
             gameResultLabel.text = defeat.name
             detailsResultLabel.text = defeat.details
             resultImage.image = UIImage(named: defeat.defeatImage)
-            firstButton.setTitle("Change difficulty", for: .normal)
-                            secondButton.setTitle("Play again", for: .normal)
+            firstButton.setTitle("Сменить сложность", for: .normal)
+                            secondButton.setTitle("Новое слово", for: .normal)
                             firstButton.addTarget(self, action: #selector(changeDifficulty), for: .touchUpInside)
                             secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
         }
     }
     @objc func backToMainMenu() {
-           if let navigationController = self.navigationController {
-               navigationController.popToRootViewController(animated: true)
-           }
+        if let viewControllers = navigationController?.viewControllers {
+                let filteredVCs = viewControllers.filter { !($0 is HangmanViewController) }
+                navigationController?.setViewControllers(filteredVCs, animated: false)
+                let difficultyVC = DifficultyHangmanViewController()
+                navigationController?.pushViewController(difficultyVC, animated: true)
+            }
        }
        
     @objc func changeDifficulty() {
-        if let navigationController = self.navigationController {
-            let difficultyVC = DifficultyHangmanViewController()
-            navigationController.popToViewController(difficultyVC, animated: true)
-        }
+        if let viewControllers = navigationController?.viewControllers {
+                let filteredVCs = viewControllers.filter { !($0 is HangmanViewController) }
+                navigationController?.setViewControllers(filteredVCs, animated: false)
+                let difficultyVC = DifficultyHangmanViewController()
+                navigationController?.pushViewController(difficultyVC, animated: true)
+            }
     }
        
        @objc func playAgain() {
@@ -61,12 +71,12 @@ extension GameOverViewController {
                    fatalError("Unexpected presenting view controller.")
                }
                
-               guard let newWord = Word.randomWord(ofDifficulty: hangmanVC.word.difficulty) else {
+               guard let newWord = HangmanGame.randomWord(ofDifficulty: hangmanVC.game.difficulty) else {
                    fatalError("Failed to generate a new random word.")
                }
                
-               hangmanVC.word = newWord
-           print(hangmanVC.word.word)
+               hangmanVC.game = newWord
+           print(hangmanVC.game.word)
                dismiss(animated: true)
        }
    }

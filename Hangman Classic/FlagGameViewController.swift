@@ -35,7 +35,6 @@ final class FlagGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         continentLabel.text = countryFlag.place.rawValue
-        progressView.progress = progress
         refreshTask()
     }
     
@@ -54,41 +53,29 @@ final class FlagGameViewController: UIViewController {
     
     // MARK: - Private Methods
     private func refreshTask() {
-        countLabel.text = "\(score)"
-        setupButtons()
-
-        
-        counrtyLabel.text = countryFlag.countries.keys.randomElement()
-
-        currentButton = buttons.randomElement()!
-
-        currentButton.configuration?.background.image = UIImage(
-            named: (countryFlag.countries[counrtyLabel.text!]!.lowercased())
-        )
-        
-        // Убрать
-        currentButton.setTitle(countryFlag.countries[counrtyLabel.text!]!, for: .normal)
-    }
-    
-    
-    private func setupButtons() {
+        let dict = countryFlag.countries
+   
         buttons.forEach { button in
-            let countryIndex = countryFlag.countries.values.randomElement()!.lowercased()
-            button.configuration?.background.image = UIImage(named: countryIndex)
-
-            button.setTitle(countryIndex, for: .normal)
+            let countryIndex = dict.values.randomElement()?.lowercased() //--
+            button.configuration?.background.image = UIImage(
+                named: countryIndex ?? ""
+            )
         }
+        
+        countLabel.text = "\(score)"
+        counrtyLabel.text = countryFlag.countries.keys.randomElement()
+        currentButton = buttons.randomElement() ?? UIButton()
+        currentButton.configuration?.background.image = UIImage(
+            named: (dict[counrtyLabel.text ?? ""] ?? "").lowercased()
+        )
     }
-    
-    
-    
     
     private func mistakeDone() {
         mistakesCount += 1
         
         liveImages.forEach { liveImage in
             if liveImage.tag == lives {
-                liveImage.alpha = 0.2
+                liveImage.alpha = 0.1
             }
         }
         
@@ -99,45 +86,33 @@ final class FlagGameViewController: UIViewController {
         progressView.setProgress(progress, animated: true)
     }
     
-    
-    
     private func correctDone() {
         score += 1
         
         switch lives {
         case ..<5:
-            
             progress += 0.2
             progressView.setProgress(progress, animated: true)
             
             if progress == 1 {
-                lives += 1
                 progressFulled()
             }
-            
-            
-
         default:
             lives = 5
         }
     }
     
-    
-    
-    
-    
     private func progressFulled() {
-        
+        lives += 1
+        lives = min(lives, 5)
         
         liveImages.forEach { liveImage in
             if liveImage.tag == lives {
                 liveImage.alpha = 1
             }
         }
-        lives = min(lives, 5)
         
         if lives < 5 {
-       
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
                 self.progress = 0
                 progressView.setProgress(progress, animated: true)
@@ -145,9 +120,4 @@ final class FlagGameViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
-    
 }

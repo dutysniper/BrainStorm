@@ -44,6 +44,7 @@ extension CountryFlag {
             allCountries.merge(countryFlag.countries, uniquingKeysWith: { $1 })
         }
         
+        allCountries.removeValue(forKey: "")
         coutryFlags.insert(
             CountryFlag(place: .allCountries, countries: allCountries),
             at: 0

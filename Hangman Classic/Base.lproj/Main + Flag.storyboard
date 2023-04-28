@@ -438,11 +438,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="102.66666666666667"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="ef">
+                                                <buttonConfiguration key="configuration" style="filled">
                                                     <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="2" strokeOutset="4">
                                                         <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </backgroundConfiguration>
-                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="y6q-kp-Aj7" eventType="touchUpInside" id="VIf-Wm-dpH"/>
@@ -455,11 +454,10 @@
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="ef">
+                                                <buttonConfiguration key="configuration" style="filled">
                                                     <backgroundConfiguration key="background" cornerRadius="12" strokeWidth="2" strokeOutset="4">
                                                         <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </backgroundConfiguration>
-                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -507,9 +505,10 @@
                                     <constraint firstAttribute="height" constant="1" id="kcE-Sb-a9Q"/>
                                 </constraints>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="paD-HD-6Uu">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="paD-HD-6Uu">
                                 <rect key="frame" x="40" y="219.66666666666666" width="350" height="4"/>
                                 <color key="progressTintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Континент" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-86-daL">
                                 <rect key="frame" x="16" y="515.66666666666663" width="199" height="21"/>

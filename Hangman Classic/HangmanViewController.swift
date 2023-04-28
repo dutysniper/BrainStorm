@@ -38,12 +38,8 @@ final class HangmanViewController: UIViewController {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
 
         gameOverVC.result = isWordComplete 
-        ? "Успех!"
-        : "Поражение!"
-
-        gameOverVC.detail = isWordComplete
-        ? word.gameResult.first?.rawValue
-        : word.gameResult.last?.rawValue
+        ? word.gameResult.first
+        : word.gameResult.last
     }
     
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {

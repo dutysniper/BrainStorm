@@ -739,6 +739,7 @@
                     <connections>
                         <outlet property="detailsResultLabel" destination="C6r-L7-Bnj" id="XdB-Ra-VmK"/>
                         <outlet property="gameResultLabel" destination="8Tn-dW-MKO" id="6mh-ch-Mhk"/>
+                        <outlet property="resultImage" destination="Vpk-vH-qO3" id="Ima-uZ-DSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-Sd-C6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

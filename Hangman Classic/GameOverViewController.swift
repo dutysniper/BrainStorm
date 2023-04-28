@@ -10,13 +10,25 @@ import UIKit
 final class GameOverViewController: UIViewController {
     @IBOutlet var gameResultLabel: UILabel!
     @IBOutlet var detailsResultLabel: UILabel!
-    
-    var result: String!
-    var detail: String!
+    @IBOutlet weak var resultImage: UIImageView!
+    var result: GameResult!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameResultLabel.text = result
-        detailsResultLabel.text = detail 
+       setupUI(with: result)
+    }
+}
+extension GameOverViewController {
+    private func setupUI(with result: GameResult) {
+        switch result {
+        case .win(let win):
+            gameResultLabel.text = win.name
+            detailsResultLabel.text = win.details
+            resultImage.image = UIImage(named: win.winImage)
+        case .defeat(let defeat):
+            gameResultLabel.text = defeat.name
+            detailsResultLabel.text = defeat.details
+            resultImage.image = UIImage(named: defeat.defeatImage)
+        }
     }
 }

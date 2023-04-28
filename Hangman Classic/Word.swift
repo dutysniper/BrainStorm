@@ -41,9 +41,24 @@ enum GameProgress: String, CaseIterable {
     case seven = "hangman7"
 }
 
-enum GameResult: String, CaseIterable {
-    case win = "Вас не остановить! Вы успешно угадали слово и остановили палача"
-    case defeat = "На этот раз удача отвернулась от вас. Понизим сложность?"
+enum GameResult: CaseIterable {
+    case win(name: String, details: String, winImage: String)
+    case defeat(name: String, details: String, defeatImage: String)
+    
+    static var allCases: [GameResult] {
+        return [
+            .win(
+                name: "Успех",
+                details: "Вас не остановить! Вы успешно угадали слово и остановили палача",
+                winImage: "hangmanWin"
+            ),
+            .defeat(
+                name: "Поражение",
+                details: "На этот раз удача отвернулась от вас. Понизим сложность?",
+                defeatImage: "hangmanDefeat"
+            )
+        ]
+    }
 }
 
 extension Word {

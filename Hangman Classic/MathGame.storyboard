@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Режимы-->
+        <!--Math Games View Controller-->
         <scene sceneID="wcU-Jr-dxd">
             <objects>
                 <tableViewController storyboardIdentifier="MathGames" hidesBottomBarWhenPushed="YES" id="0OL-eO-6eY" customClass="MathGamesViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,15 @@
                             <outlet property="delegate" destination="0OL-eO-6eY" id="u7X-5u-ce3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Режимы" id="9OE-wz-b7a"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9OE-wz-b7a">
+                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="RWb-Jb-QMD">
+                            <connections>
+                                <action selector="rulesPressed:" destination="Y6W-OH-hqX" id="Pmv-uS-7Rd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="show" identifier="timeGame" id="60p-9o-bSO"/>
                         <segue destination="gxi-Fz-rj7" kind="show" identifier="yesOrNoGame" id="B55-XC-ywF"/>
@@ -58,14 +66,14 @@
             <objects>
                 <viewController storyboardIdentifier="MathGame" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="SprintMathViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-jW-tjP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-TW-5uh">
-                                <rect key="frame" x="16" y="-10" width="288" height="54"/>
+                                <rect key="frame" x="16" y="10" width="288" height="54"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-4y-nJj">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="4"/>
@@ -121,7 +129,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-82-3or">
-                                <rect key="frame" x="124" y="363" width="72" height="40"/>
+                                <rect key="frame" x="124" y="377.5" width="72" height="40"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Старт">
@@ -131,14 +139,14 @@
                                     <action selector="startPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eZC-Tp-BJa"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3tm-3t-mZp">
-                                <rect key="frame" x="16" y="402" width="288" height="96"/>
+                            <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3tm-3t-mZp">
+                                <rect key="frame" x="16" y="427.5" width="288" height="120.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rZ7-sP-ptx">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="52.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-xz-Iv7">
-                                                <rect key="frame" x="0.0" y="0.0" width="136" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="52.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="2">
                                                     <backgroundConfiguration key="background">
@@ -153,7 +161,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmt-K5-uje">
-                                                <rect key="frame" x="152" y="0.0" width="136" height="40"/>
+                                                <rect key="frame" x="152" y="0.0" width="136" height="52.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="2">
                                                     <backgroundConfiguration key="background">
@@ -170,10 +178,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v2f-0q-Qb6">
-                                        <rect key="frame" x="0.0" y="56" width="288" height="40"/>
+                                        <rect key="frame" x="0.0" y="68.5" width="288" height="52"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vN-nJ-C7J">
-                                                <rect key="frame" x="0.0" y="0.0" width="136" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="52"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="2">
                                                     <backgroundConfiguration key="background">
@@ -188,7 +196,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlE-vF-ix8">
-                                                <rect key="frame" x="152" y="0.0" width="136" height="40"/>
+                                                <rect key="frame" x="152" y="0.0" width="136" height="52"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="2">
                                                     <backgroundConfiguration key="background">
@@ -207,13 +215,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 12 = ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhj-To-pFA">
-                                <rect key="frame" x="94.5" y="255" width="131.5" height="38.5"/>
+                                <rect key="frame" x="94.5" y="265" width="131.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спринт" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pzl-oH-VPT">
-                                <rect key="frame" x="102.5" y="152" width="115" height="30.5"/>
+                                <rect key="frame" x="102.5" y="159" width="115" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                 <color key="textColor" name="CommonColor"/>
                                 <nil key="highlightedColor"/>
@@ -228,12 +236,13 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PAI-82-3or" secondAttribute="bottom" multiplier="1.36" id="AO7-gr-Nxe"/>
                             <constraint firstItem="bhj-To-pFA" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="BG7-bo-hzB"/>
                             <constraint firstItem="PAI-82-3or" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Eh3-X8-E5N"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3tm-3t-mZp" secondAttribute="bottom" multiplier="1.1" id="EpY-VL-ET2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3tm-3t-mZp" secondAttribute="bottom" constant="20" id="EpY-VL-ET2"/>
                             <constraint firstItem="eUY-TW-5uh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-10" id="N9f-uS-ZBk"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NyI-2F-fPR"/>
                             <constraint firstItem="pzl-oH-VPT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PiM-y9-knS"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="TRX-VU-Dn6"/>
                             <constraint firstItem="zMq-jW-tjP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Umz-hf-XQC"/>
+                            <constraint firstItem="3tm-3t-mZp" firstAttribute="top" secondItem="PAI-82-3or" secondAttribute="bottom" constant="10" id="kbE-mq-uhj"/>
                             <constraint firstItem="eUY-TW-5uh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="kjf-Mw-saQ"/>
                             <constraint firstItem="bhj-To-pFA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ovL-k5-ARo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pzl-oH-VPT" secondAttribute="bottom" multiplier="3" id="sO5-Gt-Baf"/>
@@ -273,14 +282,14 @@
             <objects>
                 <viewController id="gxi-Fz-rj7" customClass="YesOrNoMathViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="unw-lV-a4d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathBackground" translatesAutoresizingMaskIntoConstraints="NO" id="50Z-Gg-v5c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvO-Oc-jea">
-                                <rect key="frame" x="124" y="363" width="72" height="40"/>
+                                <rect key="frame" x="124" y="341.5" width="72" height="40"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Старт">
@@ -292,10 +301,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1ju-Jw-lPf">
-                                <rect key="frame" x="16" y="446" width="288" height="34"/>
+                                <rect key="frame" x="16" y="411.5" width="288" height="77.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i97-QC-LR3">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="77.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="xmark.seal.fill" catalog="system">
                                             <backgroundConfiguration key="background">
@@ -308,7 +317,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-ND-PyU">
-                                        <rect key="frame" x="152" y="0.0" width="136" height="34"/>
+                                        <rect key="frame" x="152" y="0.0" width="136" height="77.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="checkmark.seal.fill" catalog="system">
                                             <backgroundConfiguration key="background">
@@ -323,13 +332,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 12 = ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GS-IZ-dDa">
-                                <rect key="frame" x="94.5" y="255" width="131.5" height="38.5"/>
+                                <rect key="frame" x="94.5" y="265" width="131.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nr9-LP-oo6">
-                                <rect key="frame" x="16" y="-10" width="288" height="54"/>
+                                <rect key="frame" x="16" y="10" width="288" height="54"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-3m-sFi">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="4"/>
@@ -385,7 +394,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правда или ложь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-Pq-7WW">
-                                <rect key="frame" x="21" y="152" width="278.5" height="30.5"/>
+                                <rect key="frame" x="21" y="142.5" width="278.5" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                 <color key="textColor" name="CommonColor"/>
                                 <nil key="highlightedColor"/>
@@ -403,16 +412,25 @@
                             <constraint firstItem="CyR-Ag-LOI" firstAttribute="bottom" secondItem="LvO-Oc-jea" secondAttribute="bottom" multiplier="1.36" id="Jxt-P8-Kxo"/>
                             <constraint firstItem="nr9-LP-oo6" firstAttribute="top" secondItem="CyR-Ag-LOI" secondAttribute="top" constant="-10" id="MLW-Me-WsE"/>
                             <constraint firstItem="vaE-Pq-7WW" firstAttribute="centerX" secondItem="unw-lV-a4d" secondAttribute="centerX" id="ZJj-r7-20I"/>
+                            <constraint firstItem="1ju-Jw-lPf" firstAttribute="top" secondItem="LvO-Oc-jea" secondAttribute="bottom" constant="30" id="bw0-mH-UXG"/>
                             <constraint firstItem="50Z-Gg-v5c" firstAttribute="leading" secondItem="unw-lV-a4d" secondAttribute="leading" id="dM0-xW-0Gs"/>
                             <constraint firstItem="nr9-LP-oo6" firstAttribute="leading" secondItem="CyR-Ag-LOI" secondAttribute="leading" constant="16" id="fEY-5o-zUT"/>
                             <constraint firstItem="6GS-IZ-dDa" firstAttribute="centerY" secondItem="unw-lV-a4d" secondAttribute="centerY" id="hyA-FG-dPK"/>
                             <constraint firstItem="50Z-Gg-v5c" firstAttribute="top" secondItem="unw-lV-a4d" secondAttribute="top" id="iQQ-4o-rPr"/>
                             <constraint firstAttribute="bottom" secondItem="50Z-Gg-v5c" secondAttribute="bottom" id="pRP-1g-00l"/>
                             <constraint firstItem="LvO-Oc-jea" firstAttribute="centerX" secondItem="unw-lV-a4d" secondAttribute="centerX" id="r9j-rM-4Xx"/>
-                            <constraint firstItem="CyR-Ag-LOI" firstAttribute="bottom" secondItem="1ju-Jw-lPf" secondAttribute="bottom" constant="68" id="wSy-Ub-2up"/>
+                            <constraint firstItem="CyR-Ag-LOI" firstAttribute="bottom" secondItem="1ju-Jw-lPf" secondAttribute="bottom" constant="30" id="wSy-Ub-2up"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="h3k-xH-PsV"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="h3k-xH-PsV">
+                        <barButtonItem key="rightBarButtonItem" image="questionmark.circle" catalog="system" id="Ipf-pM-v13">
+                            <connections>
+                                <action selector="rulesPressed:" destination="Y6W-OH-hqX" id="7mN-4I-D5y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="expressionLabel" destination="6GS-IZ-dDa" id="IKp-CQ-bcE"/>
                         <outlet property="gameNameLabel" destination="vaE-Pq-7WW" id="Ivy-nL-pJd"/>
@@ -432,6 +450,7 @@
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="mathBackground" width="2000" height="1333"/>
         <image name="medal" catalog="system" width="121" height="128"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>

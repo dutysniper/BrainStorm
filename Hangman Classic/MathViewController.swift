@@ -12,16 +12,17 @@ final class MathViewController: UIViewController {
     // MARK: - Public Properties
     var gameDescription: GameDescription!
     
-    // MARK: - IBOutlets
-    @IBOutlet private var answerButtons: [UIButton]!
+    // MARK: - IB Outlets
     @IBOutlet private var stackViews: [UIStackView]!
+    @IBOutlet private var answerButtons: [UIButton]!
     
-    @IBOutlet private var startButton: UIButton!
     @IBOutlet private var gameNameLabel: UILabel!
-    @IBOutlet private var expressionLabel: UILabel!
+    @IBOutlet private var startButton: UIButton!
+    
     @IBOutlet private var progressView: UIProgressView!
     @IBOutlet private var timerLabel: UILabel!
     @IBOutlet private var scoreLabel: UILabel!
+    @IBOutlet private var expressionLabel: UILabel!
     
     // MARK: - Private Properties
     private var expression = Expression.getRandomExpression(withDifficulty: 1)
@@ -50,7 +51,7 @@ final class MathViewController: UIViewController {
         progressView.progress = Float(progress) / 1000
     }
     
-    // MARK: - IBActions
+    // MARK: - IB Actions
     @IBAction private func startPressed() {
         setupGameScreen(withStartButton: false)
         setExpression()
@@ -83,9 +84,12 @@ final class MathViewController: UIViewController {
         ac.addAction(okAction)
         present(ac, animated: true)
     }
-    
-    // MARK: - Private Methods
-    private func setupGameScreen(withStartButton boolean: Bool) {
+}
+
+// MARK: - Game logic methods
+private extension MathViewController {
+    // MARK: - Methods
+    func setupGameScreen(withStartButton boolean: Bool) {
         stackViews.forEach {
             $0.isHidden = boolean
         }
@@ -97,13 +101,13 @@ final class MathViewController: UIViewController {
         expressionDifficulty = 1
     }
     
-    private func setExpression() {
+    func setExpression() {
         expression = Expression.getRandomExpression(withDifficulty: expressionDifficulty)
         expressionLabel.text = expression.expression
         setButtons()
     }
     
-    private func setButtons() {
+    func setButtons() {
         var i = 0
         correctButton = Int.random(in: 0...3)
         let operationTypes = Array(OperationType.allCases)
@@ -139,7 +143,7 @@ final class MathViewController: UIViewController {
         }
     }
     
-    private func createTimer() {
+    func createTimer() {
         timer = Timer.scheduledTimer(
             timeInterval: 0.01,
             target: self,
@@ -149,7 +153,7 @@ final class MathViewController: UIViewController {
         )
     }
     
-    private func stopTheGame(withMessage title: String) {
+    func stopTheGame(withMessage title: String) {
         timer.invalidate()
         let ac = UIAlertController(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -161,7 +165,7 @@ final class MathViewController: UIViewController {
     
     // MARK: - Objective-C Methods
     @objc
-    private func setProgressView() {
+    func setProgressView() {
         progress -= 1
         progressView.setProgress(Float(progress) / 1000, animated: true)
         if progress < 1 {

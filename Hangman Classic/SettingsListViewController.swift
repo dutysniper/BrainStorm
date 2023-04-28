@@ -32,6 +32,13 @@ extension SettingsListViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+       
+        
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
@@ -42,9 +49,11 @@ extension SettingsListViewController {
         content.imageProperties.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
         
         switch indexPath.section {
-        case 0 where indexPath.row == 0, 2:
+        case 0 where indexPath.row == 0, 3:
             cell.accessoryType = .disclosureIndicator
-        case 3:
+        case 2:
+            return (tableView.dequeueReusableCell(withIdentifier: "themeCell", for: indexPath) as? ThemeTableViewCell)!
+        case 4:
             content.textProperties.color = .opaqueSeparator
             cell.selectionStyle = .none
             content.textProperties.alignment = .center

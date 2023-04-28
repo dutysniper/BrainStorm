@@ -91,6 +91,16 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		4C88CA7B29FC0E97005ABAF3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
+				4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */,
+				4C88CA7929FC0637005ABAF3 /* ThemeTableViewCell.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		4C944E1A29F956F000E12081 /* FlagViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +115,9 @@
 		4CF7AC3929F9F1ED00C25C0A /* MainViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
 				4CF7AC3329F9B16600C25C0A /* GameListViewController.swift */,
 				4C41E5C429FACEF1007C2E90 /* StatsListViewController.swift */,
-				4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */,
-				4C88CA7929FC0637005ABAF3 /* ThemeTableViewCell.swift */,
+				4C88CA7B29FC0E97005ABAF3 /* Settings */,
 			);
 			name = MainViewControllers;
 			sourceTree = "<group>";

@@ -9,6 +9,10 @@ import UIKit
 
 final class ThemeTableViewCell: UITableViewCell {
     
+    @IBOutlet var cellImageView: UIImageView!
+    
+    @IBOutlet var cellLabel: UILabel!
+    
     @IBAction func themeToggle(_ sender: UISwitch) {
         window?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
     }

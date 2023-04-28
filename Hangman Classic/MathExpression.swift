@@ -11,11 +11,13 @@ struct Expression {
     let operationType: OperationType
     let expressionType: ExpressionType
     var result: Int {
-        switch operationType {
-        case .addition: return firstNumber + secondNumber
-        case .subtraction: return firstNumber - secondNumber
-        case .multiplication: return firstNumber * secondNumber
-        case .division: return firstNumber / secondNumber
+        get {
+            switch operationType {
+            case .addition: return firstNumber + secondNumber
+            case .subtraction: return firstNumber - secondNumber
+            case .multiplication: return firstNumber * secondNumber
+            case .division: return firstNumber / secondNumber
+            }
         }
     }
     var expression: String {
@@ -25,8 +27,11 @@ struct Expression {
         case .result: return "\(firstNumber) \(operationType.rawValue) \(secondNumber) = ?"
         }
     }
+    var fullExpression: String {
+        "\(firstNumber) \(operationType.rawValue) \(secondNumber) = \(result)"
+    }
     
-    static func getTimeRandomExpression(withDifficulty difficulty: Int) -> Expression {
+    static func getRandomExpression(withDifficulty difficulty: Int) -> Expression {
         var firstNumber = 0
         var secondNumber = 0
         let operationTypes: [OperationType] = [

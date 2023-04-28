@@ -7,9 +7,13 @@
 
 import UIKit
 
-class MathGamesViewController: UITableViewController {
+final class MathGamesViewController: UITableViewController {
+    
+    var gameDescription: GameDescription!
 
-    let gamemodes = Gamemodes.allCases
+    private let gameNames = ["Спринт", "Правда или ложь"]
+    private let gameDescriptions = ["10 секунд на правильный ответ", "Определите верное ли выражение"]
+    private let gameImages = ["timeGame", "yesOrNoGame"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,7 @@ class MathGamesViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        gamemodes.count
+        gameNames.count
     }
 
     
@@ -27,7 +31,14 @@ class MathGamesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
 
         var content = cell.defaultContentConfiguration()
-        content.image = UIImage(named: gamemodes[indexPath.row].rawValue)
+
+        content.imageProperties.maximumSize = CGSize(width: 30, height: 30)
+        content.imageProperties.cornerRadius = content.imageProperties.maximumSize.width / 2
+        content.textProperties.font = .boldSystemFont(ofSize: 15)
+        content.text = gameNames[indexPath.row]
+        content.secondaryText = gameDescriptions[indexPath.row]
+        content.image = UIImage(named: gameImages[indexPath.row])
+        
         cell.contentConfiguration = content
         return cell
     }
@@ -40,13 +51,13 @@ class MathGamesViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0: performSegue(withIdentifier: "timeGame", sender: nil)
+        case 1: performSegue(withIdentifier: "yesOrNoGame", sender: nil)
+        default: break
+        }
+    }
     
 
-}
-
-extension MathGamesViewController {
-    enum Gamemodes: String, CaseIterable {
-        case time = "timeGame"
-        case yesOrNo = "yesOrNoGame"
-    }
 }

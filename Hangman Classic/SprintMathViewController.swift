@@ -7,10 +7,7 @@
 
 import UIKit
 
-final class MathViewController: UIViewController {
-    
-    // MARK: - Public Properties
-    var gameDescription: GameDescription!
+final class SprintMathViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet private var stackViews: [UIStackView]!
@@ -25,7 +22,7 @@ final class MathViewController: UIViewController {
     @IBOutlet private var expressionLabel: UILabel!
     
     // MARK: - Private Properties
-    private var expression = Expression.getTimeRandomExpression(withDifficulty: 1)
+    private var expression = Expression.getRandomExpression(withDifficulty: 1)
     private var expressionDifficulty = 1
     private var timer = Timer()
     private var correctButton = 0
@@ -63,7 +60,6 @@ final class MathViewController: UIViewController {
             setExpression()
             progress = 1000
             score += 1
-            sender.tintColor = .green
         } else {
             stopTheGame(withMessage: "Вы ошиблись")
         }
@@ -87,7 +83,7 @@ final class MathViewController: UIViewController {
 }
 
 // MARK: - Game logic methods
-private extension MathViewController {
+private extension SprintMathViewController {
     // MARK: - Methods
     func setupGameScreen(withStartButton boolean: Bool) {
         stackViews.forEach {
@@ -102,7 +98,7 @@ private extension MathViewController {
     }
     
     func setExpression() {
-        expression = Expression.getTimeRandomExpression(withDifficulty: expressionDifficulty)
+        expression = Expression.getRandomExpression(withDifficulty: expressionDifficulty)
         expressionLabel.text = expression.expression
         setButtons()
     }
@@ -155,7 +151,9 @@ private extension MathViewController {
     
     func stopTheGame(withMessage title: String) {
         timer.invalidate()
-        showOkAlert(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)")
+        showOkAlert(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)") { _ in
+            self.setupGameScreen(withStartButton: true)
+        }
     }
     
     // MARK: - Objective-C Methods

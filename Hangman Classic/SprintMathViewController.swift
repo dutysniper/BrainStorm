@@ -60,7 +60,6 @@ final class SprintMathViewController: UIViewController {
             setExpression()
             progress = 1000
             score += 1
-            sender.tintColor = .green
         } else {
             stopTheGame(withMessage: "Вы ошиблись")
         }
@@ -152,7 +151,9 @@ private extension SprintMathViewController {
     
     func stopTheGame(withMessage title: String) {
         timer.invalidate()
-        showOkAlert(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)")
+        showOkAlert(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)") { _ in
+            self.setupGameScreen(withStartButton: true)
+        }
     }
     
     // MARK: - Objective-C Methods

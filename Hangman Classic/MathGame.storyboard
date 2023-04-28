@@ -384,6 +384,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правда или ложь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-Pq-7WW">
+                                <rect key="frame" x="21" y="152" width="278.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
+                                <color key="textColor" name="CommonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CyR-Ag-LOI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -392,9 +398,11 @@
                             <constraint firstItem="1ju-Jw-lPf" firstAttribute="leading" secondItem="CyR-Ag-LOI" secondAttribute="leading" constant="16" id="3Ex-jf-cMQ"/>
                             <constraint firstAttribute="trailing" secondItem="50Z-Gg-v5c" secondAttribute="trailing" id="3IR-rN-lUf"/>
                             <constraint firstItem="CyR-Ag-LOI" firstAttribute="trailing" secondItem="1ju-Jw-lPf" secondAttribute="trailing" constant="16" id="9dz-LY-RGy"/>
+                            <constraint firstItem="CyR-Ag-LOI" firstAttribute="bottom" secondItem="vaE-Pq-7WW" secondAttribute="bottom" multiplier="3" id="Hg1-fg-6As"/>
                             <constraint firstItem="CyR-Ag-LOI" firstAttribute="trailing" secondItem="nr9-LP-oo6" secondAttribute="trailing" constant="16" id="I3P-Al-2aY"/>
                             <constraint firstItem="CyR-Ag-LOI" firstAttribute="bottom" secondItem="LvO-Oc-jea" secondAttribute="bottom" multiplier="1.36" id="Jxt-P8-Kxo"/>
                             <constraint firstItem="nr9-LP-oo6" firstAttribute="top" secondItem="CyR-Ag-LOI" secondAttribute="top" constant="-10" id="MLW-Me-WsE"/>
+                            <constraint firstItem="vaE-Pq-7WW" firstAttribute="centerX" secondItem="unw-lV-a4d" secondAttribute="centerX" id="ZJj-r7-20I"/>
                             <constraint firstItem="50Z-Gg-v5c" firstAttribute="leading" secondItem="unw-lV-a4d" secondAttribute="leading" id="dM0-xW-0Gs"/>
                             <constraint firstItem="nr9-LP-oo6" firstAttribute="leading" secondItem="CyR-Ag-LOI" secondAttribute="leading" constant="16" id="fEY-5o-zUT"/>
                             <constraint firstItem="6GS-IZ-dDa" firstAttribute="centerY" secondItem="unw-lV-a4d" secondAttribute="centerY" id="hyA-FG-dPK"/>
@@ -407,6 +415,7 @@
                     <navigationItem key="navigationItem" id="h3k-xH-PsV"/>
                     <connections>
                         <outlet property="expressionLabel" destination="6GS-IZ-dDa" id="IKp-CQ-bcE"/>
+                        <outlet property="gameNameLabel" destination="vaE-Pq-7WW" id="Ivy-nL-pJd"/>
                         <outlet property="progressView" destination="jPd-3m-sFi" id="Oo4-4C-pmb"/>
                         <outlet property="scoreLabel" destination="dVY-5D-st2" id="VuG-Ks-PMg"/>
                         <outlet property="stackView" destination="nr9-LP-oo6" id="XjP-qW-Rbo"/>

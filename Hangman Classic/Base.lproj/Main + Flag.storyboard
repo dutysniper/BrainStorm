@@ -682,46 +682,51 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="themeCell" id="PmP-sp-Xj8" customClass="ThemeTableViewCell" customModule="Hangman_Classic" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="103.66666793823242" width="430" height="20.666666030883789"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="themeCell" rowHeight="55" id="PmP-sp-Xj8" customClass="ThemeTableViewCell" customModule="Hangman_Classic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="103.66666793823242" width="430" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PmP-sp-Xj8" id="0TH-wE-nsV">
-                                    <rect key="frame" x="0.0" y="0.0" width="430" height="20.666666030883789"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-l7-1Vc">
-                                            <rect key="frame" x="341" y="-5.3333333333333286" width="51" height="31.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="49" id="8kM-gK-NVW"/>
-                                            </constraints>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-l7-1Vc">
+                                            <rect key="frame" x="341" y="12" width="51" height="31"/>
+                                            <color key="onTintColor" name="CommonColor"/>
+                                            <color key="thumbTintColor" systemColor="systemBackgroundColor"/>
                                             <connections>
                                                 <action selector="themeToggle:" destination="PmP-sp-Xj8" eventType="valueChanged" id="hIy-OS-vRH"/>
                                             </connections>
                                         </switch>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backward.end.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X9P-fq-Qqo">
-                                            <rect key="frame" x="20" y="0.99999999999999822" width="20.666666666666671" height="19.333333333333336"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="X9P-fq-Qqo" secondAttribute="height" multiplier="1:1" id="c6c-90-Cj1"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Темная тема" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYD-7l-Gfd">
-                                            <rect key="frame" x="60.666666666666657" y="-0.3333333333333286" width="260.33333333333337" height="21.333333333333329"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYD-7l-Gfd">
+                                            <rect key="frame" x="60" y="17.333333333333336" width="261" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HUu-cb-guq">
+                                            <rect key="frame" x="5" y="5" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="HUu-cb-guq" secondAttribute="height" multiplier="1:1" id="7UA-U5-I0V"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="gaP-l7-1Vc" secondAttribute="trailing" constant="40" id="0bI-qP-Rs2"/>
-                                        <constraint firstItem="X9P-fq-Qqo" firstAttribute="height" secondItem="0TH-wE-nsV" secondAttribute="height" id="2QW-VC-Cq7"/>
                                         <constraint firstItem="gaP-l7-1Vc" firstAttribute="centerY" secondItem="0TH-wE-nsV" secondAttribute="centerY" id="4er-de-WEw"/>
-                                        <constraint firstItem="X9P-fq-Qqo" firstAttribute="leading" secondItem="0TH-wE-nsV" secondAttribute="leading" constant="20" id="N8c-q5-acY"/>
+                                        <constraint firstItem="YYD-7l-Gfd" firstAttribute="leading" secondItem="HUu-cb-guq" secondAttribute="trailing" constant="10" id="OB4-mb-coi"/>
                                         <constraint firstItem="gaP-l7-1Vc" firstAttribute="leading" secondItem="YYD-7l-Gfd" secondAttribute="trailing" constant="20" id="OSd-C1-cu6"/>
-                                        <constraint firstItem="YYD-7l-Gfd" firstAttribute="leading" secondItem="X9P-fq-Qqo" secondAttribute="trailing" constant="20" id="TG2-kd-iVC"/>
                                         <constraint firstItem="YYD-7l-Gfd" firstAttribute="centerY" secondItem="0TH-wE-nsV" secondAttribute="centerY" id="TXp-gD-Okr"/>
-                                        <constraint firstItem="X9P-fq-Qqo" firstAttribute="centerY" secondItem="0TH-wE-nsV" secondAttribute="centerY" id="hFJ-YP-mbZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="HUu-cb-guq" firstAttribute="top" secondItem="PmP-sp-Xj8" secondAttribute="top" constant="5" id="4vC-hD-FVH"/>
+                                    <constraint firstItem="HUu-cb-guq" firstAttribute="leading" secondItem="PmP-sp-Xj8" secondAttribute="leading" constant="5" id="5p0-cP-OvH"/>
+                                    <constraint firstAttribute="bottom" secondItem="HUu-cb-guq" secondAttribute="bottom" constant="5" id="n6T-mJ-maG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellImageView" destination="HUu-cb-guq" id="Kun-9b-Zav"/>
+                                    <outlet property="cellLabel" destination="YYD-7l-Gfd" id="idm-aw-CFQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -736,7 +741,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lO3-RX-xag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263" y="839"/>
+            <point key="canvasLocation" x="-2264.6511627906975" y="838.84120171673828"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="qir-U0-3M3">
@@ -796,7 +801,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backward.end.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="90"/>
         <image name="flagBackground" width="1080" height="1920"/>

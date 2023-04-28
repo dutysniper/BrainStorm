@@ -26,7 +26,7 @@ struct Expression {
         }
     }
     
-    static func getRandomExpression(withDifficulty difficulty: Int) -> Expression {
+    static func getTimeRandomExpression(withDifficulty difficulty: Int) -> Expression {
         var firstNumber = 0
         var secondNumber = 0
         let operationTypes: [OperationType] = [

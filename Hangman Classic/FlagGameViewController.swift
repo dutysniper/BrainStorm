@@ -9,31 +9,32 @@ import UIKit
 
 final class FlagGameViewController: UIViewController {
      
-    var countryFlag: CountryFlag!
-    
-    var score = 0
-    
-    var lives = 5
-    
-    var currentButton = UIButton()
-    var mistakesCount = 0 
-    var progress: Float = 1
-
+    // MARK: - IB Outlets
     @IBOutlet private var counrtyLabel: UILabel!
     @IBOutlet private var countLabel: UILabel!
-    @IBOutlet private var buttons: [UIButton]!
-    @IBOutlet var circleView: UIView!
-    @IBOutlet var progressView: UIProgressView!
-    
-    @IBOutlet var liveImages: [UIImageView]!
-    
     @IBOutlet private var continentLabel: UILabel!
     
+    @IBOutlet private var buttons: [UIButton]!
+    @IBOutlet private var liveImages: [UIImageView]!
+    
+    @IBOutlet private var circleView: UIView!
+    @IBOutlet private var progressView: UIProgressView!
+    
+    // MARK: - Public Properties
+    var countryFlag: CountryFlag!
+    
+    // MARK: - Private Properties
+    private var currentButton = UIButton()
+    private var progress: Float = 1
+    
+    private var score = 0
+    private var lives = 5
+    private var mistakesCount = 0
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         continentLabel.text = countryFlag.place.rawValue
-        
         progressView.progress = progress
         refreshTask()
     }
@@ -45,8 +46,13 @@ final class FlagGameViewController: UIViewController {
         circleView.layer.borderColor = UIColor.opaqueSeparator.cgColor
     }
     
+    // MARK: - IB Actions
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        sender.tag == currentButton.tag ? correctDone() : mistakeDone()
+        refreshTask()
+    }
     
-    
+    // MARK: - Private Methods
     private func refreshTask() {
         countLabel.text = "\(score)"
         setupButtons()
@@ -65,85 +71,6 @@ final class FlagGameViewController: UIViewController {
     }
     
     
-    
-    
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        if sender.tag == currentButton.tag {
-            score += 1
-            
-            
-            
-            
-            switch lives {
-            case ..<5:
-                progress += 0.2
-                
-                if progress == 1 {
-                    lives += 1
-                    
-                    liveImages.forEach { liveImage in
-                        if liveImage.tag == lives {
-                            liveImage.alpha = 1
-                        }
-                    }
-                    lives = min(lives, 5)
-                    
-                    
-                    if lives == 5 {
-                        progress = 1
-                    } else {
-                        progress = 0
-                    }
-                    
-                
-                    
-                }
-                
-                progressView.setProgress(progress, animated: true)
-                
-              
-                
-                print("Progress: \(progress)  |  Lives: \(lives)")
-                
-                
-            default:
-                lives = 5
-                
-                print("Progress: \(progress)  |  Lives: \(lives)")
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        } else {
-            mistakesCount += 1
-            
-            liveImages.forEach { liveImage in
-                if liveImage.tag == lives {
-                    liveImage.alpha = 0.2
-                }
-            }
-            
-            lives -= 1
-            lives = max(lives, 0)
-            
-            progress = 0
-            progressView.setProgress(progress, animated: true)
-            
-            print("Progress: \(progress)  |  Lives: \(lives)")
-        }
-        refreshTask()
-    }
-    
-    
-    
-    
-    
     private func setupButtons() {
         buttons.forEach { button in
             let countryIndex = countryFlag.countries.values.randomElement()!.lowercased()
@@ -152,6 +79,73 @@ final class FlagGameViewController: UIViewController {
             button.setTitle(countryIndex, for: .normal)
         }
     }
+    
+    
+    
+    
+    private func mistakeDone() {
+        mistakesCount += 1
+        
+        liveImages.forEach { liveImage in
+            if liveImage.tag == lives {
+                liveImage.alpha = 0.2
+            }
+        }
+        
+        lives -= 1
+        lives = max(lives, 0)
+        
+        progress = 0
+        progressView.setProgress(progress, animated: true)
+    }
+    
+    
+    
+    private func correctDone() {
+        score += 1
+        
+        switch lives {
+        case ..<5:
+            
+            progress += 0.2
+            progressView.setProgress(progress, animated: true)
+            
+            if progress == 1 {
+                lives += 1
+                progressFulled()
+            }
+            
+            
+
+        default:
+            lives = 5
+        }
+    }
+    
+    
+    
+    
+    
+    private func progressFulled() {
+        
+        
+        liveImages.forEach { liveImage in
+            if liveImage.tag == lives {
+                liveImage.alpha = 1
+            }
+        }
+        lives = min(lives, 5)
+        
+        if lives < 5 {
+       
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+                self.progress = 0
+                progressView.setProgress(progress, animated: true)
+                return
+            }
+        }
+    }
+    
     
     
     

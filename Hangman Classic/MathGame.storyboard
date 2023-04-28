@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Math Games View Controller-->
+        <!--Режимы-->
         <scene sceneID="wcU-Jr-dxd">
             <objects>
-                <tableViewController storyboardIdentifier="mathGames" id="0OL-eO-6eY" customClass="MathGamesViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MathGames" id="0OL-eO-6eY" customClass="MathGamesViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="c1z-Lj-xTW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,10 @@
                             <outlet property="delegate" destination="0OL-eO-6eY" id="u7X-5u-ce3"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Режимы" id="9OE-wz-b7a"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="show" id="60p-9o-bSO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCa-93-siX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,14 +48,14 @@
             <objects>
                 <viewController storyboardIdentifier="MathGame" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="MathViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-jW-tjP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-TW-5uh">
-                                <rect key="frame" x="16" y="10" width="288" height="54"/>
+                                <rect key="frame" x="16" y="-10" width="288" height="54"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-4y-nJj">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="4"/>
@@ -107,7 +111,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-82-3or">
-                                <rect key="frame" x="124" y="364" width="72" height="40"/>
+                                <rect key="frame" x="124" y="344" width="72" height="40"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Старт">
@@ -118,7 +122,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3tm-3t-mZp">
-                                <rect key="frame" x="16" y="420.5" width="288" height="96"/>
+                                <rect key="frame" x="16" y="402" width="288" height="96"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rZ7-sP-ptx">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -193,13 +197,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 12 = ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhj-To-pFA">
-                                <rect key="frame" x="94.5" y="265" width="131.5" height="38.5"/>
+                                <rect key="frame" x="94.5" y="255" width="131.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Math" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzl-oH-VPT">
-                                <rect key="frame" x="89.5" y="154.5" width="141.5" height="35"/>
+                                <rect key="frame" x="89.5" y="147.5" width="141.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
                                 <color key="textColor" name="CommonColor"/>
                                 <nil key="highlightedColor"/>

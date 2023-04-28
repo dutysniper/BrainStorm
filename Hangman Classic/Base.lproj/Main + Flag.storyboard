@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-2263" y="138"/>
         </scene>
-        <!--MathGame-->
+        <!--MathGames-->
         <scene sceneID="xBE-uR-whp">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MathGame" storyboardName="MathGame" referencedIdentifier="MathGame" id="hnq-G2-Eiz" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MathGame" referencedIdentifier="MathGames" id="hnq-G2-Eiz" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Sj1-Tc-vUj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dl7-CV-3TM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -104,17 +104,47 @@ final class MathViewController: UIViewController {
     }
     
     private func setButtons() {
+        var i = 0
         correctButton = Int.random(in: 0...3)
+        let operationTypes = Array(OperationType.allCases)
         answerButtons.forEach {
-            if $0.tag == correctButton {
-                $0.setTitle(String(expression.result), for: .normal)
-            } else {
-                if Int.random(in: 1...10) > 5 {
-                    $0.setTitle(String(expression.result - Int.random(in: 1...10)), for: .normal)
+            switch expression.expressionType {
+            case .operand:
+                if $0.tag == correctButton {
+                    $0.setTitle(String(expression.secondNumber), for: .normal)
                 } else {
-                    $0.setTitle(String(expression.result + Int.random(in: 1...10)), for: .normal)
+                    if Int.random(in: 1...10) > 5 {
+                        $0.setTitle(String(expression.secondNumber - Int.random(in: 1...10)), for: .normal)
+                    } else {
+                        $0.setTitle(String(expression.secondNumber + Int.random(in: 1...10)), for: .normal)
+                    }
+                }
+            case .operationType:
+                $0.setTitle(operationTypes[i].rawValue, for: .normal)
+                if operationTypes[i] == expression.operationType {
+                    correctButton = i
+                }
+                i += 1
+            case .result:
+                if $0.tag == correctButton {
+                    $0.setTitle(String(expression.result), for: .normal)
+                } else {
+                    if Int.random(in: 1...10) > 5 {
+                        $0.setTitle(String(expression.result - Int.random(in: 1...10)), for: .normal)
+                    } else {
+                        $0.setTitle(String(expression.result + Int.random(in: 1...10)), for: .normal)
+                    }
                 }
             }
+            //            if $0.tag == correctButton {
+            //                $0.setTitle(String(expression.result), for: .normal)
+            //            } else {
+            //                if Int.random(in: 1...10) > 5 {
+            //                    $0.setTitle(String(expression.result - Int.random(in: 1...10)), for: .normal)
+            //                } else {
+            //                    $0.setTitle(String(expression.result + Int.random(in: 1...10)), for: .normal)
+            //                }
+            //            }
         }
     }
     

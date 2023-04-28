@@ -14,18 +14,27 @@
         <!--Режимы-->
         <scene sceneID="wcU-Jr-dxd">
             <objects>
-                <tableViewController storyboardIdentifier="MathGames" id="0OL-eO-6eY" customClass="MathGamesViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MathGames" hidesBottomBarWhenPushed="YES" id="0OL-eO-6eY" customClass="MathGamesViewController" customModule="Hangman_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="c1z-Lj-xTW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="pA4-bI-Qtk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" textLabel="L1j-0d-mLX" style="IBUITableViewCellStyleDefault" id="pA4-bI-Qtk">
                                 <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pA4-bI-Qtk" id="A2Z-9w-vX0">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L1j-0d-mLX">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +45,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Режимы" id="9OE-wz-b7a"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="show" id="60p-9o-bSO"/>
+                        <segue destination="Y6W-OH-hqX" kind="show" identifier="timeGame" id="60p-9o-bSO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCa-93-siX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,9 +9,6 @@ import UIKit
 
 final class MathViewController: UIViewController {
     
-    // MARK: - Public Properties
-    var gameDescription: GameDescription!
-    
     // MARK: - IB Outlets
     @IBOutlet private var stackViews: [UIStackView]!
     @IBOutlet private var answerButtons: [UIButton]!

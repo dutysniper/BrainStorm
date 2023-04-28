@@ -5,7 +5,7 @@
 //  Created by Константин Натаров on 24.04.2023.
 //
 
-struct Word {
+struct HangmanGame {
     let word: String
     let difficulty: Difficulty
     var gameProgress: [GameProgress]
@@ -61,8 +61,8 @@ enum GameResult: CaseIterable {
     }
 }
 
-extension Word {
-    static func randomWord(ofDifficulty difficulty: Difficulty) -> Word? {
+extension HangmanGame {
+    static func randomWord(ofDifficulty difficulty: Difficulty) -> HangmanGame? {
         let wordArray: [String]
         let dataStore = HangmanDataStore.shared
         switch difficulty {
@@ -80,6 +80,6 @@ extension Word {
             return nil
         }
         
-        return Word(word: randomWord.lowercased(), difficulty: difficulty, gameProgress: GameProgress.allCases, gameResult: GameResult.allCases)
+        return HangmanGame(word: randomWord.lowercased(), difficulty: difficulty, gameProgress: GameProgress.allCases, gameResult: GameResult.allCases)
     }
 }

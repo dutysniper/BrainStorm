@@ -19,8 +19,8 @@ final class DifficultyHangmanViewController: UIViewController {
         guard let hangmanVC = segue.destination as? HangmanViewController else { return }
         guard let button = sender as? UIButton else { return }
         let tag = button.tag 
-        let randomWord = Word.randomWord(ofDifficulty: Difficulty.allCases[tag])
-        hangmanVC.word = randomWord
+        let randomWord = HangmanGame.randomWord(ofDifficulty: Difficulty.allCases[tag])
+        hangmanVC.game = randomWord
     }
     
     // MARK: - Navigation

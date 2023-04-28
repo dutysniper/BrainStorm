@@ -16,7 +16,7 @@ final class HangmanViewController: UIViewController {
     @IBOutlet var livesImages: [UIImageView]!
     @IBOutlet private var keyBoardButtons: [UIButton]!
     
-    var word: Word!
+    var game: HangmanGame!
     var numberOfErrors = 0
     var secretWord = "" {
         didSet {
@@ -41,14 +41,16 @@ final class HangmanViewController: UIViewController {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
 
         gameOverVC.result = isWordComplete 
-        ? word.gameResult.first
-        : word.gameResult.last
+        ? game.gameResult.first
+        : game.gameResult.last
     }
-    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        dismiss(animated: true)
+    }
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
         let letter = sender.titleLabel?.text?.lowercased() ?? " "
-
-        if word.word.contains(letter) {
+        print(numberOfErrors)
+        if game.word.contains(letter) {
             setCorrectLetter(letter: letter)
             sender.layer.borderColor = UIColor.green.cgColor
         } else {
@@ -85,7 +87,7 @@ extension HangmanViewController {
     
     private func setCorrectLetter(letter: String) {
         var _word = ""
-        for (wordChar, secretChar) in zip(word.word, secretWord) {
+        for (wordChar, secretChar) in zip(game.word, secretWord) {
             _word += (String(wordChar) == letter && String(secretChar) == "_") ? letter : String(secretChar)
         }
         secretWord = _word
@@ -93,15 +95,19 @@ extension HangmanViewController {
     
     private func setIncorrectLetter() {
         numberOfErrors += 1
-        hangmanImage.image = UIImage(named: word.gameProgress[numberOfErrors - 1].rawValue)
+        hangmanImage.image = UIImage(named: game.gameProgress[numberOfErrors - 1].rawValue)
         livesImages[numberOfErrors - 1].alpha = 0.2
     }
 }
 extension HangmanViewController {
     private func updateUI() {
-        print(word.word)
-        secretWord = word.word.map { _ in "_" }.joined()
-        difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
+        print(game.word)
+        numberOfErrors = 0
+        secretWord = game.word.map { _ in "_" }.joined()
+        difficultyLabel.text = "Сложность: \(game?.difficulty.rawValue ?? "")"
+        livesImages.forEach { live in
+            live.alpha = 1
+        }
         keyBoardButtons.forEach { button in
             button.isEnabled = true
             button.alpha = 1

@@ -33,7 +33,7 @@
 		9131602629F5B28D006CECD7 /* Main + Flag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131602429F5B28D006CECD7 /* Main + Flag.storyboard */; };
 		9131602829F5B28E006CECD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9131602729F5B28E006CECD7 /* Assets.xcassets */; };
 		9131602B29F5B28E006CECD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */; };
-		9131603829F70B4E006CECD7 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131603729F70B4E006CECD7 /* Word.swift */; };
+		9131603829F70B4E006CECD7 /* HangmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131603729F70B4E006CECD7 /* HangmanGame.swift */; };
 		91D1482F29F926C20084E763 /* Hangman.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D1482E29F926C20084E763 /* Hangman.storyboard */; };
 		91D1483129F92A6A0084E763 /* DifficultyHangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */; };
 		91D1483329FB06210084E763 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1483229FB06210084E763 /* GameOverViewController.swift */; };
@@ -67,7 +67,7 @@
 		9131602729F5B28E006CECD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9131602A29F5B28E006CECD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9131602C29F5B28E006CECD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9131603729F70B4E006CECD7 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		9131603729F70B4E006CECD7 /* HangmanGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGame.swift; sourceTree = "<group>"; };
 		9131603A29F70BCC006CECD7 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		91D1482E29F926C20084E763 /* Hangman.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hangman.storyboard; sourceTree = "<group>"; };
 		91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyHangmanViewController.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDEB72029F70ED50021932A /* Developer.swift */,
-				9131603729F70B4E006CECD7 /* Word.swift */,
+				9131603729F70B4E006CECD7 /* HangmanGame.swift */,
 				4C944E1429F940B400E12081 /* CountryFlag.swift */,
 				4CF7AC3529F9BA4A00C25C0A /* GameDescription.swift */,
 				07F5ADA129F870E6008ED0F3 /* MathExpression.swift */,
@@ -324,7 +324,7 @@
 				4CB012EF29F76E4E005508CC /* FlagGameViewController.swift in Sources */,
 				91D1483329FB06210084E763 /* GameOverViewController.swift in Sources */,
 				4CB012F129F77B72005508CC /* FlagDataStore.swift in Sources */,
-				9131603829F70B4E006CECD7 /* Word.swift in Sources */,
+				9131603829F70B4E006CECD7 /* HangmanGame.swift in Sources */,
 				4C41E5C329FA9213007C2E90 /* FlagRulesViewController.swift in Sources */,
 				07F5ADA429F87108008ED0F3 /* MathViewController.swift in Sources */,
 				4CF7AC3629F9BA4A00C25C0A /* GameDescription.swift in Sources */,

@@ -25,7 +25,7 @@ final class MathViewController: UIViewController {
     @IBOutlet private var expressionLabel: UILabel!
     
     // MARK: - Private Properties
-    private var expression = Expression.getRandomExpression(withDifficulty: 1)
+    private var expression = Expression.getTimeRandomExpression(withDifficulty: 1)
     private var expressionDifficulty = 1
     private var timer = Timer()
     private var correctButton = 0
@@ -102,7 +102,7 @@ private extension MathViewController {
     }
     
     func setExpression() {
-        expression = Expression.getRandomExpression(withDifficulty: expressionDifficulty)
+        expression = Expression.getTimeRandomExpression(withDifficulty: expressionDifficulty)
         expressionLabel.text = expression.expression
         setButtons()
     }
@@ -155,12 +155,7 @@ private extension MathViewController {
     
     func stopTheGame(withMessage title: String) {
         timer.invalidate()
-        let ac = UIAlertController(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.setupGameScreen(withStartButton: true)
-        }
-        ac.addAction(okAction)
-        present(ac, animated: true)
+        showOkAlert(title: title, message: "Ваш результат: \(score)\nСложность: \(expressionDifficulty)")
     }
     
     // MARK: - Objective-C Methods

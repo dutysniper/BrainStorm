@@ -39,6 +39,11 @@ extension SettingsButtonTitle {
                 image: ["star.fill", "envelope.open.fill"]
             ),
             SettingsButtonTitle(
+                header: "Тема",
+                title: ["Тема"],
+                image: ["envelope.open.fill"]
+            ),
+            SettingsButtonTitle(
                 header: "Команда",
                 title: ["Разработчики"],
                 image: ["person.2.fill"]

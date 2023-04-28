@@ -7,19 +7,13 @@
 
 import UIKit
 
-class ThemeTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    @IBAction func themeToggle(_ sender: UISwitch) {
-    }
+final class ThemeTableViewCell: UITableViewCell {
     
+    @IBOutlet var cellImageView: UIImageView!
+    
+    @IBOutlet var cellLabel: UILabel!
+    
+    @IBAction func themeToggle(_ sender: UISwitch) {
+        window?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
+    }
 }

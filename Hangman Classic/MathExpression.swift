@@ -9,6 +9,7 @@ struct Expression {
     let firstNumber: Int
     let secondNumber: Int
     let operationType: OperationType
+    let expressionType: ExpressionType
     var result: Int {
         switch operationType {
         case .addition: return firstNumber + secondNumber
@@ -18,7 +19,11 @@ struct Expression {
         }
     }
     var expression: String {
-        "\(firstNumber) \(operationType.rawValue) \(secondNumber) = ?"
+        switch expressionType {
+        case .operand: return "\(firstNumber) \(operationType.rawValue) ?  = \(result)"
+        case .operationType: return "\(firstNumber) ? \(secondNumber) = \(result)"
+        case .result: return "\(firstNumber) \(operationType.rawValue) \(secondNumber) = ?"
+        }
     }
     
     static func getRandomExpression(withDifficulty difficulty: Int) -> Expression {
@@ -30,7 +35,13 @@ struct Expression {
             .multiplication,
             .division
         ]
+        let expressionTypes: [ExpressionType] = [
+            .operand,
+            .operationType,
+            .result
+        ]
         let operationType = operationTypes.randomElement() ?? .addition
+        let expressionType = expressionTypes.randomElement() ?? .operationType
         
         switch operationType {
         case .addition:
@@ -60,15 +71,21 @@ struct Expression {
         return Expression(
             firstNumber: firstNumber,
             secondNumber: secondNumber,
-            operationType: operationType
+            operationType: operationType,
+            expressionType: expressionType
         )
     }
 }
 
-enum OperationType: String {
+enum OperationType: String, CaseIterable {
     case addition = "+"
     case subtraction = "-"
     case multiplication = "*"
     case division = "/"
 }
 
+enum ExpressionType {
+    case operand
+    case operationType
+    case result
+}

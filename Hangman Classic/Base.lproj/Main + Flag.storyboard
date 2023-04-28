@@ -682,7 +682,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="themeCell" rowHeight="55" id="PmP-sp-Xj8" customClass="ThemeTableViewCell" customModule="Hangman_Classic" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="themeCell" rowHeight="55" id="PmP-sp-Xj8" customClass="ThemeTableViewCell" customModule="Hangman_Classic" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="103.66666793823242" width="430" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PmP-sp-Xj8" id="0TH-wE-nsV">
@@ -690,28 +690,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-l7-1Vc">
-                                            <rect key="frame" x="341" y="12" width="51" height="31"/>
+                                            <rect key="frame" x="365" y="12" width="51" height="31"/>
                                             <color key="onTintColor" name="CommonColor"/>
                                             <color key="thumbTintColor" systemColor="systemBackgroundColor"/>
                                             <connections>
-                                                <action selector="themeToggle:" destination="PmP-sp-Xj8" eventType="valueChanged" id="hIy-OS-vRH"/>
+                                                <action selector="themeSwitchTapped" destination="PmP-sp-Xj8" eventType="valueChanged" id="wKz-8P-0lP"/>
                                             </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYD-7l-Gfd">
-                                            <rect key="frame" x="60" y="17.333333333333336" width="261" height="20.333333333333336"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YYD-7l-Gfd">
+                                            <rect key="frame" x="65" y="17.333333333333336" width="280" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HUu-cb-guq">
-                                            <rect key="frame" x="5" y="5" width="45" height="45"/>
+                                            <rect key="frame" x="10" y="5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="HUu-cb-guq" secondAttribute="height" multiplier="1:1" id="7UA-U5-I0V"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="gaP-l7-1Vc" secondAttribute="trailing" constant="40" id="0bI-qP-Rs2"/>
+                                        <constraint firstAttribute="trailing" secondItem="gaP-l7-1Vc" secondAttribute="trailing" constant="16" id="0bI-qP-Rs2"/>
                                         <constraint firstItem="gaP-l7-1Vc" firstAttribute="centerY" secondItem="0TH-wE-nsV" secondAttribute="centerY" id="4er-de-WEw"/>
                                         <constraint firstItem="YYD-7l-Gfd" firstAttribute="leading" secondItem="HUu-cb-guq" secondAttribute="trailing" constant="10" id="OB4-mb-coi"/>
                                         <constraint firstItem="gaP-l7-1Vc" firstAttribute="leading" secondItem="YYD-7l-Gfd" secondAttribute="trailing" constant="20" id="OSd-C1-cu6"/>
@@ -720,12 +720,13 @@
                                 </tableViewCellContentView>
                                 <constraints>
                                     <constraint firstItem="HUu-cb-guq" firstAttribute="top" secondItem="PmP-sp-Xj8" secondAttribute="top" constant="5" id="4vC-hD-FVH"/>
-                                    <constraint firstItem="HUu-cb-guq" firstAttribute="leading" secondItem="PmP-sp-Xj8" secondAttribute="leading" constant="5" id="5p0-cP-OvH"/>
+                                    <constraint firstItem="HUu-cb-guq" firstAttribute="leading" secondItem="PmP-sp-Xj8" secondAttribute="leading" constant="10" id="5p0-cP-OvH"/>
                                     <constraint firstAttribute="bottom" secondItem="HUu-cb-guq" secondAttribute="bottom" constant="5" id="n6T-mJ-maG"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="cellImageView" destination="HUu-cb-guq" id="Kun-9b-Zav"/>
                                     <outlet property="cellLabel" destination="YYD-7l-Gfd" id="idm-aw-CFQ"/>
+                                    <outlet property="themeSwitch" destination="gaP-l7-1Vc" id="8g9-Hx-ZBb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

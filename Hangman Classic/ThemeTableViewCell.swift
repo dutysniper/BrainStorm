@@ -10,10 +10,10 @@ import UIKit
 final class ThemeTableViewCell: UITableViewCell {
     
     @IBOutlet var cellImageView: UIImageView!
-    
     @IBOutlet var cellLabel: UILabel!
+    @IBOutlet var themeSwitch: UISwitch!
     
-    @IBAction func themeToggle(_ sender: UISwitch) {
-        window?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
+    @IBAction func themeSwitchTapped() {
+        window?.overrideUserInterfaceStyle = themeSwitch.isOn ? .dark : .light
     }
 }

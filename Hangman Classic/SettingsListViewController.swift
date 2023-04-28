@@ -32,43 +32,44 @@ extension SettingsListViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let settingSection = headersAndTitles[indexPath.section]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
-        var content = cell.defaultContentConfiguration()
+        let settingCell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
+        guard let themeCell = tableView.dequeueReusableCell(withIdentifier: "themeCell", for: indexPath) as? ThemeTableViewCell else { return settingCell }
         
-        content.text = headersAndTitles[indexPath.section].title[indexPath.row]
+        themeCell.cellLabel.text = settingSection.title[indexPath.row]
+        themeCell.cellImageView.image = UIImage(
+            systemName: settingSection.image[indexPath.row]
+        )
+        themeCell.cellImageView.contentMode = .scaleAspectFit
+        themeCell.cellImageView.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
+        themeCell.separatorInset.right = themeCell.themeSwitch.frame.width + 32
+        themeCell.separatorInset.left = themeCell.cellImageView.frame.width + 12
+        
+        var content = settingCell.defaultContentConfiguration()
+        content.text = settingSection.title[indexPath.row]
         content.image = UIImage(
-            systemName: headersAndTitles[indexPath.section].image[indexPath.row]
+            systemName: settingSection.image[indexPath.row]
         )
         content.imageProperties.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
         
         switch indexPath.section {
-        case 0 where indexPath.row == 0, 3:
-            cell.accessoryType = .disclosureIndicator
+        case 0 where indexPath.row == 0:
+            settingCell.accessoryType = .disclosureIndicator
         case 1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "themeCell", for: indexPath) as? ThemeTableViewCell {
-                
-                cell.cellLabel.text = headersAndTitles[indexPath.section].title[indexPath.row]
-                cell.cellImageView.image = UIImage(
-                    systemName: headersAndTitles[indexPath.section].image[indexPath.row]
-                )
-                cell.cellImageView.contentMode = .scaleAspectFit
-                cell.cellImageView.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
-                cell.separatorInset.right = cell.themeSwitch.frame.width + 32
-                cell.separatorInset.left = cell.cellImageView.frame.width + 12
-                
-                return cell
-            }
+            return themeCell
+        case 3:
+            settingCell.accessoryType = .disclosureIndicator
         case 4:
             content.textProperties.color = .opaqueSeparator
-            cell.selectionStyle = .none
+            settingCell.selectionStyle = .none
             content.textProperties.alignment = .center
         default:
             break
         }
         
-        cell.contentConfiguration = content
-        return cell
+        settingCell.contentConfiguration = content
+        return settingCell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -104,10 +105,9 @@ extension SettingsListViewController: MFMailComposeViewControllerDelegate {
     
     private func sendMail() {
         if MFMailComposeViewController.canSendMail() {
-            
             let mailComposer = MFMailComposeViewController()
-            mailComposer.mailComposeDelegate = self
             
+            mailComposer.mailComposeDelegate = self
             mailComposer.setToRecipients(["on-line-misha@mail.ru"])
             mailComposer.setSubject("Brain Storm Customer")
             

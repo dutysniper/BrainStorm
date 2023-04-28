@@ -31,11 +31,12 @@ extension UIViewController {
             preferredStyle: .alert
         )
         
-        present(alert, animated: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            alert.dismiss(animated: true)
+        present(alert, animated: true) {
+            sleep(1)
         }
+        
+        dismiss(animated: true)
+        
     }
     
     func showOkAlert(title: String, message: String) {

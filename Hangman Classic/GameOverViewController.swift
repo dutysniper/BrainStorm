@@ -66,6 +66,7 @@ extension GameOverViewController {
                }
                
                hangmanVC.word = newWord
+           print(hangmanVC.word.word)
                dismiss(animated: true)
        }
    }

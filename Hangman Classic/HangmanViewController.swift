@@ -27,13 +27,16 @@ final class HangmanViewController: UIViewController {
         !secretWord.contains("_")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(word.word)
-        secretWord = word.word.map { _ in "_" }.joined()
-        difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        print(word.word)
+//        secretWord = word.word.map { _ in "_" }.joined()
+//        difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
+//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
 
@@ -47,25 +50,28 @@ final class HangmanViewController: UIViewController {
 
         if word.word.contains(letter) {
             setCorrectLetter(letter: letter)
+            sender.layer.borderColor = UIColor.green.cgColor
         } else {
             setIncorrectLetter()
+            sender.layer.borderColor = UIColor.red.cgColor
         }
 
         sender.isEnabled = false
         sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
         sender.layer.borderWidth = 3
-        sender.layer.borderColor = [UIColor.red.cgColor, UIColor.green.cgColor].randomElement()
+        sender.layer.cornerRadius = min(sender.bounds.width, sender.bounds.height) / 2
+        sender.layer.masksToBounds = true
 
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }) { _ in
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.5) {
                 sender.transform = CGAffineTransform.identity
             }
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            UIButton.animate(withDuration: 0.3, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            UIButton.animate(withDuration: 0.5, animations: {
                 sender.alpha = 0.0
             }) { _ in
                 if self.isWordComplete || self.numberOfErrors == self.livesImages.count {
@@ -91,5 +97,18 @@ extension HangmanViewController {
         livesImages[numberOfErrors - 1].alpha = 0.2
     }
 }
-
-
+extension HangmanViewController {
+    private func updateUI() {
+        print(word.word)
+        secretWord = word.word.map { _ in "_" }.joined()
+        difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
+        keyBoardButtons.forEach { button in
+            button.isEnabled = true
+            button.alpha = 1
+            button.layer.borderColor = .none
+            button.layer.borderWidth = 0
+            button.layer.removeAllAnimations()
+            button.backgroundColor = .none
+        }
+    }
+}

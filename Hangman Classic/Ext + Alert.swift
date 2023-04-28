@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Alert Extension
 extension UIViewController {
-    func showAlert(title: String, message: String, handler: @escaping () -> Void) {
+    func showOkDenyAlert(title: String, message: String, handler: @escaping () -> Void) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -23,4 +23,30 @@ extension UIViewController {
         alert.addAction(denyAction)
         present(alert, animated: true)
     }
+    
+    func disappearableAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        present(alert, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            alert.dismiss(animated: true)
+        }
+    }
+    
+    func showOkAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+      
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
 }

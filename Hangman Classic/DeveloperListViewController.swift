@@ -55,7 +55,7 @@ final class DeveloperListViewController: UITableViewController {
         let person = developers[indexPath.section].person[indexPath.row]
         guard let url = URL(string: person.gitHubLink) else { return }
         
-        showAlert(title: "Перейти в GitHub?", message: person.gitHubLink) {
+        showOkDenyAlert(title: "Перейти в GitHub?", message: person.gitHubLink) {
             UIApplication.shared.open(url)
         }
     }

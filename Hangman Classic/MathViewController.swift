@@ -136,15 +136,6 @@ final class MathViewController: UIViewController {
                     }
                 }
             }
-            //            if $0.tag == correctButton {
-            //                $0.setTitle(String(expression.result), for: .normal)
-            //            } else {
-            //                if Int.random(in: 1...10) > 5 {
-            //                    $0.setTitle(String(expression.result - Int.random(in: 1...10)), for: .normal)
-            //                } else {
-            //                    $0.setTitle(String(expression.result + Int.random(in: 1...10)), for: .normal)
-            //                }
-            //            }
         }
     }
     

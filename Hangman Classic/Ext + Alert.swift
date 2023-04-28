@@ -32,7 +32,7 @@ extension UIViewController {
         )
         
         present(alert, animated: true) {
-            sleep(1)
+            sleep(2)
             self.dismiss(animated: true)
         }
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MathGamesViewController: UITableViewController {
+final class MathGamesViewController: UITableViewController {
     
     var gameDescription: GameDescription!
 
@@ -52,7 +52,11 @@ class MathGamesViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "timeGame", sender: nil)
+        switch indexPath.row {
+        case 0: performSegue(withIdentifier: "timeGame", sender: nil)
+        case 1: performSegue(withIdentifier: "yesOrNoGame", sender: nil)
+        default: break
+        }
     }
     
 

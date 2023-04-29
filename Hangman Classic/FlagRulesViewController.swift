@@ -11,6 +11,8 @@ final class FlagRulesViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet private var rulesTextView: UITextView!
+    @IBOutlet private var backgroundImageView: UIImageView!
+    
     
     // MARK: - Public Properties
     var gameDescription: GameDescription!
@@ -19,5 +21,11 @@ final class FlagRulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rulesTextView.text = gameDescription.rule
+        
+        if traitCollection.userInterfaceStyle == .light {
+            backgroundImageView.image = UIImage(named: "flagBackground.light")
+        } else {
+            backgroundImageView.image = UIImage(named: "flagBackground.dark")
+        }
     }
 }

@@ -13,6 +13,7 @@ final class FlagSettingsViewController: UIViewController {
     @IBOutlet private var countryPicker: UIPickerView!
     @IBOutlet private var countriesQuantity: UILabel!
     @IBOutlet private var NameLabel: UILabel!
+    @IBOutlet private var backgroundImageView: UIImageView!
     
     // MARK: - Public Properties
     var gameDescription: GameDescription!
@@ -25,6 +26,12 @@ final class FlagSettingsViewController: UIViewController {
         super.viewDidLoad()
         countryPicker.delegate = self
         countryPicker.dataSource = self
+        
+        if traitCollection.userInterfaceStyle == .light {
+            backgroundImageView.image = UIImage(named: "flagBackground.light")
+        } else {
+            backgroundImageView.image = UIImage(named: "flagBackground.dark")
+        }
         
         NameLabel.text = gameDescription.game.rawValue
         

@@ -56,7 +56,10 @@ final class FlagGameViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         animation(sender, fitstAlpha: 0.5, lastAlpha: 1)
         sender.tag == currentButton.tag ? correctDone() : mistakeDone()
-        refreshTask()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.refreshTask()
+        }
     }
     
     // MARK: - Private Methods

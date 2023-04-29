@@ -47,6 +47,7 @@ final class FlagGameViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func buttonPressed(_ sender: UIButton) {
+        animation(sender, fitstAlpha: 0.5, lastAlpha: 1)
         sender.tag == currentButton.tag ? correctDone() : mistakeDone()
         refreshTask()
     }
@@ -75,7 +76,7 @@ final class FlagGameViewController: UIViewController {
         
         liveImages.forEach { liveImage in
             if liveImage.tag == lives {
-                liveImage.alpha = 0.1
+                animation(liveImage, fitstAlpha: 0.15, lastAlpha: 0.2)
             }
         }
         
@@ -84,6 +85,12 @@ final class FlagGameViewController: UIViewController {
         
         progress = 0
         progressView.setProgress(progress, animated: true)
+        
+        if lives == 0 {
+            gameOver()
+        } else if lives == 1 {
+            showOkAlert(title: "Осталась одна жизнь!", message: "")
+        }
     }
     
     private func correctDone() {
@@ -108,7 +115,7 @@ final class FlagGameViewController: UIViewController {
         
         liveImages.forEach { liveImage in
             if liveImage.tag == lives {
-                liveImage.alpha = 1
+                animation(liveImage, fitstAlpha: 0.2, lastAlpha: 1)
             }
         }
         
@@ -119,5 +126,28 @@ final class FlagGameViewController: UIViewController {
                 return
             }
         }
+    }
+    
+    private func gameOver() {
+        let messageText = """
+                          Очков заработано: \(score)
+                          Количество ошибок: \(mistakesCount)
+                          """
+        
+        showOkAlert(title: "Жизни закончились", message: messageText) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    private func animation(_ sender: UIView, duration: Double = 0.05, fitstAlpha: CGFloat, lastAlpha: CGFloat) {
+        UIView.animate(withDuration: duration, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            sender.alpha = fitstAlpha
+        }, completion: { _ in
+            UIView.animate(withDuration: duration, animations: {
+                sender.transform = .identity
+                sender.alpha = lastAlpha
+            })
+        })
     }
 }

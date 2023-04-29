@@ -81,15 +81,14 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cww-6h-owv">
-                                <rect key="frame" x="73.5" y="114" width="173" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите сложность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cww-6h-owv">
+                                <rect key="frame" x="34.5" y="114" width="251.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zdA-nL-mZB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2hM-Pm-5Cs"/>
                             <constraint firstItem="3VH-rh-e0g" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="2yj-vZ-LRM"/>
@@ -99,6 +98,10 @@
                             <constraint firstItem="3VH-rh-e0g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ybW-UH-Sk0"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" springLoaded="YES" id="PcN-VH-KJN"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="ATJ-FO-Sqw" kind="presentation" identifier="showHangmanVC" modalPresentationStyle="fullScreen" id="dSY-IH-Bw6"/>
                     </connections>
@@ -583,7 +586,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aEY-ZB-4r6"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7kq-it-A0a" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="16" id="2Hk-xW-v03"/>
                             <constraint firstItem="nTR-uH-8Zc" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="20" id="4Su-MW-Xhe"/>
@@ -604,7 +607,9 @@
                             <constraint firstItem="iUd-xP-z1E" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="16" id="th7-th-Xdo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ee1-KQ-4MZ"/>
+                    <navigationItem key="navigationItem" id="ee1-KQ-4MZ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0xg-4i-NFZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="difficultyLabel" destination="Kc2-WV-Z87" id="Inc-TU-X80"/>
                         <outlet property="hangmanImage" destination="eRA-iP-uRU" id="nqw-r7-mzh"/>
@@ -735,7 +740,9 @@
                             <constraint firstItem="2xZ-dz-Luk" firstAttribute="height" secondItem="Y90-aa-br3" secondAttribute="height" multiplier="0.0801056" id="zKM-UT-lhi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BLv-Ru-5rE"/>
+                    <navigationItem key="navigationItem" id="BLv-Ru-5rE">
+                        <barButtonItem key="backBarButtonItem" title="back" id="PhL-Xj-F8V"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailsResultLabel" destination="C6r-L7-Bnj" id="XdB-Ra-VmK"/>
                         <outlet property="firstButton" destination="jAI-eg-VTL" id="eDK-Eo-PHL"/>

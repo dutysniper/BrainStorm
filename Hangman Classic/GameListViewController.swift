@@ -65,3 +65,4 @@ extension GameListViewController {
         performSegue(withIdentifier: segueID, sender: nil)
     }
 }
+

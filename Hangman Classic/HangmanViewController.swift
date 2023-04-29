@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HangmanViewControllerDelegate: AnyObject {
+    func gameIsOver()
+}
+
 final class HangmanViewController: UIViewController {
     
     @IBOutlet weak var secretWordLabel: UILabel!
@@ -15,6 +19,8 @@ final class HangmanViewController: UIViewController {
     
     @IBOutlet var livesImages: [UIImageView]!
     @IBOutlet private var keyBoardButtons: [UIButton]!
+    
+    weak var delegate: HangmanViewControllerDelegate?
     
     var game: HangmanGame!
     var numberOfErrors = 0
@@ -39,14 +45,14 @@ final class HangmanViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
-
+        
+        gameOverVC.delegate = self
+        
         gameOverVC.result = isWordComplete 
         ? game.gameResult.first
         : game.gameResult.last
     }
-    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
-        dismiss(animated: true)
-    }
+   
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
         let letter = sender.titleLabel?.text?.lowercased() ?? " "
         print(numberOfErrors)
@@ -103,6 +109,7 @@ extension HangmanViewController {
     private func updateUI() {
         print(game.word)
         numberOfErrors = 0
+        hangmanImage.image = .none
         secretWord = game.word.map { _ in "_" }.joined()
         difficultyLabel.text = "Сложность: \(game?.difficulty.rawValue ?? "")"
         livesImages.forEach { live in
@@ -115,6 +122,14 @@ extension HangmanViewController {
             button.layer.borderWidth = 0
             button.layer.removeAllAnimations()
             button.backgroundColor = .none
+        }
+    }
+}
+
+extension HangmanViewController: GameOverViewControllerDelegate {
+    func gameIsOver() {
+        dismiss(animated: true) { [weak self] in
+            self?.delegate?.gameIsOver()
         }
     }
 }

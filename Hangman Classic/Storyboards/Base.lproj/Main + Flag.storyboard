@@ -172,7 +172,7 @@
                                             <color key="baseBackgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="y6q-kp-Aj7" kind="show" id="1pB-Lf-CGH"/>
+                                            <segue destination="y6q-kp-Aj7" kind="show" id="cC0-0u-Tb4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -336,6 +336,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rrb-PV-XW1">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-AK-euv">
                                 <rect key="frame" x="40" y="157" width="350" height="58.666666666666657"/>
                                 <subviews>
@@ -474,9 +480,6 @@
                                     <constraint firstItem="HP5-6Z-fXe" firstAttribute="top" secondItem="7I2-Ya-57c" secondAttribute="top" constant="10" id="pSD-k9-50y"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rrb-PV-XW1">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dwl-44-QEQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

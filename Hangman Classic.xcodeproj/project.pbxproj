@@ -119,7 +119,7 @@
 				9147376829FDAF7A00D0A755 /* ViewControllers */,
 				9147376729FDAEC000D0A755 /* Models */,
 				9147376629FDAE4900D0A755 /* Services */,
-				9147376329FDAD9200D0A755 /* resources */,
+				9147376329FDAD9200D0A755 /* Resources */,
 			);
 			path = "Hangman Classic";
 			sourceTree = "<group>";
@@ -135,12 +135,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9147376329FDAD9200D0A755 /* resources */ = {
+		9147376329FDAD9200D0A755 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				9131602729F5B28E006CECD7 /* Assets.xcassets */,
 			);
-			path = resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9147376429FDADF800D0A755 /* App */ = {

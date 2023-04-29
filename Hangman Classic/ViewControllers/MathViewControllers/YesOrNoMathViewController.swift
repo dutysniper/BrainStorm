@@ -9,16 +9,19 @@ import UIKit
 
 final class YesOrNoMathViewController: UIViewController {
     
-    @IBOutlet var stackView: UIStackView!
+    // MARK: - IB Outlets
+    @IBOutlet private var stackView: UIStackView!
+    @IBOutlet private var buttons: [UIButton]!
     
-    @IBOutlet var buttons: [UIButton]!
-    @IBOutlet var timerLabel: UILabel!
-    @IBOutlet var progressView: UIProgressView!
-    @IBOutlet var scoreLabel: UILabel!
-    @IBOutlet var expressionLabel: UILabel!
+    @IBOutlet private var progressView: UIProgressView!
+    @IBOutlet private var timerLabel: UILabel!
+    @IBOutlet private var scoreLabel: UILabel!
+    @IBOutlet private var expressionLabel: UILabel!
     
-    @IBOutlet var gameNameLabel: UILabel!
+    @IBOutlet private var gameNameLabel: UILabel!
+    @IBOutlet private var startButton: UIButton!
     
+    // MARK: - Private Properties
     private var expressionDifficulty = 1
     private var correctAnswer = 0
     private var expression = Expression.getRandomExpression(withDifficulty: 1)
@@ -38,20 +41,20 @@ final class YesOrNoMathViewController: UIViewController {
         }
     }
     
-    @IBOutlet var startButton: UIButton!
-    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGameScreen(withStartButton: true)
     }
     
-    @IBAction func startPressed() {
+    // MARK: - IB Actions
+    @IBAction private func startPressed() {
         setupGameScreen(withStartButton: false)
         setExpression()
         createTimer()
     }
     
-    @IBAction func answerPressed(_ sender: UIButton) {
+    @IBAction private func answerPressed(_ sender: UIButton) {
         if sender.tag == correctAnswer {
             setExpression()
             score += 1
@@ -61,7 +64,25 @@ final class YesOrNoMathViewController: UIViewController {
         }
     }
     
+    @IBAction private func rulesPressed(_ sender: UIBarButtonItem) {
+        let text = """
+            В данной игре вы испытаете свои математические способности.
+            
+            У Вас будет 10 секунд, чтобы определить, верное ли выражение. Также если Вы выберите неправильный ответ, игра остановится.
+            
+            Через определенное количество(секретная информация) набранных очков уровень сложности будет повышаться!
+            
+            Успехов!
+            """
+        let ac = UIAlertController(title: "Правила", message: text, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Понял", style: .default)
+        ac.addAction(okAction)
+        present(ac, animated: true)
+    }
+    
 }
+
+// MARK: - Game logic methods
 private extension YesOrNoMathViewController {
     func setupGameScreen(withStartButton boolean: Bool) {
         buttons.forEach {
@@ -86,6 +107,7 @@ private extension YesOrNoMathViewController {
             expressionLabel.text = "\(expression.firstNumber) \(expression.operationType.rawValue) \(expression.secondNumber) = \([expression.result - Int.random(in: 1...10), expression.result + Int.random(in: 1...10)].randomElement() ?? 0)"
         }
     }
+    
     func createTimer() {
         timer = Timer.scheduledTimer(
             timeInterval: 0.01,
@@ -103,8 +125,7 @@ private extension YesOrNoMathViewController {
         }
     }
     
-    @objc
-    func setProgressView() {
+    @objc func setProgressView() {
         progress -= 1
         progressView.setProgress(Float(progress) / 1000, animated: true)
         if progress < 1 {

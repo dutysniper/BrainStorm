@@ -10,6 +10,7 @@ struct Expression {
     let secondNumber: Int
     let operationType: OperationType
     let expressionType: ExpressionType
+    
     var result: Int {
         get {
             switch operationType {
@@ -103,7 +104,7 @@ struct MathGame {
     static func getGames() -> [MathGame] {
         [
             MathGame(name: "Спринт", description: "10 секунд на правильный ответ", image: "timeGame"),
-            MathGame(name: "Правда или ложь", description: "Определите верное ли выражение", image: "yesOrNoGame")
+            MathGame(name: "Да или нет", description: "Определите верное ли выражение", image: "yesOrNoGame")
         ]
     }
 }

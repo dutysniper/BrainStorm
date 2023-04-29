@@ -69,7 +69,7 @@ final class SprintMathViewController: UIViewController {
         let text = """
             В данной игре вы испытаете свои математические способности.
             
-            У Вас будет 10 секунд, чтобы нажать на правильный ответ. Также если вы выберите неправильный ответ, игра остановится.
+            У Вас будет 10 секунд, чтобы нажать на правильный ответ. Также если Вы выберите неправильный ответ, игра остановится.
             
             Через определенное количество(секретная информация) набранных очков уровень сложности будет повышаться!
             
@@ -157,8 +157,7 @@ private extension SprintMathViewController {
     }
     
     // MARK: - Objective-C Methods
-    @objc
-    func setProgressView() {
+    @objc func setProgressView() {
         progress -= 1
         progressView.setProgress(Float(progress) / 1000, animated: true)
         if progress < 1 {

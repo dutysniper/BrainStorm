@@ -426,7 +426,7 @@
                     <navigationItem key="navigationItem" id="h3k-xH-PsV">
                         <barButtonItem key="rightBarButtonItem" image="questionmark.circle" catalog="system" id="Ipf-pM-v13">
                             <connections>
-                                <action selector="rulesPressed:" destination="Y6W-OH-hqX" id="7mN-4I-D5y"/>
+                                <action selector="rulesPressed:" destination="gxi-Fz-rj7" id="1R0-fM-T66"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

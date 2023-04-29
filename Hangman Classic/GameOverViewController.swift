@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol GameOverViewControllerDelegate: AnyObject {
+    func gameIsOver()
+}
+
 final class GameOverViewController: UIViewController {
     @IBOutlet var gameResultLabel: UILabel!
     @IBOutlet var detailsResultLabel: UILabel!
     @IBOutlet weak var resultImage: UIImageView!
+    
+    weak var delegate: GameOverViewControllerDelegate?
     
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var firstButton: UIButton!
@@ -49,21 +55,11 @@ extension GameOverViewController {
         }
     }
     @objc func backToMainMenu() {
-        if let viewControllers = navigationController?.viewControllers {
-                let filteredVCs = viewControllers.filter { !($0 is HangmanViewController) }
-                navigationController?.setViewControllers(filteredVCs, animated: false)
-                let difficultyVC = DifficultyHangmanViewController()
-                navigationController?.pushViewController(difficultyVC, animated: true)
-            }
+        customDismiss()
        }
        
     @objc func changeDifficulty() {
-        if let viewControllers = navigationController?.viewControllers {
-                let filteredVCs = viewControllers.filter { !($0 is HangmanViewController) }
-                navigationController?.setViewControllers(filteredVCs, animated: false)
-                let difficultyVC = DifficultyHangmanViewController()
-                navigationController?.pushViewController(difficultyVC, animated: true)
-            }
+        customDismiss()
     }
        
        @objc func playAgain() {
@@ -79,8 +75,13 @@ extension GameOverViewController {
            print(hangmanVC.game.word)
                dismiss(animated: true)
        }
+    private func customDismiss() {
+        dismiss(animated: true) { [weak self] in
+            self?.delegate?.gameIsOver()
+        }
+    }
    }
-   
+
 
 
 

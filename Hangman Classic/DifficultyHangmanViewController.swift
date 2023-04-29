@@ -9,13 +9,16 @@ import UIKit
 
 final class DifficultyHangmanViewController: UIViewController {
     
+    //MARK: - Class properties
     var gameDescription: GameDescription!
     
+    // MARK: - Life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupBarButtonItem()
+        navigationController?.navigationBar.isHidden = false
     }
     
+    //MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let hangmanVC = segue.destination as? HangmanViewController else { return }
         guard let button = sender as? UIButton else { return }
@@ -26,52 +29,17 @@ final class DifficultyHangmanViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    @IBAction func difficultyButtonPressed(_ sender: UIButton) {
+    @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showHangmanVC", sender: sender)
-    
+        
     }
-}
-extension DifficultyHangmanViewController {
-    private func setupBarButtonItem() {
-        // Create a flexible space bar button item
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-
-        // Create a bar button item
-        let myButtonItem = UIBarButtonItem(title: "My Button", style: .plain, target: self, action: #selector(myButtonTapped))
-
-        // Set the toolbar items
-        var items = toolbarItems ?? []
-        items += [flexibleSpace, myButtonItem]
-        toolbarItems = items
-
-        // Set the position of the toolbar to top
-        navigationController?.setToolbarHidden(false, animated: false)
-        navigationController?.toolbar.isTranslucent = false
-        navigationController?.toolbar.barTintColor = .white
-        navigationController?.toolbar.setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
-        navigationController?.toolbar.setShadowImage(nil, forToolbarPosition: .any)
-
-        // Move the button to the right
-        navigationController?.toolbar.layoutIfNeeded()
-        if let myButtonIndex = items.firstIndex(of: myButtonItem) {
-            let flexibleSpaceIndex = myButtonIndex - 1
-            if flexibleSpaceIndex >= 0 {
-                let flexibleSpace = items[flexibleSpaceIndex]
-                items.remove(at: flexibleSpaceIndex)
-                items.append(flexibleSpace)
-                toolbarItems = items
-            }
-        }
-
-    }
-    @objc func myButtonTapped() {
-        let alert = UIAlertController(title: "My Alert", message: "This is an example alert", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
+    //MARK: - IBActions
+    @IBAction private func infoButtonTapped(_ sender: UIBarButtonItem) {
+        showOkAlert(title: "Правила", message: gameDescription.rule)
     }
 }
 
+//MARK: - HangmanViewControllerDelegate method
 extension DifficultyHangmanViewController: HangmanViewControllerDelegate {
     func gameIsOver() {
         navigationController?.popToRootViewController(animated: true)

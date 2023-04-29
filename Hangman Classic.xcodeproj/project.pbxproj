@@ -95,67 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C100FA229F74473001D3662 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4C100FA029F74379001D3662 /* Ext + Alert.swift */,
-				9147375E29FD6F4900D0A755 /* Ext + invertImageColor.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		4C88CA7B29FC0E97005ABAF3 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
-				4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */,
-				4C88CA7C29FC2AF7005ABAF3 /* Ext + SettingsListVC.swift */,
-				4C88CA7929FC0637005ABAF3 /* ThemeTableViewCell.swift */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
-		4C944E1A29F956F000E12081 /* FlagViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4CB012EE29F76E4E005508CC /* FlagGameViewController.swift */,
-				4C944E1829F956BF00E12081 /* CountriesListViewController.swift */,
-				4CF7AC3729F9DF5600C25C0A /* FlagSettingsViewController.swift */,
-				4C41E5C229FA9213007C2E90 /* FlagRulesViewController.swift */,
-			);
-			name = FlagViewControllers;
-			sourceTree = "<group>";
-		};
-		4CF7AC3929F9F1ED00C25C0A /* MainViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4CF7AC3329F9B16600C25C0A /* GameListViewController.swift */,
-				4C41E5C429FACEF1007C2E90 /* StatsListViewController.swift */,
-				4C88CA7B29FC0E97005ABAF3 /* Settings */,
-			);
-			name = MainViewControllers;
-			sourceTree = "<group>";
-		};
-		4CF7AC3A29F9F20600C25C0A /* HangmanViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */,
-				9131602229F5B28D006CECD7 /* HangmanViewController.swift */,
-				91D1483229FB06210084E763 /* GameOverViewController.swift */,
-			);
-			name = HangmanViewControllers;
-			sourceTree = "<group>";
-		};
-		4CF7AC3B29F9F22400C25C0A /* MathViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				07F5ADA329F87108008ED0F3 /* SprintMathViewController.swift */,
-				0744090229FC26FE007C98FB /* MathGamesViewController.swift */,
-				0744090429FC349E007C98FB /* YesOrNoMathViewController.swift */,
-			);
-			name = MathViewControllers;
-			sourceTree = "<group>";
-		};
 		9131601229F5B28D006CECD7 = {
 			isa = PBXGroup;
 			children = (
@@ -175,40 +114,17 @@
 		9131601D29F5B28D006CECD7 /* Hangman Classic */ = {
 			isa = PBXGroup;
 			children = (
-				9131603229F5B38F006CECD7 /* App */,
-				9131603529F5B3BF006CECD7 /* Resources */,
-				9131603429F5B3B6006CECD7 /* Storyboards */,
-				9131603929F70BB0006CECD7 /* Services */,
-				9131603629F709BB006CECD7 /* Models */,
-				9131603329F5B3AB006CECD7 /* ViewControllers */,
+				9147376429FDADF800D0A755 /* App */,
+				9147376229FDAD5500D0A755 /* Storyboards */,
+				9147376829FDAF7A00D0A755 /* ViewControllers */,
+				9147376729FDAEC000D0A755 /* Models */,
+				9147376629FDAE4900D0A755 /* Services */,
+				9147376329FDAD9200D0A755 /* resources */,
 			);
 			path = "Hangman Classic";
 			sourceTree = "<group>";
 		};
-		9131603229F5B38F006CECD7 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				9131602029F5B28D006CECD7 /* SceneDelegate.swift */,
-				9131601E29F5B28D006CECD7 /* AppDelegate.swift */,
-				9131602C29F5B28E006CECD7 /* Info.plist */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		9131603329F5B3AB006CECD7 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4CF7AC3929F9F1ED00C25C0A /* MainViewControllers */,
-				4C944E1A29F956F000E12081 /* FlagViewControllers */,
-				4CF7AC3B29F9F22400C25C0A /* MathViewControllers */,
-				4CF7AC3A29F9F20600C25C0A /* HangmanViewControllers */,
-				4C100FA229F74473001D3662 /* Extensions */,
-				4C9FC8C529FDA20E00B3A086 /* GameTrueOrFalseViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		9131603429F5B3B6006CECD7 /* Storyboards */ = {
+		9147376229FDAD5500D0A755 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */,
@@ -216,18 +132,38 @@
 				07FC0C9629F83B3300251DFB /* MathGame.storyboard */,
 				91D1482E29F926C20084E763 /* Hangman.storyboard */,
 			);
-			name = Storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9131603529F5B3BF006CECD7 /* Resources */ = {
+		9147376329FDAD9200D0A755 /* resources */ = {
 			isa = PBXGroup;
 			children = (
 				9131602729F5B28E006CECD7 /* Assets.xcassets */,
 			);
-			name = Resources;
+			path = resources;
 			sourceTree = "<group>";
 		};
-		9131603629F709BB006CECD7 /* Models */ = {
+		9147376429FDADF800D0A755 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9131602029F5B28D006CECD7 /* SceneDelegate.swift */,
+				9131601E29F5B28D006CECD7 /* AppDelegate.swift */,
+				9131602C29F5B28E006CECD7 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9147376629FDAE4900D0A755 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9131603A29F70BCC006CECD7 /* DataStore.swift */,
+				4CB012F029F77B72005508CC /* FlagDataStore.swift */,
+				4C9FC8C129FD9BFB00B3A086 /* TrueOrFalseDataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9147376729FDAEC000D0A755 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4CDEB72029F70ED50021932A /* Developer.swift */,
@@ -237,17 +173,81 @@
 				07F5ADA129F870E6008ED0F3 /* MathExpression.swift */,
 				4C41E5CE29FB263F007C2E90 /* SettingsButtonTitle.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		9131603929F70BB0006CECD7 /* Services */ = {
+		9147376829FDAF7A00D0A755 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9131603A29F70BCC006CECD7 /* DataStore.swift */,
-				4CB012F029F77B72005508CC /* FlagDataStore.swift */,
-				4C9FC8C129FD9BFB00B3A086 /* TrueOrFalseDataStore.swift */,
+				9147376929FDAF8800D0A755 /* MainViewControllers */,
+				9147376D29FDB03B00D0A755 /* HangmanViewControllerss */,
+				9147376A29FDAF9B00D0A755 /* FlagViewControllers */,
+				9147376C29FDB00900D0A755 /* MathViewControllers */,
+				9147376E29FDB05900D0A755 /* Extensions */,
+				4C9FC8C529FDA20E00B3A086 /* GameTrueOrFalseViewController.swift */,
 			);
-			name = Services;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9147376929FDAF8800D0A755 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CF7AC3329F9B16600C25C0A /* GameListViewController.swift */,
+				4C41E5C429FACEF1007C2E90 /* StatsListViewController.swift */,
+				9147376B29FDAFC400D0A755 /* Settings */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		9147376A29FDAF9B00D0A755 /* FlagViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CB012EE29F76E4E005508CC /* FlagGameViewController.swift */,
+				4C944E1829F956BF00E12081 /* CountriesListViewController.swift */,
+				4CF7AC3729F9DF5600C25C0A /* FlagSettingsViewController.swift */,
+				4C41E5C229FA9213007C2E90 /* FlagRulesViewController.swift */,
+			);
+			path = FlagViewControllers;
+			sourceTree = "<group>";
+		};
+		9147376B29FDAFC400D0A755 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4CDEB71E29F70D2B0021932A /* DeveloperListViewController.swift */,
+				4C41E5C829FADF4D007C2E90 /* SettingsListViewController.swift */,
+				4C88CA7C29FC2AF7005ABAF3 /* Ext + SettingsListVC.swift */,
+				4C88CA7929FC0637005ABAF3 /* ThemeTableViewCell.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9147376C29FDB00900D0A755 /* MathViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				07F5ADA329F87108008ED0F3 /* SprintMathViewController.swift */,
+				0744090229FC26FE007C98FB /* MathGamesViewController.swift */,
+				0744090429FC349E007C98FB /* YesOrNoMathViewController.swift */,
+			);
+			path = MathViewControllers;
+			sourceTree = "<group>";
+		};
+		9147376D29FDB03B00D0A755 /* HangmanViewControllerss */ = {
+			isa = PBXGroup;
+			children = (
+				91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */,
+				9131602229F5B28D006CECD7 /* HangmanViewController.swift */,
+				91D1483229FB06210084E763 /* GameOverViewController.swift */,
+			);
+			path = HangmanViewControllerss;
+			sourceTree = "<group>";
+		};
+		9147376E29FDB05900D0A755 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C100FA029F74379001D3662 /* Ext + Alert.swift */,
+				9147375E29FD6F4900D0A755 /* Ext + invertImageColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,9 +499,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6DCRFKN8GP;
+				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/Info.plist";
+				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -515,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GE-Developer.Hangman-Classic";
+				PRODUCT_BUNDLE_IDENTIFIER = "dutysniper.Hangman-Classic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -533,9 +533,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6DCRFKN8GP;
+				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/Info.plist";
+				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -549,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GE-Developer.Hangman-Classic";
+				PRODUCT_BUNDLE_IDENTIFIER = "dutysniper.Hangman-Classic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

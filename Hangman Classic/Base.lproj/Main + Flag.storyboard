@@ -19,7 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="separatorColor" name="CommonColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="gameCell" textLabel="A4M-2c-2xD" detailTextLabel="Vg3-Vu-VpX" imageView="am5-Ty-GBe" style="IBUITableViewCellStyleSubtitle" id="67n-6x-hYc">
                                 <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
@@ -146,7 +145,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagBackground" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-mZ-Tel">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-mZ-Tel">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-0V-4ey">
@@ -295,6 +294,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="NameLabel" destination="MAg-eb-DGu" id="H3e-us-epV"/>
+                        <outlet property="backgroundImageView" destination="G0m-mZ-Tel" id="Zai-9b-Ahd"/>
                         <outlet property="countriesQuantity" destination="bgH-tU-w98" id="Dx8-eC-BU8"/>
                         <outlet property="countryPicker" destination="VDj-0V-4ey" id="nOR-dy-2O3"/>
                     </connections>
@@ -311,7 +311,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagBackground" translatesAutoresizingMaskIntoConstraints="NO" id="J3w-RE-elG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3w-RE-elG">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw4-ZW-FLe">
@@ -337,6 +337,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Правила" largeTitleDisplayMode="never" id="yLs-WV-pxV"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="J3w-RE-elG" id="iDG-e0-U6a"/>
                         <outlet property="rulesTextView" destination="Gw4-ZW-FLe" id="75I-zl-08Q"/>
                     </connections>
                 </viewController>
@@ -397,7 +398,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Rrb-PV-XW1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rrb-PV-XW1">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-AK-euv">
@@ -478,13 +479,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страна" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-ff-znS">
                                         <rect key="frame" x="16" y="5" width="398" height="95"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="13" height="-1"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="VCZ-ff-znS" secondAttribute="trailing" constant="16" id="HAI-71-NaL"/>
                                     <constraint firstItem="VCZ-ff-znS" firstAttribute="leading" secondItem="zfG-cp-TIP" secondAttribute="leading" constant="16" id="Zkn-lc-9eR"/>
@@ -576,6 +577,7 @@
                     <navigationItem key="navigationItem" id="peu-ta-uyI"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="Rrb-PV-XW1" id="8FO-YA-ng2"/>
                         <outlet property="circleView" destination="7I2-Ya-57c" id="k6o-8D-XsF"/>
                         <outlet property="continentLabel" destination="pEh-86-daL" id="6ZQ-6e-dAX"/>
                         <outlet property="counrtyLabel" destination="VCZ-ff-znS" id="oMw-yD-acM"/>
@@ -592,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zci-eK-BA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="-190"/>
+            <point key="canvasLocation" x="-202" y="-174"/>
         </scene>
         <!--Hangman-->
         <scene sceneID="Sgl-Hp-OgS">
@@ -801,10 +803,10 @@
             <point key="canvasLocation" x="-3032" y="138"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="CommonColor"/>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="90"/>
-        <image name="flagBackground" width="1080" height="1920"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>

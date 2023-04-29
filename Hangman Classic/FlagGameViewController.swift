@@ -19,6 +19,7 @@ final class FlagGameViewController: UIViewController {
     
     @IBOutlet private var circleView: UIView!
     @IBOutlet private var progressView: UIProgressView!
+    @IBOutlet private var backgroundImageView: UIImageView!
     
     // MARK: - Public Properties
     var countryFlag: CountryFlag!
@@ -33,6 +34,12 @@ final class FlagGameViewController: UIViewController {
     
     // MARK: - Override Methods
     override func viewDidLoad() {
+        if traitCollection.userInterfaceStyle == .light {
+            backgroundImageView.image = UIImage(named: "flagBackground.light")
+        } else {
+            backgroundImageView.image = UIImage(named: "flagBackground.dark")
+        }
+        
         super.viewDidLoad()
         continentLabel.text = countryFlag.place.rawValue
         refreshTask()
@@ -49,7 +56,10 @@ final class FlagGameViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         animation(sender, fitstAlpha: 0.5, lastAlpha: 1)
         sender.tag == currentButton.tag ? correctDone() : mistakeDone()
-        refreshTask()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.refreshTask()
+        }
     }
     
     // MARK: - Private Methods
@@ -57,7 +67,7 @@ final class FlagGameViewController: UIViewController {
         let dict = countryFlag.countries
    
         buttons.forEach { button in
-            let countryIndex = dict.values.randomElement()?.lowercased() //--
+            let countryIndex = dict.values.randomElement()?.lowercased()
             button.configuration?.background.image = UIImage(
                 named: countryIndex ?? ""
             )

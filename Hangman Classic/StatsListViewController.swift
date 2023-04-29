@@ -7,7 +7,10 @@
 
 import UIKit
 
+
 final class StatsListViewController: UITableViewController {
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +19,7 @@ final class StatsListViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,8 +30,7 @@ final class StatsListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
-        content.text = " "
-        
+    
         cell.contentConfiguration = content
         return cell
     }

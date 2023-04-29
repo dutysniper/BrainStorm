@@ -11,6 +11,7 @@ final class GameTrueOrFalseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //
     }
 
 }

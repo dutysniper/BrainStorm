@@ -13,6 +13,7 @@ final class DifficultyHangmanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        setupBarButtonItem()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -88,7 +88,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zdA-nL-mZB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2hM-Pm-5Cs"/>
                             <constraint firstItem="3VH-rh-e0g" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="2yj-vZ-LRM"/>
@@ -98,9 +98,7 @@
                             <constraint firstItem="3VH-rh-e0g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ybW-UH-Sk0"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" springLoaded="YES" id="PcN-VH-KJN"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="ATJ-FO-Sqw" kind="presentation" identifier="showHangmanVC" modalPresentationStyle="fullScreen" id="dSY-IH-Bw6"/>

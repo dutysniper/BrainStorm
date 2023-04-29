@@ -36,6 +36,7 @@
 		9131602829F5B28E006CECD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9131602729F5B28E006CECD7 /* Assets.xcassets */; };
 		9131602B29F5B28E006CECD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131602929F5B28E006CECD7 /* LaunchScreen.storyboard */; };
 		9131603829F70B4E006CECD7 /* HangmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131603729F70B4E006CECD7 /* HangmanGame.swift */; };
+		9147375F29FD6F4900D0A755 /* Ext + invertImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9147375E29FD6F4900D0A755 /* Ext + invertImageColor.swift */; };
 		91D1482F29F926C20084E763 /* Hangman.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D1482E29F926C20084E763 /* Hangman.storyboard */; };
 		91D1483129F92A6A0084E763 /* DifficultyHangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */; };
 		91D1483329FB06210084E763 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1483229FB06210084E763 /* GameOverViewController.swift */; };
@@ -73,6 +74,7 @@
 		9131602C29F5B28E006CECD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9131603729F70B4E006CECD7 /* HangmanGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGame.swift; sourceTree = "<group>"; };
 		9131603A29F70BCC006CECD7 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		9147375E29FD6F4900D0A755 /* Ext + invertImageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + invertImageColor.swift"; sourceTree = "<group>"; };
 		91D1482E29F926C20084E763 /* Hangman.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hangman.storyboard; sourceTree = "<group>"; };
 		91D1483029F92A6A0084E763 /* DifficultyHangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyHangmanViewController.swift; sourceTree = "<group>"; };
 		91D1483229FB06210084E763 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4C100FA029F74379001D3662 /* Ext + Alert.swift */,
+				9147375E29FD6F4900D0A755 /* Ext + invertImageColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				9131602329F5B28D006CECD7 /* HangmanViewController.swift in Sources */,
 				4C9D524229F8716F00603710 /* DataStore.swift in Sources */,
 				4CDEB72129F70ED50021932A /* Developer.swift in Sources */,
+				9147375F29FD6F4900D0A755 /* Ext + invertImageColor.swift in Sources */,
 				4C100FA129F74379001D3662 /* Ext + Alert.swift in Sources */,
 				4C41E5CF29FB263F007C2E90 /* SettingsButtonTitle.swift in Sources */,
 				4C944E1929F956BF00E12081 /* CountriesListViewController.swift in Sources */,

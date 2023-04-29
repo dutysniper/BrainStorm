@@ -42,8 +42,15 @@ enum GameProgress: String, CaseIterable {
 }
 
 enum GameResult: CaseIterable {
-    case win(name: String, details: String, winImage: String)
-    case defeat(name: String, details: String, defeatImage: String)
+    case win(
+        name: String,
+        details: String,
+        winImage: String)
+    case defeat(
+        name: String,
+        details: String,
+        defeatImage: String
+    )
     
     static var allCases: [GameResult] {
         return [

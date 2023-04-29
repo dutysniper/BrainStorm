@@ -11,9 +11,7 @@ final class MathGamesViewController: UITableViewController {
     
     var gameDescription: GameDescription!
 
-    private let gameNames = ["Спринт", "Правда или ложь"]
-    private let gameDescriptions = ["10 секунд на правильный ответ", "Определите верное ли выражение"]
-    private let gameImages = ["timeGame", "yesOrNoGame"]
+    private let games = MathGame.getGames()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +21,7 @@ final class MathGamesViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        gameNames.count
+        games.count
     }
 
     
@@ -35,9 +33,9 @@ final class MathGamesViewController: UITableViewController {
         content.imageProperties.maximumSize = CGSize(width: 30, height: 30)
         content.imageProperties.cornerRadius = content.imageProperties.maximumSize.width / 2
         content.textProperties.font = .boldSystemFont(ofSize: 15)
-        content.text = gameNames[indexPath.row]
-        content.secondaryText = gameDescriptions[indexPath.row]
-        content.image = UIImage(named: gameImages[indexPath.row])
+        content.text = games[indexPath.row].name
+        content.secondaryText = games[indexPath.row].description
+        content.image = UIImage(named: games[indexPath.row].image)
         
         cell.contentConfiguration = content
         return cell

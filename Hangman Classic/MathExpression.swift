@@ -94,3 +94,16 @@ enum ExpressionType {
     case operationType
     case result
 }
+
+struct MathGame {
+    let name: String
+    let description: String
+    let image: String
+    
+    static func getGames() -> [MathGame] {
+        [
+            MathGame(name: "Спринт", description: "10 секунд на правильный ответ", image: "timeGame"),
+            MathGame(name: "Правда или ложь", description: "Определите верное ли выражение", image: "yesOrNoGame")
+        ]
+    }
+}

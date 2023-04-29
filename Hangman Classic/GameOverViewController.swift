@@ -7,69 +7,87 @@
 
 import UIKit
 
+//MARK: - GameOverViewControllerDelegate protocol
 protocol GameOverViewControllerDelegate: AnyObject {
     func gameIsOver()
+    func changeDifficulty()
 }
 
 final class GameOverViewController: UIViewController {
-    @IBOutlet var gameResultLabel: UILabel!
-    @IBOutlet var detailsResultLabel: UILabel!
-    @IBOutlet weak var resultImage: UIImageView!
     
-    @IBOutlet weak var secondButton: UIButton!
-    @IBOutlet weak var firstButton: UIButton!
+    //MARK: - IBOutlets
+    @IBOutlet private var gameResultLabel: UILabel!
+    @IBOutlet private var detailsResultLabel: UILabel!
+    @IBOutlet private var wordLabel: UILabel!
     
+    @IBOutlet private var resultImage: UIImageView!
+    
+    @IBOutlet private var secondButton: UIButton!
+    @IBOutlet private var firstButton: UIButton!
+    
+    //MARK: - Class properties
     weak var delegate: GameOverViewControllerDelegate?
     var result: GameResult!
+    var word: String?
     
+    //MARK: - Life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI(with: result)
     }
 }
 
+//MARK: - Setup UI
 extension GameOverViewController {
     private func setupUI(with result: GameResult) {
         switch result {
-        case .win(let win):
-            gameResultLabel.text = win.name
-            detailsResultLabel.text = win.details
-            resultImage.image = UIImage(named: win.winImage)
+        case .win(let name, let details, let winImage):
+            gameResultLabel.text = name
+            detailsResultLabel.text = details
+            resultImage.image = UIImage(named: winImage)
             firstButton.setTitle("Выход", for: .normal)
             firstButton.setImage(UIImage(named: "house.fill"), for: .normal)
             secondButton.setTitle("Новое слово", for: .normal)
             firstButton.addTarget(self, action: #selector(backToMainMenu), for: .touchUpInside)
             secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
             
-        case .defeat(let defeat):
-            gameResultLabel.text = defeat.name
-            detailsResultLabel.text = defeat.details
-           
+        case .defeat(let name, let details, let defeatImage):
+            gameResultLabel.text = name
+            detailsResultLabel.text = details
+            wordLabel.isHidden = false
+            wordLabel.text = "Слово: \(word ?? "")"
+            
             firstButton.setTitle("Сменить сложность", for: .normal)
             secondButton.setTitle("Новое слово", for: .normal)
+            
             firstButton.addTarget(self, action: #selector(changeDifficulty), for: .touchUpInside)
             secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
             
             if (traitCollection.userInterfaceStyle == .light) {
-                resultImage.image = UIImage(named: defeat.defeatImage)
+                resultImage.image = UIImage(named: defeatImage)
             } else {
-                resultImage.image = invertImageColor(defeat.defeatImage)
+                resultImage.image = invertImageColor(defeatImage)
             }
         }
     }
-    @objc func backToMainMenu() {
-        customDismiss()
+    
+    //MARK: - Setup buttons logic
+    @objc private func backToMainMenu() {
+        dismiss(animated: true) { [weak self] in
+            self?.delegate?.gameIsOver()
+        }
     }
     
-    @objc func changeDifficulty() {
-        customDismiss()
+    @objc private func changeDifficulty() {
+        dismiss(animated: true) { [weak self] in
+            self?.delegate?.changeDifficulty()
+        }
     }
     
-    @objc func playAgain() {
+    @objc private func playAgain() {
         guard let hangmanVC = presentingViewController as? HangmanViewController else {
             fatalError("Unexpected presenting view controller.")
         }
-        
         guard let newWord = HangmanGame.randomWord(ofDifficulty: hangmanVC.game.difficulty) else {
             fatalError("Failed to generate a new random word.")
         }
@@ -80,10 +98,3 @@ extension GameOverViewController {
     }
 }
 
-extension GameOverViewController {
-    private func customDismiss() {
-        dismiss(animated: true) { [weak self] in
-            self?.delegate?.gameIsOver()
-        }
-    }
-}

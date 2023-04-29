@@ -7,69 +7,68 @@
 
 import UIKit
 
+//MARK: - HangmanViewContollerDelegate Protocol
 protocol HangmanViewControllerDelegate: AnyObject {
     func gameIsOver()
 }
 
 final class HangmanViewController: UIViewController {
     
-    @IBOutlet weak var secretWordLabel: UILabel!
-    @IBOutlet weak var difficultyLabel: UILabel!
-    @IBOutlet weak var hangmanImage: UIImageView!
+    //MARK: - IBOutlets
+    @IBOutlet private var secretWordLabel: UILabel!
+    @IBOutlet private var difficultyLabel: UILabel!
+    @IBOutlet private var hangmanImage: UIImageView!
     
-    @IBOutlet var livesImages: [UIImageView]!
+    @IBOutlet private var livesImages: [UIImageView]!
     @IBOutlet private var keyBoardButtons: [UIButton]!
     
+    //MARK: - Class properties
     weak var delegate: HangmanViewControllerDelegate?
-    
     var game: HangmanGame!
-    var numberOfErrors = 0
-    var secretWord = "" {
+    private var numberOfErrors = 0
+    private var secretWord = "" {
         didSet {
             secretWordLabel.text = secretWord.map { String($0) }.joined(separator: " ")
         }
     }
-    var isWordComplete: Bool {
+    private var isWordComplete: Bool {
         !secretWord.contains("_")
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        print(word.word)
-//        secretWord = word.word.map { _ in "_" }.joined()
-//        difficultyLabel.text = "Сложность: \(word?.difficulty.rawValue ?? "")"
-//    }
+    //MARK: - Life-cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
     }
+    
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameOverVC = segue.destination as? GameOverViewController else { return }
         
         gameOverVC.delegate = self
-        
+        gameOverVC.word = game.word
         gameOverVC.result = isWordComplete 
         ? game.gameResult.first
         : game.gameResult.last
     }
-   
+    
+    //MARK: - IBActions
     @IBAction private func keyBoardButtonPressed(_ sender: UIButton) {
         let letter = sender.titleLabel?.text?.lowercased() ?? " "
-        print(numberOfErrors)
         if game.word.contains(letter) {
             setCorrectLetter(letter: letter)
             sender.layer.borderColor = UIColor.green.cgColor
-        } else {
+        } else if numberOfErrors < livesImages.count {
             setIncorrectLetter()
             sender.layer.borderColor = UIColor.red.cgColor
         }
-
+        
         sender.isEnabled = false
         sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07267296393)
         sender.layer.borderWidth = 3
         sender.layer.cornerRadius = min(sender.bounds.width, sender.bounds.height) / 2
         sender.layer.masksToBounds = true
-
+        
         UIView.animate(withDuration: 0.5, animations: {
             sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }) { _ in
@@ -77,18 +76,23 @@ final class HangmanViewController: UIViewController {
                 sender.transform = CGAffineTransform.identity
             }
         }
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             UIButton.animate(withDuration: 0.5, animations: {
                 sender.alpha = 0.0
             }) { _ in
                 if self.isWordComplete || self.numberOfErrors == self.livesImages.count {
+                    self.keyBoardButtons.forEach { button in
+                        button.isEnabled = false
+                    }
                     self.performSegue(withIdentifier: "showGameOver", sender: sender)
                 }
             }
         }
     }
-   }
+}
+
+//MARK: - Private methods for letters
 extension HangmanViewController {
     
     private func setCorrectLetter(letter: String) {
@@ -109,6 +113,8 @@ extension HangmanViewController {
         livesImages[numberOfErrors - 1].alpha = 0.2
     }
 }
+
+//MARK: - Setup UI
 extension HangmanViewController {
     private func updateUI() {
         print(game.word)
@@ -130,10 +136,16 @@ extension HangmanViewController {
     }
 }
 
+//MARK: GameOverViewContollerDelegate methods
 extension HangmanViewController: GameOverViewControllerDelegate {
     func gameIsOver() {
         dismiss(animated: true) { [weak self] in
             self?.delegate?.gameIsOver()
         }
     }
+    
+    func changeDifficulty() {
+        dismiss(animated: true)
+    }
 }
+

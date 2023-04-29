@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Задаем основной таб для таббара
         if let tabBarController = window?.rootViewController as? UITabBarController {
-            tabBarController.selectedIndex = 1
+            tabBarController.selectedIndex = 0
         }
     }
 }

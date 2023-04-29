@@ -24,7 +24,7 @@ final class GameOverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setupUI(with: result)
+        setupUI(with: result)
     }
 }
 
@@ -36,6 +36,7 @@ extension GameOverViewController {
             detailsResultLabel.text = win.details
             resultImage.image = UIImage(named: win.winImage)
             firstButton.setTitle("Выход", for: .normal)
+            firstButton.setImage(UIImage(named: "house.fill"), for: .normal)
             secondButton.setTitle("Новое слово", for: .normal)
             firstButton.addTarget(self, action: #selector(backToMainMenu), for: .touchUpInside)
             secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
@@ -48,15 +49,10 @@ extension GameOverViewController {
             } else {
                 resultImage.image = invertImageColor(defeat.defeatImage)
             }
-                    firstButton.setTitle("Сменить сложность", for: .normal)
-                                    secondButton.setTitle("Новое слово", for: .normal)
-                                    firstButton.addTarget(self, action: #selector(changeDifficulty), for: .touchUpInside)
-                                    secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
-
             firstButton.setTitle("Сменить сложность", for: .normal)
-                            secondButton.setTitle("Новое слово", for: .normal)
-                            firstButton.addTarget(self, action: #selector(changeDifficulty), for: .touchUpInside)
-                            secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
+            secondButton.setTitle("Новое слово", for: .normal)
+            firstButton.addTarget(self, action: #selector(changeDifficulty), for: .touchUpInside)
+            secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
         }
     }
     @objc func backToMainMenu() {
@@ -80,7 +76,7 @@ extension GameOverViewController {
         print(hangmanVC.game.word)
         dismiss(animated: true)
     }
-   }
+}
 
 extension GameOverViewController {
     private func customDismiss() {
@@ -91,7 +87,7 @@ extension GameOverViewController {
 }
 
 
-    
+
 
 
 

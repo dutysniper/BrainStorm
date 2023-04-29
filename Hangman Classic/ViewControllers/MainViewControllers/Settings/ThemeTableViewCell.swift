@@ -13,7 +13,7 @@ final class ThemeTableViewCell: UITableViewCell {
     @IBOutlet var cellLabel: UILabel!
     @IBOutlet var themeSwitch: UISwitch!
     
-    @IBAction func themeSwitchTapped() {
+    @IBAction private func themeSwitchTapped() {
         window?.overrideUserInterfaceStyle = themeSwitch.isOn ? .dark : .light
     }
 }

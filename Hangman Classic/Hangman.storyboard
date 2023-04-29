@@ -88,7 +88,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zdA-nL-mZB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2hM-Pm-5Cs"/>
                             <constraint firstItem="3VH-rh-e0g" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="2yj-vZ-LRM"/>
@@ -586,7 +586,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aEY-ZB-4r6"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7kq-it-A0a" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="16" id="2Hk-xW-v03"/>
                             <constraint firstItem="nTR-uH-8Zc" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="20" id="4Su-MW-Xhe"/>

@@ -604,7 +604,9 @@
                             <constraint firstItem="iUd-xP-z1E" firstAttribute="leading" secondItem="aEY-ZB-4r6" secondAttribute="leading" constant="16" id="th7-th-Xdo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ee1-KQ-4MZ"/>
+                    <navigationItem key="navigationItem" id="ee1-KQ-4MZ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0xg-4i-NFZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="difficultyLabel" destination="Kc2-WV-Z87" id="Inc-TU-X80"/>
                         <outlet property="hangmanImage" destination="eRA-iP-uRU" id="nqw-r7-mzh"/>
@@ -735,7 +737,9 @@
                             <constraint firstItem="2xZ-dz-Luk" firstAttribute="height" secondItem="Y90-aa-br3" secondAttribute="height" multiplier="0.0801056" id="zKM-UT-lhi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BLv-Ru-5rE"/>
+                    <navigationItem key="navigationItem" id="BLv-Ru-5rE">
+                        <barButtonItem key="backBarButtonItem" title="back" id="PhL-Xj-F8V"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailsResultLabel" destination="C6r-L7-Bnj" id="XdB-Ra-VmK"/>
                         <outlet property="firstButton" destination="jAI-eg-VTL" id="eDK-Eo-PHL"/>

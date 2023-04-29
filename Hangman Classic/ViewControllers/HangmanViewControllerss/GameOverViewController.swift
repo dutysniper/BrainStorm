@@ -1,9 +1,7 @@
 //
 //  GameOverViewController.swift
 //  Hangman Classic
-//
 //  Created by Константин Натаров on 27.04.2023.
-//  All Rights Reserved.
 
 import UIKit
 

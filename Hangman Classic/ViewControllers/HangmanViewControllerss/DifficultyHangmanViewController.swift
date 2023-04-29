@@ -1,7 +1,6 @@
 //
 //  DifficultyHangmanViewController.swift
 //  Hangman Classic
-//
 //  Created by Константин Натаров on 26.04.2023.
 //
 

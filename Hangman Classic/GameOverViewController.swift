@@ -44,15 +44,17 @@ extension GameOverViewController {
         case .defeat(let defeat):
             gameResultLabel.text = defeat.name
             detailsResultLabel.text = defeat.details
-            if traitCollection.userInterfaceStyle == .light {
-                resultImage.image = UIImage(named: defeat.defeatImage)
-            } else {
-                resultImage.image = invertImageColor(defeat.defeatImage)
-            }
+           
             firstButton.setTitle("Сменить сложность", for: .normal)
             secondButton.setTitle("Новое слово", for: .normal)
             firstButton.addTarget(self, action: #selector(changeDifficulty), for: .touchUpInside)
             secondButton.addTarget(self, action: #selector(playAgain), for: .touchUpInside)
+            
+            if (traitCollection.userInterfaceStyle == .light) {
+                resultImage.image = UIImage(named: defeat.defeatImage)
+            } else {
+                resultImage.image = invertImageColor(defeat.defeatImage)
+            }
         }
     }
     @objc func backToMainMenu() {
@@ -85,12 +87,3 @@ extension GameOverViewController {
         }
     }
 }
-
-
-
-
-
-
-
-
-

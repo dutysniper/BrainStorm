@@ -656,7 +656,7 @@
                         <outletCollection property="livesImages" destination="qGq-ZC-aIl" collectionClass="NSMutableArray" id="r0o-ed-iRf"/>
                         <outletCollection property="livesImages" destination="HV3-Vf-1px" collectionClass="NSMutableArray" id="6td-9p-7SR"/>
                         <outletCollection property="livesImages" destination="cvg-ac-tbe" collectionClass="NSMutableArray" id="lab-eU-8zg"/>
-                        <segue destination="opk-t9-m93" kind="presentation" identifier="showGameOver" modalPresentationStyle="fullScreen" id="aP4-tF-IVl"/>
+                        <segue destination="opk-t9-m93" kind="presentation" identifier="showGameOver" modalPresentationStyle="currentContext" id="aP4-tF-IVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RvK-rY-OJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

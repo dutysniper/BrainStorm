@@ -21,6 +21,10 @@ final class MathGamesViewController: UITableViewController {
         title = "Режим игры"
     }
     
+    // MARK: - IB Actions
+    @IBAction private func settingsPressed(_ sender: UIBarButtonItem) {
+        showOkAlert(title: "Error", message: "Under development")
+    }
     // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         games.count

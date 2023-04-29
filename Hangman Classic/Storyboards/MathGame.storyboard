@@ -47,7 +47,7 @@
                     <navigationItem key="navigationItem" id="9OE-wz-b7a">
                         <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="RWb-Jb-QMD">
                             <connections>
-                                <action selector="rulesPressed:" destination="Y6W-OH-hqX" id="Pmv-uS-7Rd"/>
+                                <action selector="settingsPressed:" destination="0OL-eO-6eY" id="hPW-vS-LDU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

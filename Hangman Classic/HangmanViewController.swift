@@ -101,7 +101,11 @@ extension HangmanViewController {
     
     private func setIncorrectLetter() {
         numberOfErrors += 1
-        hangmanImage.image = UIImage(named: game.gameProgress[numberOfErrors - 1].rawValue)
+        if traitCollection.userInterfaceStyle == .light {
+            hangmanImage.image = UIImage(named: game.gameProgress[numberOfErrors - 1].rawValue)
+        } else {
+            hangmanImage.image = invertImageColor(game.gameProgress[numberOfErrors - 1].rawValue)
+        }
         livesImages[numberOfErrors - 1].alpha = 0.2
     }
 }

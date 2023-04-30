@@ -62,7 +62,7 @@
 		4CF7AC3329F9B16600C25C0A /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		4CF7AC3529F9BA4A00C25C0A /* GameDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDescription.swift; sourceTree = "<group>"; };
 		4CF7AC3729F9DF5600C25C0A /* FlagSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSettingsViewController.swift; sourceTree = "<group>"; };
-		9131601B29F5B28D006CECD7 /* Hangman Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9131601B29F5B28D006CECD7 /* BrainStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9131601E29F5B28D006CECD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9131602029F5B28D006CECD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9131602229F5B28D006CECD7 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
@@ -89,23 +89,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9131601229F5B28D006CECD7 = {
-			isa = PBXGroup;
-			children = (
-				9131601D29F5B28D006CECD7 /* Hangman Classic */,
-				9131601C29F5B28D006CECD7 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		9131601C29F5B28D006CECD7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9131601B29F5B28D006CECD7 /* Hangman Classic.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9131601D29F5B28D006CECD7 /* Hangman Classic */ = {
+		07B8CE6729FEE9F800AB2ABA /* BrainStorm */ = {
 			isa = PBXGroup;
 			children = (
 				9147376429FDADF800D0A755 /* App */,
@@ -115,7 +99,23 @@
 				9147376629FDAE4900D0A755 /* Services */,
 				9147376329FDAD9200D0A755 /* Resources */,
 			);
-			path = "Hangman Classic";
+			path = BrainStorm;
+			sourceTree = "<group>";
+		};
+		9131601229F5B28D006CECD7 = {
+			isa = PBXGroup;
+			children = (
+				07B8CE6729FEE9F800AB2ABA /* BrainStorm */,
+				9131601C29F5B28D006CECD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9131601C29F5B28D006CECD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9131601B29F5B28D006CECD7 /* BrainStorm.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9147376229FDAD5500D0A755 /* Storyboards */ = {
@@ -244,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9131601A29F5B28D006CECD7 /* Hangman Classic */ = {
+		9131601A29F5B28D006CECD7 /* BrainStorm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9131602F29F5B28E006CECD7 /* Build configuration list for PBXNativeTarget "Hangman Classic" */;
+			buildConfigurationList = 9131602F29F5B28E006CECD7 /* Build configuration list for PBXNativeTarget "BrainStorm" */;
 			buildPhases = (
 				9131601729F5B28D006CECD7 /* Sources */,
 				9131601829F5B28D006CECD7 /* Frameworks */,
@@ -256,9 +256,9 @@
 			);
 			dependencies = (
 			);
-			name = "Hangman Classic";
+			name = BrainStorm;
 			productName = "Hangman Classic";
-			productReference = 9131601B29F5B28D006CECD7 /* Hangman Classic.app */;
+			productReference = 9131601B29F5B28D006CECD7 /* BrainStorm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -276,7 +276,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9131601629F5B28D006CECD7 /* Build configuration list for PBXProject "Hangman Classic" */;
+			buildConfigurationList = 9131601629F5B28D006CECD7 /* Build configuration list for PBXProject "BrainStorm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -289,7 +289,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9131601A29F5B28D006CECD7 /* Hangman Classic */,
+				9131601A29F5B28D006CECD7 /* BrainStorm */,
 			);
 		};
 /* End PBXProject section */
@@ -490,7 +490,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
+				INFOPLIST_FILE = BrainStorm/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -526,7 +526,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6DCRFKN8GP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hangman Classic/App/Info.plist";
+				INFOPLIST_FILE = BrainStorm/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -555,7 +555,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9131601629F5B28D006CECD7 /* Build configuration list for PBXProject "Hangman Classic" */ = {
+		9131601629F5B28D006CECD7 /* Build configuration list for PBXProject "BrainStorm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9131602D29F5B28E006CECD7 /* Debug */,
@@ -564,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9131602F29F5B28E006CECD7 /* Build configuration list for PBXNativeTarget "Hangman Classic" */ = {
+		9131602F29F5B28E006CECD7 /* Build configuration list for PBXNativeTarget "BrainStorm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9131603029F5B28E006CECD7 /* Debug */,

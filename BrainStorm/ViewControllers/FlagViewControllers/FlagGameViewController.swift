@@ -53,7 +53,7 @@ final class FlagGameViewController: UIViewController {
     }
     
     // MARK: - IB Actions
-    @IBAction func buttonPressed(_ sender: UIButton) {
+    @IBAction private func buttonPressed(_ sender: UIButton) {
         animation(sender, fitstAlpha: 0.5, lastAlpha: 1)
         sender.tag == currentButton.tag ? correctDone() : mistakeDone()
         
@@ -64,21 +64,28 @@ final class FlagGameViewController: UIViewController {
     
     // MARK: - Private Methods
     private func refreshTask() {
-        let dict = countryFlag.countries
-   
-        buttons.forEach { button in
-            let countryIndex = dict.values.randomElement()?.lowercased()
-            button.configuration?.background.image = UIImage(
-                named: countryIndex ?? ""
-            )
-        }
+        var dict = countryFlag.countries
+        let curCountryKey = countryFlag.countries.keys.randomElement()
+        let curCountryValue = dict[curCountryKey ?? ""] ?? ""
         
         countLabel.text = "\(score)"
-        counrtyLabel.text = countryFlag.countries.keys.randomElement()
+        counrtyLabel.text = curCountryKey
+        
         currentButton = buttons.randomElement() ?? UIButton()
         currentButton.configuration?.background.image = UIImage(
-            named: (dict[counrtyLabel.text ?? ""] ?? "").lowercased()
+            named: (curCountryValue).lowercased()
         )
+   
+        buttons.forEach { button in
+            if button.tag != currentButton.tag {
+                dict[curCountryKey ?? ""] = nil
+                let otherValue = dict.values.randomElement() ?? ""
+    
+                button.configuration?.background.image = UIImage(
+                    named: otherValue.lowercased()
+                )
+            }
+        }
     }
     
     private func mistakeDone() {

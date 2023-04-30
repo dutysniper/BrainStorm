@@ -44,13 +44,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9OE-wz-b7a">
-                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="RWb-Jb-QMD">
-                            <connections>
-                                <action selector="settingsPressed:" destination="0OL-eO-6eY" id="hPW-vS-LDU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="9OE-wz-b7a"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="show" identifier="timeGame" id="60p-9o-bSO"/>
@@ -450,7 +444,6 @@
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
-        <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="mathBackground" width="2000" height="1333"/>
         <image name="medal" catalog="system" width="121" height="128"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>

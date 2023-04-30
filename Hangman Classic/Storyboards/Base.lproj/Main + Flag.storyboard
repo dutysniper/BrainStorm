@@ -712,7 +712,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T14-Po-ZVU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="selectedImageTintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" name="CommonColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="FjO-yw-QMC" kind="relationship" relationship="viewControllers" id="1Nz-5D-3Lp"/>

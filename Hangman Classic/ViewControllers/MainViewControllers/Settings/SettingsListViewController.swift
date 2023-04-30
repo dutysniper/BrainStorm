@@ -77,7 +77,10 @@ extension SettingsListViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         tableView.rowHeight
     }
-    
+}
+
+// MARK: - Extension UITableViewDelegate
+extension SettingsListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.section {

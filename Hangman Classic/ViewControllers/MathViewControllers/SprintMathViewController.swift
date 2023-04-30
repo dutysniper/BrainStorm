@@ -84,7 +84,7 @@ final class SprintMathViewController: UIViewController {
 
 // MARK: - Game logic methods
 private extension SprintMathViewController {
-    // MARK: - Methods
+    // Methods
     func setupGameScreen(withStartButton boolean: Bool) {
         stackViews.forEach {
             $0.isHidden = boolean
@@ -156,7 +156,7 @@ private extension SprintMathViewController {
         }
     }
     
-    // MARK: - Objective-C Methods
+    // Objective-C Methods
     @objc func setProgressView() {
         progress -= 1
         progressView.setProgress(Float(progress) / 1000, animated: true)

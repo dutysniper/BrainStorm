@@ -18,6 +18,7 @@ final class GameListViewController: UITableViewController {
         tableView.rowHeight = view.frame.height / 8
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
@@ -37,13 +38,13 @@ extension GameListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         gameDescriptions.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         let gameInfo = gameDescriptions[indexPath.row]
-
+        
         content.imageProperties.maximumSize.height = tableView.rowHeight * 0.8
         content.imageProperties.cornerRadius = tableView.rowHeight / 10
         
@@ -58,7 +59,10 @@ extension GameListViewController {
         cell.contentConfiguration = content
         return cell
     }
-    
+}
+
+// MARK: - Extension UITableViewDelegate
+extension GameListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let segueID = gameDescriptions[indexPath.row].segueID
         

@@ -11,7 +11,7 @@ final class DeveloperListViewController: UITableViewController {
     
     // MARK: - Private Properties
     private let developers = Developer.getDevInfo()
-
+    
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ final class DeveloperListViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         developers.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         developers[section].person.count
     }
@@ -30,7 +30,7 @@ final class DeveloperListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         developers[section].status.rawValue
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "developer", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -40,7 +40,7 @@ final class DeveloperListViewController: UITableViewController {
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         content.textProperties.font = .systemFont(ofSize: 17, weight: .semibold)
         content.secondaryTextProperties.color = .darkGray
-
+        
         content.text = developer.name
         content.secondaryText = developer.nickName
         content.image = UIImage(named: developer.photo)
@@ -48,7 +48,10 @@ final class DeveloperListViewController: UITableViewController {
         cell.contentConfiguration = content
         return cell
     }
-    
+}
+
+// MARK: - Extension UITableViewDelegate
+extension DeveloperListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         

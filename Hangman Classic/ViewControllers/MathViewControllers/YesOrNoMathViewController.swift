@@ -84,6 +84,7 @@ final class YesOrNoMathViewController: UIViewController {
 
 // MARK: - Game logic methods
 private extension YesOrNoMathViewController {
+    // Methods
     func setupGameScreen(withStartButton boolean: Bool) {
         buttons.forEach {
             $0.isHidden = boolean
@@ -124,7 +125,7 @@ private extension YesOrNoMathViewController {
             self.setupGameScreen(withStartButton: true)
         }
     }
-    
+    // Objective-C Methods
     @objc func setProgressView() {
         progress -= 1
         progressView.setProgress(Float(progress) / 1000, animated: true)

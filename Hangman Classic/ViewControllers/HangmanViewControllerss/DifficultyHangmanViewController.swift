@@ -11,7 +11,7 @@ final class DifficultyHangmanViewController: UIViewController {
     //MARK: - Class properties
     var gameDescription: GameDescription!
     
-    // MARK: - Life-cycle
+    //MARK: - Life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
@@ -27,7 +27,7 @@ final class DifficultyHangmanViewController: UIViewController {
         hangmanVC.game = randomWord
     }
     
-    // MARK: - Navigation
+    //MARK: - Navigation
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showHangmanVC", sender: sender)
         

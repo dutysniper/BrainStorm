@@ -91,9 +91,8 @@ final class HangmanViewController: UIViewController {
 }
 
 //MARK: - Private methods for letters
-extension HangmanViewController {
-    
-    private func setCorrectLetter(letter: String) {
+private extension HangmanViewController {
+    func setCorrectLetter(letter: String) {
         var _word = ""
         for (wordChar, secretChar) in zip(game.word, secretWord) {
             _word += (String(wordChar) == letter && String(secretChar) == "_") ? letter : String(secretChar)
@@ -101,7 +100,7 @@ extension HangmanViewController {
         secretWord = _word
     }
     
-    private func setIncorrectLetter() {
+    func setIncorrectLetter() {
         numberOfErrors += 1
         if traitCollection.userInterfaceStyle == .light {
             hangmanImage.image = UIImage(named: game.gameProgress[numberOfErrors - 1].rawValue)
@@ -113,8 +112,8 @@ extension HangmanViewController {
 }
 
 //MARK: - Setup UI
-extension HangmanViewController {
-    private func updateUI() {
+private extension HangmanViewController {
+    func updateUI() {
         print(game.word)
         numberOfErrors = 0
         hangmanImage.image = .none

@@ -36,8 +36,8 @@ final class GameOverViewController: UIViewController {
 }
 
 //MARK: - Setup UI
-extension GameOverViewController {
-    private func setupUI(with result: GameResult) {
+private extension GameOverViewController {
+    func setupUI(with result: GameResult) {
         switch result {
         case .win(let name, let details, let winImage):
             gameResultLabel.text = name
@@ -70,19 +70,19 @@ extension GameOverViewController {
     }
     
     //MARK: - Setup buttons logic
-    @objc private func backToMainMenu() {
+    @objc func backToMainMenu() {
         dismiss(animated: true) { [weak self] in
             self?.delegate?.gameIsOver()
         }
     }
     
-    @objc private func changeDifficulty() {
+    @objc func changeDifficulty() {
         dismiss(animated: true) { [weak self] in
             self?.delegate?.changeDifficulty()
         }
     }
     
-    @objc private func playAgain() {
+    @objc func playAgain() {
         guard let hangmanVC = presentingViewController as? HangmanViewController else {
             fatalError("Unexpected presenting view controller.")
         }

@@ -40,7 +40,7 @@ extension SettingsListViewController {
             systemName: settingSection.image[indexPath.row]
         )
         themeCell.cellImageView.contentMode = .scaleAspectFit
-        themeCell.cellImageView.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
+        themeCell.cellImageView.tintColor = .init(named: "commonColor")
         themeCell.separatorInset.right = themeCell.themeSwitch.frame.width + 32
         themeCell.separatorInset.left = themeCell.cellImageView.frame.width + 12
         
@@ -49,7 +49,7 @@ extension SettingsListViewController {
         content.image = UIImage(
             systemName: settingSection.image[indexPath.row]
         )
-        content.imageProperties.tintColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
+        content.imageProperties.tintColor = .init(named: "commonColor")
         
         switch indexPath.section {
         case 0 where indexPath.row == 0:

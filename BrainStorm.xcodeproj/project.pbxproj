@@ -488,7 +488,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6DCRFKN8GP;
+				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrainStorm/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
@@ -524,7 +524,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6DCRFKN8GP;
+				DEVELOPMENT_TEAM = Q3W8P7J6DJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrainStorm/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Brain Storm";
